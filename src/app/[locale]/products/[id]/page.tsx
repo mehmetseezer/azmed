@@ -1,0 +1,146 @@
+import { products } from '@/data/products';
+import { notFound } from 'next/navigation';
+import { setRequestLocale } from 'next-intl/server';
+import { Link } from '@/i18n/routing';
+import { ArrowLeft, MessageCircle, CheckCircle2, Shield, Truck } from 'lucide-react';
+
+export function generateStaticParams() {
+  const locales = ['en', 'tr'];
+  const params = [];
+  
+  for (const locale of locales) {
+    for (const product of products) {
+      params.push({ locale, id: product.id });
+    }
+  }
+  
+  return params;
+}
+
+export default async function ProductDetailPage({
+  params
+}: {
+  params: Promise<{ locale: string; id: string }>;
+}) {
+  const { locale, id } = (await params) as { locale: 'tr' | 'en'; id: string };
+  setRequestLocale(locale);
+
+  const product = products.find((p) => p.id === id);
+
+  if (!product) {
+    notFound();
+  }
+
+  const t = {
+    back: locale === 'tr' ? 'Ürünlere Dön' : 'Back to Products',
+    features: locale === 'tr' ? 'Öne Çıkan Özellikler' : 'Key Features',
+    warranty: locale === 'tr' ? 'Garanti' : 'Warranty',
+    warrantyDesc: locale === 'tr' ? '2 Yıl Tam Destek' : '2 Years Support',
+    delivery: locale === 'tr' ? 'Teslimat' : 'Delivery',
+    deliveryDesc: locale === 'tr' ? 'Hızlı Kurulum' : 'Fast Setup',
+    whatsapp: locale === 'tr' ? 'WhatsApp ile Bilgi Al' : 'Get Info via WhatsApp',
+    contact: locale === 'tr' ? 'İletişime Geç' : 'Contact Us'
+  };
+
+  return (
+    <main className="pt-32 pb-24 bg-white">
+      <div className="container mx-auto px-6">
+        {/* Breadcrumb */}
+        <Link 
+          href="/products" 
+          className="inline-flex items-center gap-2 text-gray-500 hover:text-blue-600 mb-12 transition-colors group"
+        >
+          <ArrowLeft size={20} className="group-hover:-translate-x-1 transition-transform" />
+          {t.back}
+        </Link>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          {/* Image Gallery */}
+          <div className="space-y-6">
+            <div className="aspect-square rounded-3xl overflow-hidden bg-gray-50 border border-gray-100 shadow-inner">
+              <img 
+                src={product.image} 
+                alt={product.name[locale]}
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="grid grid-cols-3 gap-4">
+               {[1,2,3].map(i => (
+                 <div key={i} className="aspect-square rounded-2xl bg-gray-50 border border-gray-100 overflow-hidden cursor-pointer hover:opacity-80 transition-opacity">
+                   <img src={product.image} alt={product.name[locale]} className="w-full h-full object-cover" />
+                 </div>
+               ))}
+            </div>
+          </div>
+
+          {/* Product Info */}
+          <div className="flex flex-col">
+            <div className="mb-8">
+              <span className="text-blue-600 font-bold text-sm uppercase tracking-widest mb-4 block">
+                {product.category}
+              </span>
+              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">{product.name[locale]}</h1>
+              <p className="text-gray-600 text-lg leading-relaxed mb-8">
+                {product.description[locale]}
+              </p>
+            </div>
+
+            {/* Features List */}
+            <div className="mb-10">
+              <h3 className="text-xl font-bold text-gray-900 mb-6">{t.features}</h3>
+              <ul className="space-y-4">
+                {product.features[locale].map((feature, i) => (
+                  <li key={i} className="flex items-center gap-4 text-gray-700">
+                    <CheckCircle2 className="text-green-500 shrink-0" size={24} />
+                    <span className="font-medium">{feature}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Trust Badges */}
+            <div className="grid grid-cols-2 gap-6 mb-12">
+              <div className="p-4 rounded-2xl bg-gray-50 border border-gray-100 flex items-center gap-4">
+                <Shield className="text-blue-600" size={32} />
+                <div>
+                  <p className="text-xs text-gray-500 font-medium">{t.warranty}</p>
+                  <p className="text-sm font-bold text-gray-900">{t.warrantyDesc}</p>
+                </div>
+              </div>
+              <div className="p-4 rounded-2xl bg-gray-50 border border-gray-100 flex items-center gap-4">
+                <Truck className="text-blue-600" size={32} />
+                <div>
+                  <p className="text-xs text-gray-500 font-medium">{t.delivery}</p>
+                  <p className="text-sm font-bold text-gray-900">{t.deliveryDesc}</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Action Buttons */}
+            <div className="mt-auto flex flex-col sm:flex-row gap-4">
+              <a 
+                href={`https://wa.me/905000000000?text=${encodeURIComponent(
+                  locale === 'tr' 
+                  ? `${product.name[locale]} hakkında bilgi almak istiyorum.` 
+                  : `I would like to get information about ${product.name[locale]}.`
+                )}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 flex items-center justify-center gap-3 bg-green-500 text-white font-bold py-5 rounded-2xl hover:bg-green-600 transition-all shadow-xl shadow-green-100 active:scale-95"
+              >
+                <MessageCircle size={24} />
+                {t.whatsapp}
+              </a>
+              <Link 
+                href="/contact"
+                className="flex-1 flex items-center justify-center bg-blue-900 text-white font-bold py-5 rounded-2xl hover:bg-blue-950 transition-all active:scale-95"
+              >
+                {t.contact}
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  );
+}
