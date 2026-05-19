@@ -2,6 +2,14 @@ import { setRequestLocale, getTranslations } from 'next-intl/server';
 import { Building2, Award, ExternalLink } from 'lucide-react';
 import { Link } from '@/i18n/routing';
 
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  const isTr = locale === 'tr';
+  return {
+    title: isTr ? 'Referanslarımız' : 'References',
+  };
+}
+
 export default async function ReferencesPage({
   params
 }: {

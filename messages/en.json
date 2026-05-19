@@ -81,8 +81,11 @@
     "title": "Contact Us",
     "description": "You can always reach us for your questions, collaboration proposals, or technical support requests. Our expert team will get back to you as soon as possible.",
     "phone": "Phone",
+    "phoneMobile": "Mobile: +90 (552) 428 61 25",
+    "phoneLand": "Landline: +90 (216) 232 25 34",
     "email": "Email",
     "address": "Address",
+    "addressVal": "Karlıktepe Mahallesi, Fahri Korutürk Caddesi, Mert Apartmanı No: 29/1A, Kartal / İstanbul, Turkey",
     "send": "Send Message",
     "formName": "Full Name",
     "formEmail": "Email Address",
@@ -112,5 +115,24 @@
     "cat1": "Medical Devices",
     "cat2": "Laboratory Equipment",
     "cat3": "Consumables"
+  },
+  "Categories": {
+    "All": "All",
+    "ECG": "ECG Devices",
+    "Monitor": "Patient Monitors",
+    "SurgicalLight": "Surgical Lights",
+    "Endovision": "Endovision Systems",
+    "Electrosurgery": "Electrosurgical Units",
+    "MedicalCart": "Medical Carts",
+    "Thermometer": "Thermometers",
+    "Laryngoscope": "Laryngoscopes",
+    "CPR": "ADC CPR",
+    "Stethoscope": "Stethoscopes",
+    "OtoscopeSpecula": "Otoscope Specula Tips",
+    "Negatoscope": "Negatoscopes",
+    "Imaging": "Imaging Devices",
+    "Cardiology": "Cardiology Devices",
+    "Respiratory": "Respiratory Devices",
+    "Surgical": "Surgical Devices"
   }
 }

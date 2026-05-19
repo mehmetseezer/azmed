@@ -6,13 +6,16 @@ import { useTranslations } from 'next-intl';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import LanguageSwitcher from '@/components/layout/LanguageSwitcher';
+import { categories } from '@/data/products';
 
 export default function Navbar() {
   const t = useTranslations('Navbar');
+  const tCat = useTranslations('Categories');
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isCorporateOpen, setIsCorporateOpen] = useState(false);
+  const [isProductsOpen, setIsProductsOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -92,9 +95,44 @@ export default function Navbar() {
             </div>
           </div>
 
-          <Link href="/products" className={cn("text-sm font-bold hover:text-blue-500 transition-colors", navColor)}>
-            {t('products')}
-          </Link>
+          {/* Products Dropdown */}
+          <div 
+            className="relative"
+            onMouseEnter={() => setIsProductsOpen(true)}
+            onMouseLeave={() => setIsProductsOpen(false)}
+          >
+            <Link 
+              href="/products" 
+              className={cn("text-sm font-bold flex items-center gap-1 hover:text-blue-500 transition-colors", navColor)}
+            >
+              {t('products')} <ChevronDown size={14} className={cn("transition-transform", isProductsOpen && "rotate-180")} />
+            </Link>
+            <div className={cn(
+              "absolute top-full left-0 pt-2 w-64 transition-all duration-300 origin-top",
+              isProductsOpen ? "opacity-100 scale-100 translate-y-0" : "opacity-0 scale-95 -translate-y-2 pointer-events-none"
+            )}>
+              <div className="bg-white rounded-2xl shadow-2xl border border-gray-100 py-3 overflow-hidden">
+                {/* All category link */}
+                <Link 
+                  href="/products?category=All"
+                  className="block px-6 py-2.5 text-sm font-bold text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors border-b border-gray-50"
+                >
+                  {tCat('All')}
+                </Link>
+                {/* Specific categories */}
+                {categories.filter(c => c !== 'All').map((cat) => (
+                  <Link 
+                    key={cat}
+                    href={`/products?category=${cat}`}
+                    className="block px-6 py-2.5 text-sm font-bold text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                  >
+                    {tCat(cat)}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
+
           <Link href="/contact" className={cn("text-sm font-bold hover:text-blue-500 transition-colors", navColor)}>
             {t('contact')}
           </Link>
@@ -117,7 +155,7 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="lg:hidden absolute top-full left-0 right-0 bg-white border-b border-gray-100 shadow-xl p-6 flex flex-col gap-4 animate-in slide-in-from-top duration-300">
+        <div className="lg:hidden absolute top-full left-0 right-0 bg-white border-b border-gray-100 shadow-xl p-6 flex flex-col gap-4 animate-in slide-in-from-top duration-300 max-h-[85vh] overflow-y-auto">
           <Link href="/" onClick={() => setIsOpen(false)} className="text-lg font-bold text-gray-900 border-b border-gray-50 pb-2">
             {t('home')}
           </Link>
@@ -136,9 +174,26 @@ export default function Navbar() {
             ))}
           </div>
 
-          <Link href="/products" onClick={() => setIsOpen(false)} className="text-lg font-bold text-gray-900 border-b border-gray-50 pb-2">
-            {t('products')}
-          </Link>
+          <div className="flex flex-col gap-2">
+            <Link 
+              href="/products" 
+              onClick={() => setIsOpen(false)} 
+              className="text-lg font-bold text-gray-900 border-b border-gray-50 pb-2"
+            >
+              {t('products')}
+            </Link>
+            {categories.map((cat) => (
+              <Link 
+                key={cat}
+                href={`/products?category=${cat}`} 
+                onClick={() => setIsOpen(false)} 
+                className="text-md font-bold text-blue-900 pl-4"
+              >
+                {tCat(cat)}
+              </Link>
+            ))}
+          </div>
+
           <Link href="/contact" onClick={() => setIsOpen(false)} className="text-lg font-bold text-gray-900">
             {t('contact')}
           </Link>

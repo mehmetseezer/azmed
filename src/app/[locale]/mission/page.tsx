@@ -1,6 +1,14 @@
 import { setRequestLocale, getTranslations } from 'next-intl/server';
 import { Target, Eye, ShieldCheck, Heart } from 'lucide-react';
 
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  const isTr = locale === 'tr';
+  return {
+    title: isTr ? 'Misyon & Vizyon' : 'Mission & Vision',
+  };
+}
+
 export default async function MissionPage({
   params
 }: {

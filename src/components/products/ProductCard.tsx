@@ -6,6 +6,7 @@ import { useLocale, useTranslations } from 'next-intl';
 export default function ProductCard({ product }: { product: Product }) {
   const locale = useLocale() as 'tr' | 'en';
   const t = useTranslations('Navbar'); // Using Navbar namespace for general translations if needed
+  const tCat = useTranslations('Categories');
 
   return (
     <div className="group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 flex flex-col h-full">
@@ -17,7 +18,7 @@ export default function ProductCard({ product }: { product: Product }) {
         />
         <div className="absolute top-4 left-4 z-20">
           <span className="bg-blue-600/90 backdrop-blur-md text-white text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider">
-            {product.category}
+            {tCat(product.category)}
           </span>
         </div>
         {/* Hover Overlay */}

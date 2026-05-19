@@ -81,8 +81,11 @@
     "title": "Bize Ulaşın",
     "description": "Sorularınız, iş birliği teklifleriniz veya teknik destek talepleriniz için bize her zaman ulaşabilirsiniz. Uzman ekibimiz size en kısa sürede dönüş yapacaktır.",
     "phone": "Telefon",
+    "phoneMobile": "Cep: 0 (552) 428 61 25",
+    "phoneLand": "Sabit: 0 (216) 232 25 34",
     "email": "E-posta",
     "address": "Adres",
+    "addressVal": "Karlıktepe Mahallesi, Fahri Korutürk Caddesi, Mert Apartmanı No: 29/1A, Kartal / İstanbul, Türkiye",
     "send": "Mesaj Gönder",
     "formName": "Adınız Soyadınız",
     "formEmail": "E-posta Adresiniz",
@@ -112,5 +115,24 @@
     "cat1": "Tıbbi Cihazlar",
     "cat2": "Laboratuvar Ekipmanları",
     "cat3": "Sarf Malzemeleri"
+  },
+  "Categories": {
+    "All": "Tümü",
+    "ECG": "EKG Cihazları",
+    "Monitor": "Hastabaşı Monitörleri",
+    "SurgicalLight": "Ameliyathane Lambaları",
+    "Endovision": "Endovizyon Sistemleri",
+    "Electrosurgery": "Koter Cihazları",
+    "MedicalCart": "Medikal Arabalar",
+    "Thermometer": "Ateş Ölçerler",
+    "Laryngoscope": "Laringoskoplar",
+    "CPR": "ADC CPR",
+    "Stethoscope": "Steteskoplar",
+    "OtoscopeSpecula": "Otoskop Spekülüm Uçları",
+    "Negatoscope": "Negatoskop",
+    "Imaging": "Görüntüleme Cihazları",
+    "Cardiology": "Kardiyoloji Cihazları",
+    "Respiratory": "Solunum Cihazları",
+    "Surgical": "Cerrahi Cihazlar"
   }
 }

@@ -28,7 +28,7 @@ export default function WhatsAppButton() {
 
       <div className="relative">
         <a
-          href="https://wa.me/905000000000" // Replace with real number
+          href="https://wa.me/905524286125"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center justify-center w-14 h-14 bg-green-500 text-white rounded-full shadow-2xl hover:bg-green-600 transition-all hover:scale-110 active:scale-95 animate-bounce-subtle"

@@ -4,6 +4,21 @@ import { setRequestLocale } from 'next-intl/server';
 import { Link } from '@/i18n/routing';
 import { ArrowLeft, MessageCircle, CheckCircle2, Shield, Truck } from 'lucide-react';
 
+export async function generateMetadata({ params }: { params: Promise<{ locale: string; id: string }> }) {
+  const { locale, id } = await params;
+  const loc = locale === 'en' ? 'en' : 'tr';
+  const product = products.find((p) => p.id === id);
+  if (!product) {
+    return {
+      title: loc === 'tr' ? 'Ürün Bulunamadı' : 'Product Not Found',
+    };
+  }
+  return {
+    title: product.name[loc],
+    description: product.description[loc],
+  };
+}
+
 export function generateStaticParams() {
   const locales = ['en', 'tr'];
   const params = [];
@@ -42,6 +57,25 @@ export default async function ProductDetailPage({
     contact: locale === 'tr' ? 'İletişime Geç' : 'Contact Us'
   };
 
+  const categoryNames: Record<string, { tr: string; en: string }> = {
+    ECG: { tr: 'EKG Cihazları', en: 'ECG Devices' },
+    Monitor: { tr: 'Hastabaşı Monitörleri', en: 'Patient Monitors' },
+    SurgicalLight: { tr: 'Ameliyathane Lambaları', en: 'Surgical Lights' },
+    Endovision: { tr: 'Endovizyon Sistemleri', en: 'Endovision Systems' },
+    Electrosurgery: { tr: 'Koter Cihazları', en: 'Electrosurgical Units' },
+    MedicalCart: { tr: 'Medikal Arabalar', en: 'Medical Carts' },
+    Thermometer: { tr: 'Ateş Ölçerler', en: 'Thermometers' },
+    Laryngoscope: { tr: 'Laringoskoplar', en: 'Laryngoscopes' },
+    CPR: { tr: 'ADC CPR', en: 'ADC CPR' },
+    Stethoscope: { tr: 'Steteskoplar', en: 'Stethoscopes' },
+    OtoscopeSpecula: { tr: 'Otoskop Spekülüm Uçları', en: 'Otoscope Specula Tips' },
+    Negatoscope: { tr: 'Negatoskop', en: 'Negatoscopes' },
+    Imaging: { tr: 'Görüntüleme Cihazları', en: 'Imaging Devices' },
+    Cardiology: { tr: 'Kardiyoloji Cihazları', en: 'Cardiology Devices' },
+    Respiratory: { tr: 'Solunum Cihazları', en: 'Respiratory Devices' },
+    Surgical: { tr: 'Cerrahi Cihazlar', en: 'Surgical Devices' }
+  };
+
   return (
     <main className="pt-32 pb-24 bg-white">
       <div className="container mx-auto px-6">
@@ -53,7 +87,7 @@ export default async function ProductDetailPage({
           <ArrowLeft size={20} className="group-hover:-translate-x-1 transition-transform" />
           {t.back}
         </Link>
-
+ 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           {/* Image Gallery */}
           <div className="space-y-6">
@@ -67,17 +101,17 @@ export default async function ProductDetailPage({
             <div className="grid grid-cols-3 gap-4">
                {[1,2,3].map(i => (
                  <div key={i} className="aspect-square rounded-2xl bg-gray-50 border border-gray-100 overflow-hidden cursor-pointer hover:opacity-80 transition-opacity">
-                   <img src={product.image} alt={product.name[locale]} className="w-full h-full object-cover" />
+                    <img src={product.image} alt={product.name[locale]} className="w-full h-full object-cover" />
                  </div>
                ))}
             </div>
           </div>
-
+ 
           {/* Product Info */}
           <div className="flex flex-col">
             <div className="mb-8">
               <span className="text-blue-600 font-bold text-sm uppercase tracking-widest mb-4 block">
-                {product.category}
+                {categoryNames[product.category]?.[locale] || product.category}
               </span>
               <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">{product.name[locale]}</h1>
               <p className="text-gray-600 text-lg leading-relaxed mb-8">
@@ -119,7 +153,7 @@ export default async function ProductDetailPage({
             {/* Action Buttons */}
             <div className="mt-auto flex flex-col sm:flex-row gap-4">
               <a 
-                href={`https://wa.me/905000000000?text=${encodeURIComponent(
+                href={`https://wa.me/905524286125?text=${encodeURIComponent(
                   locale === 'tr' 
                   ? `${product.name[locale]} hakkında bilgi almak istiyorum.` 
                   : `I would like to get information about ${product.name[locale]}.`

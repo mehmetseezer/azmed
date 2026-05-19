@@ -16,9 +16,15 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
+  const isTr = locale === 'tr';
+  const defaultTitle = isTr ? 'Azmed Mühendislik Elektronik | Tıbbi Cihazlar' : 'Azmed Medical Electronics | Medical Devices';
+  const defaultDescription = isTr ? 'Sağlık Teknolojilerinde Güvenilir Çözüm Ortağınız' : 'Your Trusted Partner in Healthcare Technologies';
   return {
-    title: 'Azmed Mühendislik Elektronik | Tıbbi Cihazlar',
-    description: 'Sağlık Teknolojilerinde Güvenilir Çözüm Ortağınız',
+    title: {
+      template: '%s | Azmed Mühendislik Elektronik',
+      default: defaultTitle
+    },
+    description: defaultDescription,
     icons: {
       icon: '/logo.jpeg',
     },

@@ -3,6 +3,16 @@ import HeroCarousel from '@/components/home/HeroCarousel';
 import { Link } from '@/i18n/routing';
 import { ArrowRight, ShieldCheck, Zap, HeartPulse, Microscope, Award, Headphones, Globe } from 'lucide-react';
 
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  const isTr = locale === 'tr';
+  return {
+    title: {
+      absolute: isTr ? 'Azmed Mühendislik Elektronik | Tıbbi Cihazlar' : 'Azmed Medical Electronics | Medical Devices'
+    }
+  };
+}
+
 export default async function HomePage({
   params
 }: {

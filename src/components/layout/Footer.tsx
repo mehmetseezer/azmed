@@ -60,12 +60,15 @@ export default function Footer() {
             <h4 className="text-lg font-semibold mb-6">{tc('title')}</h4>
             <ul className="space-y-4 text-gray-400 text-sm">
               <li className="flex items-start gap-3">
-                <MapPin size={18} className="text-blue-400 shrink-0" />
-                <span>{tf('location')}</span>
+                <MapPin size={18} className="text-blue-400 shrink-0 mt-0.5" />
+                <span>{tc('addressVal')}</span>
               </li>
-              <li className="flex items-center gap-3">
-                <Phone size={18} className="text-blue-400 shrink-0" />
-                <span>+90 (212) 000 00 00</span>
+              <li className="flex items-start gap-3">
+                <Phone size={18} className="text-blue-400 shrink-0 mt-0.5" />
+                <div className="flex flex-col gap-1">
+                  <span>{tc('phoneMobile')}</span>
+                  <span>{tc('phoneLand')}</span>
+                </div>
               </li>
               <li className="flex items-center gap-3">
                 <Mail size={18} className="text-blue-400 shrink-0" />

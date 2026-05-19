@@ -1,6 +1,14 @@
 import { setRequestLocale, getTranslations } from 'next-intl/server';
 import { Target, Users, Award, Clock, ShieldCheck, Heart, Sparkles, Building2 } from 'lucide-react';
 
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  const isTr = locale === 'tr';
+  return {
+    title: isTr ? 'Hakkımızda' : 'About Us',
+  };
+}
+
 export default async function AboutPage({
   params
 }: {
