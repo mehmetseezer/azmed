@@ -4,7 +4,7 @@ import { ArrowRight, Info } from 'lucide-react';
 import { useLocale, useTranslations } from 'next-intl';
 
 export default function ProductCard({ product }: { product: Product }) {
-  const locale = useLocale() as 'tr' | 'en';
+  const locale = useLocale() as 'tr' | 'en' | 'fr' | 'az';
   const t = useTranslations('Navbar'); // Using Navbar namespace for general translations if needed
   const tCat = useTranslations('Categories');
 

@@ -1,16 +1,16 @@
 import { products } from '@/data/products';
 import { notFound } from 'next/navigation';
 import { setRequestLocale } from 'next-intl/server';
-import { Link } from '@/i18n/routing';
+import { Link, routing } from '@/i18n/routing';
 import { ArrowLeft, MessageCircle, CheckCircle2, Shield, Truck } from 'lucide-react';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string; id: string }> }) {
   const { locale, id } = await params;
-  const loc = locale === 'en' ? 'en' : 'tr';
+  const loc = locale as 'tr' | 'en' | 'fr' | 'az';
   const product = products.find((p) => p.id === id);
   if (!product) {
     return {
-      title: loc === 'tr' ? 'Ürün Bulunamadı' : 'Product Not Found',
+      title: loc === 'tr' ? 'Ürün Bulunamadı' : (loc === 'az' ? 'Məhsul Tapılmadı' : (loc === 'fr' ? 'Produit Non Trouvé' : 'Product Not Found')),
     };
   }
   return {
@@ -20,10 +20,9 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 }
 
 export function generateStaticParams() {
-  const locales = ['en', 'tr'];
   const params = [];
   
-  for (const locale of locales) {
+  for (const locale of routing.locales) {
     for (const product of products) {
       params.push({ locale, id: product.id });
     }
@@ -37,7 +36,7 @@ export default async function ProductDetailPage({
 }: {
   params: Promise<{ locale: string; id: string }>;
 }) {
-  const { locale, id } = (await params) as { locale: 'tr' | 'en'; id: string };
+  const { locale, id } = await params;
   setRequestLocale(locale);
 
   const product = products.find((p) => p.id === id);
@@ -46,34 +45,36 @@ export default async function ProductDetailPage({
     notFound();
   }
 
+  const prodLocale = locale as 'tr' | 'en' | 'fr' | 'az';
+
   const t = {
-    back: locale === 'tr' ? 'Ürünlere Dön' : 'Back to Products',
-    features: locale === 'tr' ? 'Öne Çıkan Özellikler' : 'Key Features',
-    warranty: locale === 'tr' ? 'Garanti' : 'Warranty',
-    warrantyDesc: locale === 'tr' ? '2 Yıl Tam Destek' : '2 Years Support',
-    delivery: locale === 'tr' ? 'Teslimat' : 'Delivery',
-    deliveryDesc: locale === 'tr' ? 'Hızlı Kurulum' : 'Fast Setup',
-    whatsapp: locale === 'tr' ? 'WhatsApp ile Bilgi Al' : 'Get Info via WhatsApp',
-    contact: locale === 'tr' ? 'İletişime Geç' : 'Contact Us'
+    back: locale === 'tr' ? 'Ürünlere Dön' : (locale === 'az' ? 'Məhsullara Dön' : (locale === 'fr' ? 'Retour aux Produits' : 'Back to Products')),
+    features: locale === 'tr' ? 'Öne Çıkan Özellikler' : (locale === 'az' ? 'Önə Çıxan Xüsusiyyətlər' : (locale === 'fr' ? 'Caractéristiques Principales' : 'Key Features')),
+    warranty: locale === 'tr' ? 'Garanti' : (locale === 'az' ? 'Zəmanət' : (locale === 'fr' ? 'Garantie' : 'Warranty')),
+    warrantyDesc: locale === 'tr' ? '2 Yıl Tam Destek' : (locale === 'az' ? '2 İl Tam Dəstək' : (locale === 'fr' ? '2 Ans de Support' : '2 Years Support')),
+    delivery: locale === 'tr' ? 'Teslimat' : (locale === 'az' ? 'Çatdırılma' : (locale === 'fr' ? 'Livraison' : 'Delivery')),
+    deliveryDesc: locale === 'tr' ? 'Hızlı Kurulum' : (locale === 'az' ? 'Sürətli Quraşdırma' : (locale === 'fr' ? 'Installation Rapide' : 'Fast Setup')),
+    whatsapp: locale === 'tr' ? 'WhatsApp ile Bilgi Al' : (locale === 'az' ? 'WhatsApp ilə Məlumat Al' : (locale === 'fr' ? 'Info via WhatsApp' : 'Get Info via WhatsApp')),
+    contact: locale === 'tr' ? 'İletişime Geç' : (locale === 'az' ? 'Əlaqə Saxlayın' : (locale === 'fr' ? 'Contactez-nous' : 'Contact Us'))
   };
 
-  const categoryNames: Record<string, { tr: string; en: string }> = {
-    ECG: { tr: 'EKG Cihazları', en: 'ECG Devices' },
-    Monitor: { tr: 'Hastabaşı Monitörleri', en: 'Patient Monitors' },
-    SurgicalLight: { tr: 'Ameliyathane Lambaları', en: 'Surgical Lights' },
-    Endovision: { tr: 'Endovizyon Sistemleri', en: 'Endovision Systems' },
-    Electrosurgery: { tr: 'Koter Cihazları', en: 'Electrosurgical Units' },
-    MedicalCart: { tr: 'Medikal Arabalar', en: 'Medical Carts' },
-    Thermometer: { tr: 'Ateş Ölçerler', en: 'Thermometers' },
-    Laryngoscope: { tr: 'Laringoskoplar', en: 'Laryngoscopes' },
-    CPR: { tr: 'ADC CPR', en: 'ADC CPR' },
-    Stethoscope: { tr: 'Steteskoplar', en: 'Stethoscopes' },
-    OtoscopeSpecula: { tr: 'Otoskop Spekülüm Uçları', en: 'Otoscope Specula Tips' },
-    Negatoscope: { tr: 'Negatoskop', en: 'Negatoscopes' },
-    Imaging: { tr: 'Görüntüleme Cihazları', en: 'Imaging Devices' },
-    Cardiology: { tr: 'Kardiyoloji Cihazları', en: 'Cardiology Devices' },
-    Respiratory: { tr: 'Solunum Cihazları', en: 'Respiratory Devices' },
-    Surgical: { tr: 'Cerrahi Cihazlar', en: 'Surgical Devices' }
+  const categoryNames: Record<string, { tr: string; en: string; fr: string; az: string }> = {
+    ECG: { tr: 'EKG Cihazları', en: 'ECG Devices', fr: 'Électrocardiographes', az: 'EKQ Cihazları' },
+    Monitor: { tr: 'Hastabaşı Monitörleri', en: 'Patient Monitors', fr: 'Moniteurs multiparamétriques', az: 'Xəstəbaşı Monitorları' },
+    SurgicalLight: { tr: 'Ameliyathane Lambaları', en: 'Surgical Lights', fr: 'Éclairage chirurgical', az: 'Əməliyyatxana Lambaları' },
+    Endovision: { tr: 'Endovizyon Sistemleri', en: 'Endovision Systems', fr: 'Systèmes d\'endovision', az: 'Endoviziya Sistemləri' },
+    Electrosurgery: { tr: 'Koter Cihazları', en: 'Electrosurgical Units', fr: 'Bistouris électriques', az: 'Koter Cihazları' },
+    MedicalCart: { tr: 'Medikal Arabalar', en: 'Medical Carts', fr: 'Chariots médicaux', az: 'Tibbi Arabalar' },
+    Thermometer: { tr: 'Ateş Ölçerler', en: 'Thermometers', fr: 'Thermomètres', az: 'Termometrlər' },
+    Laryngoscope: { tr: 'Laringoskoplar', en: 'Laryngoscopes', fr: 'Laryngoscopes', az: 'Larinqoskoplar' },
+    CPR: { tr: 'ADC CPR', en: 'ADC CPR', fr: 'ADC CPR', az: 'ADC CPR' },
+    Stethoscope: { tr: 'Steteskoplar', en: 'Stethoscopes', fr: 'Stéthoscopes', az: 'Stetoskoplar' },
+    OtoscopeSpecula: { tr: 'Otoskop Spekülüm Uçları', en: 'Otoscope Specula Tips', fr: 'Spéculums pour otoscope', az: 'Otoskop Spekulum Ucları' },
+    Negatoscope: { tr: 'Negatoskop', en: 'Negatoscopes', fr: 'Négatoscopes', az: 'Neqatoskop' },
+    Imaging: { tr: 'Görüntüleme Cihazları', en: 'Imaging Devices', fr: 'Imagerie médicale', az: 'Görüntüləmə Cihazları' },
+    Cardiology: { tr: 'Kardiyoloji Cihazları', en: 'Cardiology Devices', fr: 'Cardiologie', az: 'Kardioloji Cihazlar' },
+    Respiratory: { tr: 'Solunum Cihazları', en: 'Respiratory Devices', fr: 'Systèmes respiratoires', az: 'Tənəffüs Cihazları' },
+    Surgical: { tr: 'Cerrahi Cihazlar', en: 'Surgical Devices', fr: 'Instruments chirurgicaux', az: 'Cərrahi Cihazlar' }
   };
 
   return (
@@ -94,14 +95,14 @@ export default async function ProductDetailPage({
             <div className="aspect-square rounded-3xl overflow-hidden bg-gray-50 border border-gray-100 shadow-inner">
               <img 
                 src={product.image} 
-                alt={product.name[locale]}
+                alt={product.name[prodLocale]}
                 className="w-full h-full object-cover"
               />
             </div>
             <div className="grid grid-cols-3 gap-4">
                {[1,2,3].map(i => (
                  <div key={i} className="aspect-square rounded-2xl bg-gray-50 border border-gray-100 overflow-hidden cursor-pointer hover:opacity-80 transition-opacity">
-                    <img src={product.image} alt={product.name[locale]} className="w-full h-full object-cover" />
+                    <img src={product.image} alt={product.name[prodLocale]} className="w-full h-full object-cover" />
                  </div>
                ))}
             </div>
@@ -111,11 +112,11 @@ export default async function ProductDetailPage({
           <div className="flex flex-col">
             <div className="mb-8">
               <span className="text-blue-600 font-bold text-sm uppercase tracking-widest mb-4 block">
-                {categoryNames[product.category]?.[locale] || product.category}
+                {categoryNames[product.category]?.[prodLocale] || product.category}
               </span>
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">{product.name[locale]}</h1>
+              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">{product.name[prodLocale]}</h1>
               <p className="text-gray-600 text-lg leading-relaxed mb-8">
-                {product.description[locale]}
+                {product.description[prodLocale]}
               </p>
             </div>
 
@@ -123,7 +124,7 @@ export default async function ProductDetailPage({
             <div className="mb-10">
               <h3 className="text-xl font-bold text-gray-900 mb-6">{t.features}</h3>
               <ul className="space-y-4">
-                {product.features[locale].map((feature, i) => (
+                {product.features[prodLocale].map((feature, i) => (
                   <li key={i} className="flex items-center gap-4 text-gray-700">
                     <CheckCircle2 className="text-green-500 shrink-0" size={24} />
                     <span className="font-medium">{feature}</span>
@@ -154,9 +155,9 @@ export default async function ProductDetailPage({
             <div className="mt-auto flex flex-col sm:flex-row gap-4">
               <a 
                 href={`https://wa.me/905524286125?text=${encodeURIComponent(
-                  locale === 'tr' 
-                  ? `${product.name[locale]} hakkında bilgi almak istiyorum.` 
-                  : `I would like to get information about ${product.name[locale]}.`
+                  prodLocale === 'tr' 
+                  ? `${product.name[prodLocale]} hakkında bilgi almak istiyorum.` 
+                  : (prodLocale === 'az' ? `${product.name[prodLocale]} haqqında məlumat almaq istəyirəm.` : (prodLocale === 'fr' ? `Je souhaite obtenir des informations sur ${product.name[prodLocale]}.` : `I would like to get information about ${product.name[prodLocale]}.`))
                 )}`}
                 target="_blank"
                 rel="noopener noreferrer"

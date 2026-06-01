@@ -11,7 +11,7 @@ export default function ProductsContent() {
   const t = useTranslations('Navbar');
   const tp = useTranslations('Home'); // Using Home translations for common terms
   const tCat = useTranslations('Categories');
-  const locale = useLocale() as 'tr' | 'en';
+  const locale = useLocale() as 'tr' | 'en' | 'fr' | 'az';
   const searchParams = useSearchParams();
   const categoryParam = searchParams.get('category');
   const [selectedCategory, setSelectedCategory] = useState('All');

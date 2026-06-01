@@ -50,7 +50,7 @@ export default function ContactContent() {
                 <h3 className="text-lg font-bold text-gray-900 mb-2">{t('phone')}</h3>
                 <p className="text-gray-600 font-medium">{t('phoneMobile')}</p>
                 <p className="text-gray-600 font-medium">{t('phoneLand')}</p>
-                <p className="text-gray-400 text-sm mt-1">Pzt - Cmt: 09:00 - 18:00</p>
+                <p className="text-gray-400 text-sm mt-1">{t('workHours')}</p>
               </div>
             </div>
 
@@ -61,7 +61,7 @@ export default function ContactContent() {
               <div>
                 <h3 className="text-lg font-bold text-gray-900 mb-2">{t('email')}</h3>
                 <p className="text-gray-600 font-medium">info@azmed.com.tr</p>
-                <p className="text-gray-400 text-sm mt-1">7/24 Yanıtlıyoruz</p>
+                <p className="text-gray-400 text-sm mt-1">{t('responseNotice')}</p>
               </div>
             </div>
 

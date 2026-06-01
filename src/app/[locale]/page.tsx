@@ -144,12 +144,12 @@ export default async function HomePage({
       {/* CTA Section */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-6 text-center">
-          <div className="max-w-4xl mx-auto p-16 rounded-[4rem] bg-gradient-to-br from-blue-50 to-green-50 border border-blue-100/50">
-             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-8">{tHome('ctaTitle')}</h2>
-             <p className="text-gray-600 text-lg mb-10">{tHome('ctaDesc')}</p>
+          <div className="max-w-4xl mx-auto p-8 md:p-16 rounded-[3rem] md:rounded-[4rem] bg-gradient-to-br from-blue-50 to-green-50 border border-blue-100/50">
+             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6 md:mb-8">{tHome('ctaTitle')}</h2>
+             <p className="text-gray-600 text-base md:text-lg mb-8 md:mb-10">{tHome('ctaDesc')}</p>
              <Link 
                href="/contact" 
-               className="bg-blue-900 text-white px-12 py-5 rounded-full font-bold text-lg hover:bg-blue-950 transition-all shadow-2xl shadow-blue-200 hover:scale-105"
+               className="inline-block bg-blue-900 text-white px-8 py-4 md:px-12 md:py-5 rounded-full font-bold text-base md:text-lg hover:bg-blue-950 transition-all shadow-2xl shadow-blue-200 hover:scale-105"
              >
                {tHome('ctaButton')}
              </Link>

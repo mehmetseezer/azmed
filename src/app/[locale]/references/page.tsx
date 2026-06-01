@@ -4,9 +4,9 @@ import { Link } from '@/i18n/routing';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
-  const isTr = locale === 'tr';
+  const title = locale === 'tr' ? 'Referanslarımız' : (locale === 'az' ? 'Referanslarımız' : (locale === 'fr' ? 'Nos Références' : 'References'));
   return {
-    title: isTr ? 'Referanslarımız' : 'References',
+    title,
   };
 }
 
@@ -73,17 +73,17 @@ export default async function ReferencesPage({
         </div>
 
         {/* Corporate Trust Banner */}
-        <div className="mt-32 p-12 md:p-20 rounded-[4rem] bg-blue-900 text-white flex flex-col md:flex-row items-center justify-between gap-12 relative overflow-hidden">
+        <div className="mt-32 p-8 md:p-20 rounded-[3rem] md:rounded-[4rem] bg-blue-900 text-white flex flex-col md:flex-row items-center justify-between gap-12 relative overflow-hidden">
            <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full -mr-32 -mt-32 blur-3xl" />
            <div className="relative z-10">
              <h2 className="text-3xl md:text-5xl font-bold mb-6">1000'den Fazla <span className="text-blue-400">Başarılı Proje</span></h2>
              <p className="text-blue-100 text-lg max-w-xl">
-               Medikal cihazların kurulumundan teknik servisine kadar her adımda çözüm ortaklarımızın yanındayız. Güvenilir mühendislik hizmetimizle sağlığın geleceğine katkıda bulunuyoruz.
+                Medikal cihazların kurulumundan teknik servisine kadar her adımda çözüm ortaklarımızın yanındayız. Güvenilir mühendislik hizmetimizle sağlığın geleceğine katkıda bulunuyoruz.
              </p>
            </div>
            <Link 
              href="/contact"
-             className="px-10 py-5 bg-white text-blue-900 font-bold rounded-full hover:scale-105 transition-all shadow-2xl relative z-10"
+             className="inline-block px-8 py-4 md:px-10 md:py-5 bg-white text-blue-900 font-bold rounded-full hover:scale-105 transition-all shadow-2xl relative z-10 whitespace-nowrap text-base md:text-lg"
            >
              Bizimle Çalışın
            </Link>

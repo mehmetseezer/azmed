@@ -3,9 +3,9 @@ import { Target, Users, Award, Clock, ShieldCheck, Heart, Sparkles, Building2 } 
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
-  const isTr = locale === 'tr';
+  const title = locale === 'tr' ? 'Hakkımızda' : (locale === 'az' ? 'Haqqımızda' : (locale === 'fr' ? 'À propos de nous' : 'About Us'));
   return {
-    title: isTr ? 'Hakkımızda' : 'About Us',
+    title
   };
 }
 

@@ -3,9 +3,9 @@ import { Target, Eye, ShieldCheck, Heart } from 'lucide-react';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
-  const isTr = locale === 'tr';
+  const title = locale === 'tr' ? 'Misyon & Vizyon' : (locale === 'az' ? 'Missiya & Vizyon' : 'Mission & Vision');
   return {
-    title: isTr ? 'Misyon & Vizyon' : 'Mission & Vision',
+    title,
   };
 }
 
@@ -17,6 +17,7 @@ export default async function MissionPage({
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations('About');
+  const tNav = await getTranslations('Navbar');
 
   return (
     <main className="pt-32 pb-24 bg-white overflow-hidden">
@@ -25,11 +26,11 @@ export default async function MissionPage({
         <div className="text-center max-w-3xl mx-auto mb-20">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 text-blue-600 text-sm font-bold mb-6">
              <span className="w-2 h-2 rounded-full bg-blue-600" />
-             Kurumsal
+             {tNav('corporate')}
           </div>
-          <h1 className="text-5xl md:text-6xl font-extrabold text-blue-900 mb-8">Misyon & Vizyon</h1>
+          <h1 className="text-5xl md:text-6xl font-extrabold text-blue-900 mb-8">{tNav('mission')}</h1>
           <p className="text-gray-600 text-lg leading-relaxed">
-            Azmed Mühendislik Elektronik olarak değerlerimizi ve geleceğe bakış açımızı temsil eden temel ilkelerimiz.
+            {t('missionDesc')}
           </p>
         </div>
 
@@ -57,8 +58,8 @@ export default async function MissionPage({
            {[
              { icon: ShieldCheck, title: t('value1Title'), desc: t('value1Desc') },
              { icon: Heart, title: t('value3Title'), desc: t('value3Desc') },
-             { icon: ShieldCheck, title: 'Kalite Standartları', desc: 'Uluslararası standartlarda sertifikalı ürün ve hizmet anlayışı.' },
-             { icon: Heart, title: 'Sürdürülebilirlik', desc: 'Sağlıkta uzun vadeli ve güvenilir çözümler üretme kararlılığı.' }
+             { icon: ShieldCheck, title: t('qualityTitle'), desc: t('qualityDesc') },
+             { icon: Heart, title: t('sustainabilityTitle'), desc: t('sustainabilityDesc') }
            ].map((v, i) => (
              <div key={i} className="p-8 rounded-3xl bg-gray-50 border border-gray-100">
                <v.icon className="text-blue-600 mb-4" size={32} />
@@ -66,7 +67,7 @@ export default async function MissionPage({
                <p className="text-sm text-gray-500 leading-relaxed">{v.desc}</p>
              </div>
            ))}
-        </div>
+         </div>
       </div>
     </main>
   );

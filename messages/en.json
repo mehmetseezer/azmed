@@ -52,7 +52,12 @@
     "m2Title": "Expansion",
     "m2Desc": "We established a technical support network in 20+ provinces across Turkey.",
     "m3Title": "Technology Leap",
-    "m3Desc": "We incorporated the latest AI-supported imaging systems into our portfolio."
+    "m3Desc": "We incorporated the latest AI-supported imaging systems into our portfolio.",
+    "missionDesc": "Our core principles representing our values and future vision as Azmed Engineering Electronics.",
+    "qualityTitle": "Quality Standards",
+    "qualityDesc": "Product and service understanding certified in international standards.",
+    "sustainabilityTitle": "Sustainability",
+    "sustainabilityDesc": "Determination to produce long-term and reliable solutions in health."
   },
   "Home": {
     "partners": "Our Partners & Brands",
@@ -102,7 +107,9 @@
     "faq4Q": "Do you offer consultancy for special projects?",
     "faq4A": "We offer free consultancy with our expert engineering staff for your hospital and clinic installation projects.",
     "whatsappLabel": "How can we help you?",
-    "whatsappSupport": "WhatsApp Support"
+    "whatsappSupport": "WhatsApp Support",
+    "workHours": "Mon - Sat: 09:00 - 18:00",
+    "responseNotice": "24/7 Response"
   },
   "Footer": {
     "desc": "We offer medical device solutions with the latest technologies in the healthcare sector. The address of quality and trust.",

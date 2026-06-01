@@ -52,7 +52,12 @@
     "m2Title": "Genişleme",
     "m2Desc": "Türkiye genelinde 20+ ilde teknik destek ağı kurduk.",
     "m3Title": "Teknoloji Hamlesi",
-    "m3Desc": "En yeni AI destekli görüntüleme sistemlerini bünyemize kattık."
+    "m3Desc": "En yeni AI destekli görüntüleme sistemlerini bünyemize kattık.",
+    "missionDesc": "Azmed Mühendislik Elektronik olarak değerlerimizi ve geleceğe bakış açımızı temsil eden temel ilkelerimiz.",
+    "qualityTitle": "Kalite Standartları",
+    "qualityDesc": "Uluslararası standartlarda sertifikalı ürün ve hizmet anlayışı.",
+    "sustainabilityTitle": "Sürdürülebilirlik",
+    "sustainabilityDesc": "Sağlıkta uzun vadeli ve güvenilir çözümler üretme kararlılığı."
   },
   "Home": {
     "partners": "Çözüm Ortaklarımız & Markalarımız",
@@ -102,7 +107,9 @@
     "faq4Q": "Özel projeler için danışmanlık veriyor musunuz?",
     "faq4A": "Hastane ve klinik kurulum projeleriniz için uzman mühendis kadromuzla ücretsiz danışmanlık sunuyoruz.",
     "whatsappLabel": "Size nasıl yardımcı olabiliriz?",
-    "whatsappSupport": "WhatsApp Destek Hattı"
+    "whatsappSupport": "WhatsApp Destek Hattı",
+    "workHours": "Pzt - Cmt: 09:00 - 18:00",
+    "responseNotice": "7/24 Yanıtlıyoruz"
   },
   "Footer": {
     "desc": "Sağlık sektöründe en yeni teknolojilerle tıbbi cihaz çözümleri sunuyoruz. Kalite ve güvenin adresi.",
