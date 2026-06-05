@@ -5,6 +5,7 @@ export interface Product {
   description: { tr: string; en: string; fr: string; az: string };
   image: string;
   features: { tr: string[]; en: string[]; fr: string[]; az: string[] };
+  type?: 'hospital' | 'veterinary';
 }
 
 export const products: Product[] = [
@@ -291,49 +292,50 @@ export const products: Product[] = [
     }
   },
   {
-    "id": "health-plus-yk-8000c-1",
+    "id": "yonker-yk-8000b-hospital",
     "name": {
-      "tr": "HEALTH PLUS YK-8000C-1 Hastabaşı Monitörü",
-      "en": "HEALTH PLUS YK-8000C-1 Patient Monitor",
-      "fr": "Moniteur patient HEALTH PLUS YK-8000C-1",
-      "az": "HEALTH PLUS YK-8000C-1 Yataq Başı Monitoru"
+      "tr": "Yonker YK-8000B Hastabaşı Monitörü",
+      "en": "Yonker YK-8000B Patient Monitor",
+      "fr": "Moniteur patient Yonker YK-8000B",
+      "az": "Yonker YK-8000B Yataq Başı Monitoru"
     },
     "category": "Monitor",
+    "type": "hospital",
     "description": {
-      "tr": "Geliştirilmiş sensör bağlantı noktaları ve yenilenen yazılım desteği ile YK-8000C serisinin en güncel ve kararlı versiyonu.",
-      "en": "The most up-to-date and stable version of the YK-8000C series with enhanced sensor ports and renewed software support.",
-      "fr": "La version la plus récente et la plus stable de la série YK-8000C avec des ports de capteur améliorés et une prise en charge logicielle renouvelée.",
-      "az": "Təkmil sensor portları və yenilənmiş proqram dəstəyi ilə YK-8000C seriyasının ən müasir və stabil versiyası."
+      "tr": "12.1 inç renkli TFT ekranı, çoklu parametre ölçüm yeteneği ve kararlı çalışma performansı ile hastaneler, klinikler ve acil servisler için tasarlanmış profesyonel hastabaşı monitörü.",
+      "en": "Professional patient monitor designed for hospitals, clinics, and emergency departments with its 12.1-inch color TFT display, multi-parameter measurement capability, and stable performance.",
+      "fr": "Moniteur patient professionnel conçu pour les hôpitaux, les cliniques et les services d'urgence avec son écran TFT couleur de 12,1 pouces, sa capacité de mesure multiparamétrique et ses performances stables.",
+      "az": "12.1 düymlük rəngli TFT ekranı, çoxlu parametr ölçmə qabiliyyəti və stabil iş performansı ilə xəstəxanalar, klinikalar və təcili yardım şöbələri üçün hazırlanmış peşəkar yataq başı monitoru."
     },
-    "image": "/Health-Plus-YK-8000C-1.jpg",
+    "image": "/yonker-yk-8000b.png",
     "features": {
       "tr": [
-        "Yenilenen Güvenilir Yazılım Altyapısı",
-        "Gelişmiş Parazit Filtreleme Özelliği",
-        "Hızlı Ölçüm ve Kısa Tepki Süresi",
-        "Dahili Termal Yazıcı Desteği (Opsiyonel)",
-        "Duvar Askısı ve Mobil Sehpa ile Kolay Montaj"
+        "12.1 inç Yüksek Çözünürlüklü Renkli TFT LCD Ekran",
+        "Standart 5 Parametre (EKG, RESP, NIBP, SpO2, TEMP)",
+        "Sesli ve Görsel Akıllı Alarm Sistemi",
+        "Trend Verileri ve Dalga Formu Saklama/İnceleme",
+        "Dahili Şarj Edilebilir Lityum Pil ile Mobil Kullanım"
       ],
       "en": [
-        "Renewed Reliable Software Infrastructure",
-        "Advanced Interference Filtering Feature",
-        "Fast Measurement and Short Response Time",
-        "Built-in Thermal Printer Support (Optional)",
-        "Easy Mounting with Wall Hanger and Mobile Stand"
+        "12.1-inch High-Resolution Color TFT LCD Display",
+        "Standard 5 Parameters (ECG, RESP, NIBP, SpO2, TEMP)",
+        "Audible and Visual Intelligent Alarm System",
+        "Trend Data and Waveform Storage/Review",
+        "Mobile Use with Built-in Rechargeable Lithium Battery"
       ],
       "fr": [
-        "Infrastructure logicielle fiable et renouvelée",
-        "Fonctionnalité avancée de filtrage des interférences",
-        "Mesure rapide et temps de réponse court",
-        "Prise en charge d'imprimante thermique intégrée (en option)",
-        "Montage facile avec support mural et support mobile"
+        "Écran LCD TFT couleur haute résolution de 12,1 pouces",
+        "Standard 5 paramètres (ECG, RESP, PNI, SpO2, TEMP)",
+        "Système d'alarme intelligent sonore et visuel",
+        "Stockage et examen des données de tendance et des formes d'onde",
+        "Utilisation mobile avec batterie au lithium rechargeable intégrée"
       ],
       "az": [
-        "Yenilənmiş Etibarlı Proqram İnfrastrukturu",
-        "Qabaqcıl Səs Filtrləmə Xüsusiyyəti",
-        "Sürətli ölçmə və qısa cavab müddəti",
-        "Daxili Termal Printer Dəstəyi (Könüllü)",
-        "Divar askısı və mobil stend ilə asan montaj"
+        "12.1 düymlük yüksək rezolyusiyalı rəngli TFT LCD ekran",
+        "Standart 5 parametr (EKQ, RESP, NIBP, SpO2, TEMP)",
+        "Səsli və vizual ağıllı siqnal sistemi",
+        "Trend məlumatları və dalğa forması saxlama/nəzərdən keçirmə",
+        "Daxili doldurula bilən litium batareya ilə mobil istifadə"
       ]
     }
   },
@@ -3954,6 +3956,917 @@ export const products: Product[] = [
         "Uzun Ömürlü LED İşıqlandırma Modulları"
       ]
     }
+  },
+  {
+    "id": "yonker-yk-8000b",
+    "name": {
+      "tr": "Yonker YK-8000B Veteriner Hastabaşı Monitörü",
+      "en": "Yonker YK-8000B Veterinary Patient Monitor",
+      "fr": "Moniteur patient vétérinaire Yonker YK-8000B",
+      "az": "Yonker YK-8000B Baytarlıq Xəstəbaşı Monitoru"
+    },
+    "category": "Monitor",
+    "type": "veterinary",
+    "description": {
+      "tr": "Veteriner klinikleri için özel olarak tasarlanmış, 12.1 inç çok parametreli renkli ekranı ve stabil performansıyla öne çıkan profesyonel veteriner hasta başı monitörü.",
+      "en": "Professional veterinary patient monitor specifically designed for vet clinics with a 12.1-inch multi-parameter color screen and stable performance.",
+      "fr": "Moniteur patient vétérinaire professionnel spécialement conçu pour les cliniques vétérinaires avec un écran couleur multiparamétrique de 12,1 pouces et des performances stables.",
+      "az": "Baytarlıq klinikaları üçün xüsusi olaraq hazırlanmış, 12.1 düymlük çox parametli rəngli ekranı və stabil performansı ilə seçilən peşəkar baytarlıq xəstəbaşı monitoru."
+    },
+    "image": "/yonker-yk-8000b.png",
+    "features": {
+      "tr": [
+        "12.1 inç Parlak Renkli TFT LCD Ekran",
+        "Standart Parametreler: EKG, RESP, SpO2, NIBP, TEMP, PR",
+        "Görsel ve Sesli Akıllı Alarm Sistemi",
+        "Yetişkin, Pediatrik ve Yenidoğan Hastalarda Güvenli Kullanım",
+        "Dahili Şarj Edilebilir Pil ile Kesintisiz Çalışma"
+      ],
+      "en": [
+        "12.1-inch High-Brightness Color TFT LCD Display",
+        "Standard Parameters: ECG, RESP, SpO2, NIBP, TEMP, PR",
+        "Smart Visual and Audible Alarm System",
+        "Safe Use for Adult, Pediatric, and Neonatal Patients",
+        "Uninterrupted Operation with Built-in Rechargeable Battery"
+      ],
+      "fr": [
+        "Écran LCD TFT couleur haute luminosité de 12,1 pouces",
+        "Paramètres standard : ECG, RESP, SpO2, NIBP, TEMP, PR",
+        "Système d'alarme intelligent visuel et sonore",
+        "Utilisation sûre pour les patients adultes, pédiatriques et néonatals",
+        "Fonctionnement ininterrompu grâce à la batterie rechargeable intégrée"
+      ],
+      "az": [
+        "12.1 düymlük yüksək parlaqlığa malik rəngli TFT LCD ekran",
+        "Standart parametrlər: EKQ, RESP, SpO2, NIBP, TEMP, PR",
+        "Ağıllı vizual və səsli siqnal sistemi",
+        "Yetkin, pediatrik və neonatal xəstələrdə təhlükəsiz istifadə",
+        "Daxili təkrar doldurulan batareya ilə fasiləsiz işləmə"
+      ]
+    }
+  },
+  {
+    "id": "mindray-umec-12-vet",
+    "name": {
+      "tr": "Mindray uMec 12 Vet Veteriner Hastabaşı Monitörü",
+      "en": "Mindray uMec 12 Vet Veterinary Patient Monitor",
+      "fr": "Moniteur patient vétérinaire Mindray uMec 12 Vet",
+      "az": "Mindray uMec 12 Vet Baytarlıq Xəstəbaşı Monitoru"
+    },
+    "category": "Monitor",
+    "type": "veterinary",
+    "description": {
+      "tr": "Gelişmiş veteriner algoritmaları, 12.1 inç yüksek çözünürlüklü dokunmatik ekranı ve yüksek taşınabilirliği ile klinikler için ideal hasta başı monitörü.",
+      "en": "Ideal multi-parameter veterinary patient monitor with advanced veterinary algorithms, 12.1-inch high-resolution touchscreen, and high portability.",
+      "fr": "Moniteur patient vétérinaire multiparamétrique ideal avec des algorithmes vétérinaires avancés, un écran tactile haute résolution de 12,1 pouces et une grande portabilité.",
+      "az": "Təkmil baytarlıq alqoritmləri, 12.1 düymlük yüksək rezolyusiyaya malik sensor ekranı və yüksək daşınma qabiliyyəti ilə klinika üçün ideal xəstəbaşı monitoru."
+    },
+    "image": "/mindray-umec-12-vet.png",
+    "features": {
+      "tr": [
+        "12.1 inç Yüksek Çözünürlüklü Renkli TFT LED Ekran",
+        "Hayvanlara Özel EKG, SpO2 ve NIBP Algoritmaları",
+        "Geniş Depolama Kapasitesi ve Trend Analizi",
+        "4 Saate Kadar Kesintisiz Pil Çalışma Süresi",
+        "Sessiz Fan Tasarımı ile Klinik Konforu"
+      ],
+      "en": [
+        "12.1-inch High-Resolution Color TFT LED Screen",
+        "Animal-specific ECG, SpO2, and NIBP Algorithms",
+        "Large Storage Capacity and Trend Review",
+        "Up to 4 Hours of Uninterrupted Battery Run Time",
+        "Silent Fan Design for Clinic Comfort"
+      ],
+      "fr": [
+        "Écran LED TFT couleur haute résolution de 12,1 pouces",
+        "Algorithmes ECG, SpO2 et PNI spécifiques aux animaux",
+        "Grande capacité de stockage et examen des tendances",
+        "Jusqu'à 4 heures d'autonomie continue sur batterie",
+        "Conception de ventilateur silencieux pour le confort de la clinique"
+      ],
+      "az": [
+        "Heyvanlara məxsus EKQ, SpO2 və NIBP alqoritmləri",
+        "Geniş yaddaş tutumu və trend analizi",
+        "4 saata qədər fasiləsiz batareya işləmə müddəti",
+        "Klinika rahatlığı üçün səssiz fan dizaynı"
+      ]
+    }
+  },
+  {
+    "id": "veteriner-anestesi-cihazi",
+    "name": {
+      "tr": "Veteriner Anestezi Cihazı",
+      "en": "Veterinary Anesthesia Machine",
+      "fr": "Machine d'anesthésie vétérinaire",
+      "az": "Baytarlıq Anesteziya Cihazı"
+    },
+    "category": "Anesthesia",
+    "type": "veterinary",
+    "description": {
+      "tr": "Veteriner klinikleri ve hastaneleri için özel olarak tasarlanmış, hassas buharlaştırıcı ve güvenilir solunum devresiyle cerrahi operasyonlarda maksimum güvenlik sağlayan veteriner anestezi cihazı.",
+      "en": "Veterinary anesthesia machine specifically designed for vet clinics and hospitals, ensuring maximum safety in surgical procedures with a precise vaporizer and reliable breathing circuit.",
+      "fr": "Machine d'anesthésie vétérinaire spécialement conçue pour les cliniques et hôpitaux vétérinaires, garantissant une sécurité maximale lors des interventions chirurgicales grâce à un vaporisateur précis et un circuit respiratoire fiable.",
+      "az": "Baytarlıq klinikaları və xəstəxanaları üçün xüsusi olaraq hazırlanmış, dəqiq buxarlandırıcı və etibarlı tənəffüs dövrəsi ilə cərrahi əməliyyatlarda maksimum təhlükəsizlik təmin edən baytarlıq anesteziya cihazı."
+    },
+    "image": "/veteriner-anestesi-cihazi.jpg",
+    "features": {
+      "tr": [
+        "Hassas ve Güvenilir Anestezi Buharlaştırıcısı (İzofluran/Sevofluran)",
+        "Kompakt ve Mobil Taşınabilir Tekerlekli Stand Tasarımı",
+        "Geniş Ağırlık Aralığındaki Hayvanlar İçin Uygun Solunum Devresi",
+        "Oksijen Bypass (Flush) Valfi ile Acil Oksijen Desteği",
+        "Kolay Okunabilir Entegre Akışölçer (Flowmeter)"
+      ],
+      "en": [
+        "Precise and Reliable Anesthesia Vaporizer (Isoflurane/Sevoflurane)",
+        "Compact and Mobile Wheeled Stand Design",
+        "Breathing Circuit Suitable for Animals of Wide Weight Range",
+        "Emergency Oxygen Support with Oxygen Flush Valve",
+        "Easy-to-read Integrated Flowmeter"
+      ],
+      "fr": [
+        "Vaporisateur d'anesthésie précis et fiable (Isoflurane/Sévoflurane)",
+        "Conception compacte et mobile sur pied à roulettes",
+        "Circuit respiratoire adapté aux animaux de large gamme de poids",
+        "Support d'oxygène d'urgence avec valve de rinçage d'oxygène",
+        "Débitmètre intégré facile à lire"
+      ],
+      "az": [
+        "Dəqiq və etibarlı anesteziya buxarlandırıcısı (İzofluran/Sevofluran)",
+        "Yığcam və mobil təkərli stend dizaynı",
+        "Geniş çəki aralığındakı heyvanlar üçün uyğun tənəffüs dövrəsi",
+        "Oksigen bypass klapanı ilə təcili oksigen dəstəyi",
+        "Asan oxunan inteqrasiya olunmuş axınölçən (flowmeter)"
+      ]
+    }
+  },
+  {
+    "id": "lcs-koter-100",
+    "name": {
+      "tr": "LCS Koter 100 Veteriner Koter Cihazı",
+      "en": "LCS Koter 100 Veterinary Electrosurgical Unit",
+      "fr": "Bistouri électrique vétérinaire LCS Koter 100",
+      "az": "LCS Koter 100 Baytarlıq Koter Cihazı"
+    },
+    "category": "Electrosurgery",
+    "type": "veterinary",
+    "description": {
+      "tr": "Veteriner hekimlikteki genel cerrahi ve küçük müdahaleler için tasarlanmış, monopolar ve bipolar modlara sahip, taşınabilir ve pratik 100W koter cihazı.",
+      "en": "Portable and practical 100W electrosurgical unit with monopolar and bipolar modes, designed for general veterinary surgery and minor interventions.",
+      "fr": "Unité d'électrochirurgie 100W portable et pratique avec modes monopolaire et bipolaire, conçue pour la chirurgie vétérinaire générale et les petites interventions.",
+      "az": "Baytarlıq cərrahiyyəsində ümumi cərrahiyyə və kiçik müdaxilələr üçün nəzərdə tutulmuş, monopolyar və bipolyar rejimlərə malik, portativ və praktik 100W koter cihazı."
+    },
+    "image": "/lcs-koter-100.jpg",
+    "features": {
+      "tr": [
+        "100W Maksimum Çıkış Gücü",
+        "Monopolar Kesme, Karışık Kesme ve Koagülasyon Modları",
+        "Hassas Bipolar Koagülasyon Desteği",
+        "Kompakt ve Kolay Taşınabilir Masaüstü Tasarım",
+        "Aşırı Yük ve Hasta Güvenlik Koruma Sistemleri"
+      ],
+      "en": [
+        "100W Maximum Output Power",
+        "Monopolar Cut, Blend Cut, and Coagulation Modes",
+        "Precise Bipolar Coagulation Support",
+        "Compact and Easy-to-carry Desktop Design",
+        "Overload and Patient Safety Protection Systems"
+      ],
+      "fr": [
+        "Puissance de sortie maximale de 100 W",
+        "Modes coupe monopolaire, coupe mixte et coagulation",
+        "Support précis de coagulation bipolaire",
+        "Conception de bureau compacte et facile à transporter",
+        "Systèmes de protection contre les surcharges et de sécurité des patients"
+      ],
+      "az": [
+        "100W Maksimum Çıxış Gücü",
+        "Monopolyar Kəsmə, Qarışıq Kəsmə və Koaqulyasiya Rejimləri",
+        "Həssas Bipolyar Koaqulyasiya Dəstəyi",
+        "Yığcam və asan daşına bilən masaüstü dizayn",
+        "Həddindən artıq yüklənmə və pasiyent təhlükəsizliyi qorunma sistemləri"
+      ]
+    }
+  },
+  {
+    "id": "shalya-lx-120",
+    "name": {
+      "tr": "Shalya LX 120 Veteriner Koter Cihazı",
+      "en": "Shalya LX 120 Veterinary Electrosurgical Unit",
+      "fr": "Bistouri électrique vétérinaire Shalya LX 120",
+      "az": "Shalya LX 120 Baytarlıq Koter Cihazı"
+    },
+    "category": "Electrosurgery",
+    "type": "veterinary",
+    "description": {
+      "tr": "Mikroişlemci kontrollü yapısı, 120W çıkış gücü ve dijital göstergesiyle modern veteriner cerrahisinin ihtiyaçlarını karşılayan gelişmiş koter ünitesi.",
+      "en": "Advanced 120W electrosurgical unit with microprocessor-controlled architecture and digital display, meeting the needs of modern veterinary surgery.",
+      "fr": "Unité d'électrochirurgie 120 W avancée avec architecture contrôlée par microprocesseur et affichage numérique, répondant aux exigences de la chirurgie vétérinaire moderne.",
+      "az": "Mikroprosessorla idarə olunan strukturu, 120W çıxış gücü və rəqəmsal göstəricisi ilə müasir baytarlıq cərrahiyyəsinin ehtiyaclarını qarşılayan təkmil koter cihazı."
+    },
+    "image": "/shalya-lx-120.png",
+    "features": {
+      "tr": [
+        "120W Maksimum Çıkış Gücü ile Güçlü Performans",
+        "Mikroişlemci Kontrollü Kararlı Çıkış Teknolojisi",
+        "Ayrı Monopolar ve Bipolar Çıkış Kanalları",
+        "Güvenilir Dijital Güç Gösterge Paneli",
+        "Ayak Pedalı veya El Kumandalı Kalem ile Çalışma"
+      ],
+      "en": [
+        "Powerful Performance with 120W Maximum Output Power",
+        "Microprocessor Controlled Stable Output Technology",
+        "Separate Monopolar and Bipolar Output Channels",
+        "Reliable Digital Power Display Panel",
+        "Operation with Foot Switch or Hand Switch Pencil"
+      ],
+      "fr": [
+        "Performances puissantes avec une puissance de sortie maximale de 120 W",
+        "Technologie de sortie stable contrôlée par microprocesseur",
+        "Canaux de sortie monopolaires et bipolaires séparés",
+        "Panneau d'affichage numérique fiable de la puissance",
+        "Fonctionnement par interrupteur au pied ou crayon à commande manuelle"
+      ],
+      "az": [
+        "120W Maksimum Çıxış Gücü ilə Güclü Performans",
+        "Mikroprosessorla İdarə Olunan Stabil Çıxış Texnologiyası",
+        "Ayrı Monopolyar və Bipolyar Çıxış Kanalları",
+        "Etibarlı rəqəmsal güc göstərici paneli",
+        "Ayaq pedalı və ya əl idarəetmə qələmi ilə işləmə"
+      ]
+    }
+  },
+  {
+    "id": "petas-petkot-500s",
+    "name": {
+      "tr": "Petaş Petkot 500S Veteriner Koter Cihazı",
+      "en": "Petas Petkot 500S Veterinary Electrosurgical Unit",
+      "fr": "Bistouri électrique vétérinaire Petas Petkot 500S",
+      "az": "Petaş Petkot 500S Baytarlıq Koter Cihazı"
+    },
+    "category": "Electrosurgery",
+    "type": "veterinary",
+    "description": {
+      "tr": "Veteriner cerrahisinde en hassas ve karmaşık ameliyatlar için tasarlanmış, yüksek frekanslı ve çok modlu 150W profesyonel elektrocerrahi koter cihazı.",
+      "en": "Professional high-frequency 150W electrosurgical unit with multiple modes, designed for the most sensitive and complex procedures in veterinary surgery.",
+      "fr": "Unité d'électrochirurgie professionnelle haute fréquence 150 W avec modes multiples, conçue pour les interventions les plus sensibles et complexes en chirurgie vétérinaire.",
+      "az": "Baytarlıq cərrahiyyəsində ən həssas və mürəkkəb əməliyyatlar üçün nəzərdə tutulmuş, yüksək tezlikli və çoxrejimli 150W peşəkar elektrocərrahiyyə koter cihazı."
+    },
+    "image": "/petas-petkot-500s.png",
+    "features": {
+      "tr": [
+        "150W Yüksek Frekanslı Elektrocerrahi Gücü",
+        "Saf Kesme, Karışık Kesme, Temaslı ve Sprey Koagülasyon",
+        "Gelişmiş Doku Direnci Algılama Sistemi",
+        "Hassas Bipolar Modu ve Mikrocerrahi Uyumluluğu",
+        "Geniş Güvenlik Alarm Donanımı (Plaka Temas Uyarısı)"
+      ],
+      "en": [
+        "150W High-frequency Electrosurgical Power",
+        "Pure Cut, Blend Cut, Contact and Spray Coagulation",
+        "Advanced Tissue Impedance Sensing System",
+        "Precise Bipolar Mode and Microsurgery Compatibility",
+        "Comprehensive Safety Alarm System (Plate Contact Alert)"
+      ],
+      "fr": [
+        "Puissance électrochirurgicale haute fréquence de 150 W",
+        "Coupe pure, coupe mixte, coagulation par contact et par pulvérisation",
+        "Système avancé de détection de l'impédance des tissus",
+        "Mode bipolaire précis et compatibilité microchirurgicale",
+        "Système d'alarme de sécurité complet (alerte de contact de plaque)"
+      ],
+      "az": [
+        "150W Yüksək Tezlikli Elektrocərrahiyyə Gücü",
+        "Təmiz Kəsmə, Qarışıq Kəsmə, Təmaslı və Sprey Koaqulyasiyası",
+        "Təkmil Toxuma Müqaviməti Aşkarlama Sistemi",
+        "Həssas Bipolyar Rejim və Mikrocərrahiyyə Uyğunluğu",
+        "Geniş Təhlükəsizlik Siqnalı Avadanlığı (Plitə təmas xəbərdarlığı)"
+      ]
+    }
+  },
+  {
+    "id": "shalya-easy-plus",
+    "name": {
+      "tr": "Shalya Easy Plus Veteriner Koter Cihazı",
+      "en": "Shalya Easy Plus Veterinary Electrosurgical Unit",
+      "fr": "Bistouri électrique vétérinaire Shalya Easy Plus",
+      "az": "Shalya Easy Plus Baytarlıq Koter Cihazı"
+    },
+    "category": "Electrosurgery",
+    "type": "veterinary",
+    "description": {
+      "tr": "Kullanıcı dostu arayüzü, gelişmiş güvenlik protokolleri ve stabil güç çıkışıyla her veteriner kliniğinde bulunması gereken çok amaçlı cerrahi koter cihazı.",
+      "en": "Versatile electrosurgical unit essential for any veterinary clinic, featuring a user-friendly interface, advanced safety protocols, and stable power output.",
+      "fr": "Unité d'électrochirurgie polyvalente indispensable pour toute clinique vétérinaire, dotée d'une interface conviviale, de protocoles de sécurité avancés et d'une puissance de sortie stable.",
+      "az": "İstifadəçi dostu interfeysi, təkmil təhlükəsizlik protokolları və stabil güc çıxışı ilə hər bir baytarlıq klinikasında olması vacib olan çoxməqsədli cərrahi koter cihazı."
+    },
+    "image": "/shalya-easy-plus-koter-cihazi.jpg",
+    "features": {
+      "tr": [
+        "Klinik İhtiyaçlara Özel Çok Yönlü Güç Çıkış Ayarları",
+        "Kolay Kullanım Sunan Sade Ön Panel Arayüzü",
+        "Hızlı Mod Değişimi ve Güç Hafıza Fonksiyonu",
+        "Aşırı Isınma ve Kısa Devre Koruması",
+        "Yüksek Kaliteli Aksesuar Seti Uyumluluğu"
+      ],
+      "en": [
+        "Versatile Power Settings Tailored for Clinic Needs",
+        "Simple Front Panel Interface for Easy Operation",
+        "Quick Mode Switching and Power Memory Function",
+        "Overheating and Short Circuit Protection",
+        "High-Quality Accessory Set Compatibility"
+      ],
+      "fr": [
+        "Réglages de puissance polyvalents adaptés aux besoins de la clinique",
+        "Interface simple du panneau avant pour une utilisation facile",
+        "Commutation rapide de mode et fonction de mémoire de puissance",
+        "Protection contre la surchauffe et les courts-circuits",
+        "Compatibilité avec un ensemble d'accessoires de haute qualité"
+      ],
+      "az": [
+        "Klinika ehtiyaclarına uyğun çoxşaxəli güc tənzimləmələri",
+        "Asan istifadə təklif edən sadə ön panel interfeysi",
+        "Sürətli rejim değiştirilməsi və güc yaddaş funksiyası",
+        "Həddindən artıq qızma və qısa qapanma qorunması",
+        "Yüksək keyfiyyetli aksesuar dəsti uyğunluğu"
+      ]
+    }
+  },
+  {
+    "id": "edan-dus60-ultrason",
+    "name": {
+      "tr": "Edan DUS 60 Veteriner Ultrason Cihazı",
+      "en": "Edan DUS 60 Veterinary Ultrasound System",
+      "fr": "Échographe vétérinaire Edan DUS 60",
+      "az": "Edan DUS 60 Baytarlıq Ultrasəs Cihazı"
+    },
+    "category": "Ultrasound",
+    "type": "veterinary",
+    "description": {
+      "tr": "Kompakt tasarımı, yüksek çözünürlüklü siyah-beyaz görüntüleme kalitesi ve veteriner hekimliğe özel ölçüm paketleriyle öne çıkan taşınabilir dijital ultrason sistemi.",
+      "en": "Portable digital ultrasound system featuring a compact design, high-resolution black-and-white imaging quality, and measurement packages customized for veterinary use.",
+      "fr": "Système d'échographie numérique portable doté d'une conception compacte, d'une qualité d'imagerie noir et blanc haute résolution et de progiciels de mesure personnalisés pour l'usage vétérinaire.",
+      "az": "Yığcam dizaynı, yüksək rezolyusiyaya malik ağ-qara görüntüləmə keyfiyyəti və baytarlığa məxsus ölçmə paketləri ilə seçilən portativ rəqəmsal ultrasəs sistemi."
+    },
+    "image": "/edan-dus60-ultrason.png",
+    "features": {
+      "tr": [
+        "12.1 inç Katlanabilir LCD Ekran",
+        "Veteriner Obstetrik ve Karın Muayenesi Ölçüm Programları",
+        "Çift Prob Bağlantı Portu (Aktif Selektörlü)",
+        "Gelişmiş PW Doppler ve Harmonik Görüntüleme Teknolojisi",
+        "Dahili Hafıza ve Kolay USB Görüntü Aktarımı"
+      ],
+      "en": [
+        "12.1-inch Foldable LCD Screen",
+        "Veterinary Obstetrics and Abdominal Measurement Packages",
+        "Dual Active Probe Connectors",
+        "Advanced PW Doppler and Harmonic Imaging Technology",
+        "Built-in Storage and Easy USB Image Transfer"
+      ],
+      "fr": [
+        "Écran LCD pliable de 12,1 pouces",
+        "Programmes de mesure obstétricale et abdominale vétérinaire",
+        "Connecteurs double sonde active",
+        "Technologie d'imagerie PW Doppler et harmonique avancée",
+        "Stockage intégré et transfert d'images USB facile"
+      ],
+      "az": [
+        "12.1 düymlük qatlana bilən LCD ekranı",
+        "Baytarlıq ginekologiyası və qarın boşluğu müayinəsi ölçmə proqramları",
+        "İkiaktiv prob birləşdirici portu",
+        "Təkmil PW Doppler və Harmonik görüntüləmə texnologiyası",
+        "Daxili yaddaş və asan USB şəkil ötürülməsi"
+      ]
+    }
+  },
+  {
+    "id": "kardesis-tek-basli-ameliyat-lambasi",
+    "name": {
+      "tr": "Tek Başlı Veteriner Ameliyat Lambası",
+      "en": "Single-Head Veterinary Surgical Light",
+      "fr": "Lampe d'opération vétérinaire à coupole unique",
+      "az": "Tək Başlı Baytarlıq Əməliyyat Lampası"
+    },
+    "category": "SurgicalLight",
+    "type": "veterinary",
+    "description": {
+      "tr": "Veteriner cerrahi operasyonlarda üstün aydınlatma performansı ve gölgesiz ışık alanı sunan, tavana monte veya mobil uyumlu profesyonel tek başlı ameliyat lambası.",
+      "en": "Professional single-head surgical light offering superior illumination performance and shadowless light field in veterinary surgical operations, ceiling-mounted or mobile-compatible.",
+      "fr": "Scialytique professionnel à coupole unique offrant des performances d'éclairage supérieures et un champ lumineux sans ombre lors des opérations chirurgicales vétérinaires, montable au plafond ou mobile.",
+      "az": "Baytarlıq cərrahi əməliyyatlarında üstün işıqlandırma performansı və kölgəsiz işıq sahəsi təklif edən, tavana quraşdırılan və ya mobil uyğun peşəkar tək başlı əməliyyat lampası."
+    },
+    "image": "/kardesis-tek-basli-ameliyat-lambasi.jpg",
+    "features": {
+      "tr": [
+        "Yüksek Yoğunluklu LED Işık Kaynağı",
+        "Ayarlanabilir Odak ve Aydınlatma Çapı",
+        "Doğal Gün Işığı Renk Sıcaklığı (CRI >95)",
+        "Isı Yaymayan Soğuk Işık Teknolojisi",
+        "Kolay Temizlenebilir Steril Kulp Yapısı"
+      ],
+      "en": [
+        "High-Intensity LED Light Source",
+        "Adjustable Focus and Spot Size",
+        "Natural Daylight Color Temperature (CRI >95)",
+        "Cool Light Technology with No Heat Emission",
+        "Easy-to-Clean Sterile Handle"
+      ],
+      "fr": [
+        "Source lumineuse LED haute intensité",
+        "Mise au point et taille du spot réglables",
+        "Température de couleur de la lumière naturelle (IRC >95)",
+        "Technologie de lumière froide sans émission de chaleur",
+        "Poignée stérile facile à nettoyer"
+      ],
+      "az": [
+        "Yüksək intensivlikli LED işıq mənbəyi",
+        "Tənzimlənən fokus və işıq sahəsi diametri",
+        "Təbii gün işığı rəng temperaturu (CRI >95)",
+        "İstilik yaymayan soyuq işıq texnologiyası",
+        "Asan təmizlənən steril qulp quruluşu"
+      ]
+    }
+  },
+  {
+    "id": "kardesis-cift-basli-ameliyat-lambasi",
+    "name": {
+      "tr": "Çift Başlı Veteriner Ameliyat Lambası",
+      "en": "Double-Head Veterinary Surgical Light",
+      "fr": "Lampe d'opération vétérinaire à double coupole",
+      "az": "Cüt Başlı Baytarlıq Əməliyyat Lampası"
+    },
+    "category": "SurgicalLight",
+    "type": "veterinary",
+    "description": {
+      "tr": "Geniş veteriner cerrahi prosedurları için geliştirilmiş, yüksek aydınlatma gücüne ve çift taraflı açılı gölgesiz aydınlatma alanına sahip profesyonel çift başlı ameliyat lambası.",
+      "en": "Professional double-head surgical light developed for wide veterinary surgical procedures, featuring high illumination power and double-sided angled shadowless lighting area.",
+      "fr": "Scialytique professionnel à double coupole développé pour les procédures chirurgicales vétérinaires étendues, offrant une puissance d'éclairage élevée et une zone d'éclairage sans ombre inclinée des deux côtés.",
+      "az": "Geniş baytarlıq cərrahi prosedurları üçün hazırlanmış, yüksək işıqlandırma gücünə və cüt tərəfli bucaqlı kölgəsiz işıq sahəsinə malik peşəkar cüt başlı əməliyyat lampası."
+    },
+    "image": "/kardesis-cift-basli-ameliyat-lambasi.png",
+    "features": {
+      "tr": [
+        "Çift Başlıklı Bağımsız Kontrol ve Aydınlatma",
+        "Yüksek Yoğunluklu LED Teknolojisi",
+        "Esnek Pozisyonlama Sunan Denge Kolları",
+        "Optimize Edilmiş Hava Akışı Tasarımı (Laminer Akış Uyumlu)",
+        "Dokunmatik Kontrol Paneli ve Dijital Parlaklık Ayarı"
+      ],
+      "en": [
+        "Double-head Independent Control and Illumination",
+        "High-Intensity LED Technology",
+        "Balance Arms Offering Flexible Positioning",
+        "Optimized Airflow Design (Laminar Flow Compatible)",
+        "Touch Control Panel and Digital Brightness Adjustment"
+      ],
+      "fr": [
+        "Contrôle et éclairage indépendants à double coupole",
+        "Technologie LED haute intensité",
+        "Bras d'équilibrage offrant un positionnement flexible",
+        "Conception optimisée du flux d'air (compatible flux laminaire)",
+        "Panneau de commande tactile et réglage numérique de la luminosité"
+      ],
+      "az": [
+        "Cüt başlıqlı müstəqil idarəetmə və işıqlandırma",
+        "Yüksək intensivlikli LED texnologiyası",
+        "Çevik mövqeləndirmə təklif edən balans qolları",
+        "Optimallaşdırılmış hava axını dizaynı (Laminar axın uyğun)",
+        "Sensorlu idarəetmə paneli və rəqəmsal parlaqlıq tənzimlənməsi"
+      ]
+    }
+  },
+  {
+    "id": "mindray-infuzyon-enjektomat",
+    "name": {
+      "tr": "Mindray Veteriner İnfüzyon ve Enjektör Pompası",
+      "en": "Mindray Veterinary Infusion & Syringe Pump",
+      "fr": "Pompe d'infusion et seringue vétérinaire Mindray",
+      "az": "Mindray Baytarlıq İnfüziya və Enjektor Pompası"
+    },
+    "category": "InfusionPump",
+    "type": "veterinary",
+    "description": {
+      "tr": "Veteriner klinikalarında hassas sıvı ve ilaç iletimi sağlamak için geliştirilmiş, yüksek güvenlik standartlarına ve sezgisel tasarıma sahip infüzyon ve enjektör pompası sistemi.",
+      "en": "Infusion & syringe pump system developed to provide precise fluid and medication delivery in veterinary clinics, featuring high safety standards and an intuitive design.",
+      "fr": "Système de pompe d'infusion et de seringue développé pour assurer un débit précis de fluides et de médicaments dans les cliniques vétérinaires, doté de normes de sécurité élevées et d'une conception intuitive.",
+      "az": "Baytarlıq klinikalarında dəqiq maye və dərman ötürülməsini təmin etmək üçün hazırlanmış, yüksək təhlükəsizlik standartlarına və intuitiv dizayna malik infüziya və enjektor pompası sistemi."
+    },
+    "image": "/mindray-infuzyon-enjektomat.png",
+    "features": {
+      "tr": [
+        "Hassas Mikro Akış Hızı Kontrolü",
+        "Geniş Enjektör Markası Uyumluluğu (5ml, 10ml, 20ml, 30ml, 50/60ml)",
+        "Akıllı Tıkanıklık ve Hava Algılama Sensörleri",
+        "Dahili Batarya ve Uzun Süreli Mobil Kullanım",
+        "Kolay Kullanımlı Renkli LCD Ekran"
+      ],
+      "en": [
+        "Precise Micro Flow Rate Control",
+        "Wide Syringe Brand Compatibility (5ml, 10ml, 20ml, 30ml, 50/60ml)",
+        "Intelligent Occlusion and Air Bubble Detection Sensors",
+        "Built-in Battery for Long-term Mobile Operation",
+        "Easy-to-use Color LCD Screen"
+      ],
+      "fr": [
+        "Contrôle précis du micro-débit",
+        "Large compatibilité avec les marques de seringues (5ml, 10ml, 20ml, 30ml, 50/60ml)",
+        "Capteurs intelligents de détection d'occlusion et de bulles d'air",
+        "Batterie intégrée pour une utilisation mobile de longue durée",
+        "Écran couleur LCD facile à utiliser"
+      ],
+      "az": [
+        "Dəqiq mikro axın sürəti nəzarəti",
+        "Geniş enjektor markası uyğunluğu (5ml, 10ml, 20ml, 30ml, 50/60ml)",
+        "Ağıllı tıxanıqlıq və hava qabarcığı aşkarlama sensorları",
+        "Daxili batareya və uzunmüddətli mobil istifadə",
+        "Asan istifadə olunan rəngli LCD ekran"
+      ]
+    }
+  },
+  {
+    "id": "sino-infuzyon-pompasi",
+    "name": {
+      "tr": "Sino Veteriner İnfüzyon Pompası",
+      "en": "Sino Veterinary Infusion Pump",
+      "fr": "Pompe d'infusion vétérinaire Sino",
+      "az": "Sino Baytarlıq İnfüziya Pompası"
+    },
+    "category": "InfusionPump",
+    "type": "veterinary",
+    "description": {
+      "tr": "Küçük ve büyük hayvan klinikleri için tasarlanmış, kararlı akış hızı ve yüksek verimlilik sunan dayanıklı infüzyon pompası.",
+      "en": "Durable infusion pump designed for small and large animal clinics, offering stable flow rate and high efficiency.",
+      "fr": "Pompe d'infusion durable conçue pour les cliniques de petits et grands animaux, offrant un débit stable et une grande efficacité.",
+      "az": "Kiçik və böyük heyvan klinikaları üçün hazırlanmış, sabit axın sürəti və yüksək səmərəlilik təklif edən davamlı infüziya pompası."
+    },
+    "image": "/sino-infuzyon-pompasi.jpeg",
+    "features": {
+      "tr": [
+        "Yüksek Kararlılıkta Volumetrik İnfüzyon",
+        "Çoklu İnfüzyon Modu Desteği (Hız, Zaman, Damla, Ağırlık)",
+        "Sesli ve Görsel Alarm Uyarı Sistemi",
+        "Sıvı Geçirmez Gövde Tasarımı (IPX2 Sınıfı)",
+        "Kompakt ve Kolay Taşınabilir Tasarım"
+      ],
+      "en": [
+        "High-Stability Volumetric Infusion",
+        "Multiple Infusion Modes (Rate, Time, Drip, Weight)",
+        "Audible and Visual Alarm Warning System",
+        "Waterproof Casing Design (IPX2 Class)",
+        "Compact and Easy-to-Carry Design"
+      ],
+      "fr": [
+        "Infusion volumétrique à haute stabilité",
+        "Plusieurs modes d'infusion (débit, temps, goutte, poids)",
+        "Système d'alarme sonore et visuel",
+        "Conception de boîtier étanche (classe IPX2)",
+        "Conception compacte et facile à transporter"
+      ],
+      "az": [
+        "Yüksək sabitlikdə volumetrik infüziya",
+        "Çoxlu infüziya rejimi dəstəyi (Sürət, Zaman, Damcı, Çəki)",
+        "Səsli və vizual siqnal xəbərdarlıq sistemi",
+        "Su keçirməyən gövdə dizaynı (IPX2 sinfi)",
+        "Yığcam və asan daşına bilən dizayn"
+      ]
+    }
+  },
+  {
+    "id": "sino-enjektomat",
+    "name": {
+      "tr": "Sino Veteriner Enjektör Pompası",
+      "en": "Sino Veterinary Syringe Pump",
+      "fr": "Pompe de seringue vétérinaire Sino",
+      "az": "Sino Baytarlıq Enjektor Pompası"
+    },
+    "category": "InfusionPump",
+    "type": "veterinary",
+    "description": {
+      "tr": "Küçük hacimli ve yüksek hassasiyetli ilaç uygulamaları için geliştirilmiş veteriner uyumlu enjektör pompası.",
+      "en": "Veterinary-compatible syringe pump developed for low-volume and high-precision drug applications.",
+      "fr": "Pompe de seringue compatible vétérinaire développée pour les applications de médicaments à faible volume et de haute précision.",
+      "az": "Kiçik həcmli və yüksək dəqiqlikli dərman tətbiqləri üçün hazırlanmış baytarlıqla uyğun enjektor pompası."
+    },
+    "image": "/sino-enjektomat.png",
+    "features": {
+      "tr": [
+        "Mikroenjeksiyon Hassasiyeti (0.1 ml/s adım aralığı)",
+        "Otomatik Enjektör Boyutu Tanıma",
+        "Akıllı İlaç Kütüphanesi ve Dozaj Desteği",
+        "Çift CPU Güvenlik Kontrol Sistemi",
+        "6 Saatten Fazla Çalışan Dahili Şarj Edilebilir Pil"
+      ],
+      "en": [
+        "Micro-injection Precision (0.1 ml/h step increments)",
+        "Automatic Syringe Size Recognition",
+        "Intelligent Drug Library and Dosage Support",
+        "Dual CPU Safety Monitoring System",
+        "Internal Rechargeable Battery Operating for 6+ Hours"
+      ],
+      "fr": [
+        "Précision de micro-injection (incréments de 0,1 ml/h)",
+        "Reconnaissance automatique de la taille de la seringue",
+        "Bibliothèque de médicaments intelligente et support de dosage",
+        "Système de surveillance de sécurité à double processeur",
+        "Batterie rechargeable interne offrant plus de 6 heures d'autonomie"
+      ],
+      "az": [
+        "Mikroeneksiya dəqiqliyi (0.1 ml/saat addım aralığı)",
+        "Avtomatik enjektor ölçüsü tanıma",
+        "Ağıllı dərman kitabxanası və doza dəstəyi",
+        "Cüt prosessorlu təhlükəsizlik idarəetmə sistemi",
+        "6 saatdan çox işləyən daxili doldurula bilən batareya"
+      ]
+    }
+  },
+  {
+    "id": "medcaptain-infuzyon-pompasi",
+    "name": {
+      "tr": "Medcaptain Veteriner İnfüzyon Pompası",
+      "en": "Medcaptain Veterinary Infusion Pump",
+      "fr": "Pompe d'infusion vétérinaire Medcaptain",
+      "az": "Medcaptain Baytarlıq İnfüziya Pompası"
+    },
+    "category": "InfusionPump",
+    "type": "veterinary",
+    "description": {
+      "tr": "Yenilikçi dokunmatik ekranı, üst düzey güvenlik mekanizmaları ve kablosuz bağlantı desteği sunan yeni nesil veteriner infüzyon pompası.",
+      "en": "Next-generation veterinary infusion pump offering an innovative touchscreen, high-level safety mechanisms, and wireless connectivity support.",
+      "fr": "Pompe d'infusion vétérinaire de nouvelle génération offrant un écran tactile innovant, des mécanismes de sécurité de haut niveau et un support de connectivité sans fil.",
+      "az": "İnnovativ sensorlu ekranı, yüksək səviyyəli təhlükəsizlik mexanizmləri və simsiz qoşulma dəstəyi təklif edən yeni nəsil baytarlıq infüziya pompası."
+    },
+    "image": "/medcaptain-infuzyon-pompasi.png",
+    "features": {
+      "tr": [
+        "Dokunmatik Renkli LCD Ekran Arayüzü",
+        "Akıllı Serum Seti Algılama ve Otomatik Kalibrasyon",
+        "WiFi Kablosuz İletişim ve Klinik Entegrasyon Desteği",
+        "Anti-bolus Fonksiyonu ile Güvenli İlaç Teslimatı",
+        "IP24 Seviyesi Toz ve Su Geçirmezlik"
+      ],
+      "en": [
+        "Touchscreen Color LCD Interface",
+        "Smart IV Set Detection and Auto-calibration",
+        "WiFi Wireless Communication and Clinical Integration Support",
+        "Safe Drug Delivery with Anti-bolus Function",
+        "IP24 Rated Dust and Water Resistance"
+      ],
+      "fr": [
+        "Interface tactile LCD couleur",
+        "Détection intelligente de la tubulure IV et étalonnage automatique",
+        "Communication sans fil WiFi et support d'intégration clinique",
+        "Distribution sécurisée des médicaments avec fonction anti-bolus",
+        "Résistance à la poussière et à l'eau classée IP24"
+      ],
+      "az": [
+        "Sensorlu rəngli LCD ekran interfeysi",
+        "Ağıllı serum seti aşkarlama və avtomatik kalibrləmə",
+        "WiFi simsiz rabitə və klinik inteqrasiya dəstəyi",
+        "Anti-bolus funksiyası ile təhlükəsiz dərman ötürülməsi",
+        "IP24 səviyyəli toz və su keçirməzlik"
+      ]
+    }
+  },
+  {
+    "id": "medcaptain-enjektomat",
+    "name": {
+      "tr": "Medcaptain Veteriner Enjektör Pompası",
+      "en": "Medcaptain Veterinary Syringe Pump",
+      "fr": "Pompe de seringue vétérinaire Medcaptain",
+      "az": "Medcaptain Baytarlıq Enjektor Pompası"
+    },
+    "category": "InfusionPump",
+    "type": "veterinary",
+    "description": {
+      "tr": "Hassas infüzyon hızı, kolay kullanımı ve üst düzey hasta güvenliği önlemleri ile donatılmış modern veteriner enjektör pompası.",
+      "en": "Modern veterinary syringe pump equipped with precise infusion rate, ease of use, and high-level patient safety measures.",
+      "fr": "Pompe de seringue vétérinaire moderne équipée d'un débit d'infusion précis, d'une grande facilité d'utilisation et de mesures de sécurité élevées pour les patients.",
+      "az": "Dəqiq infüziya sürəti, asan istifadə ve yüksək səviyyəli xəstə təhlükəsizliyi tədbirləri ilə təchiz edilmiş müasir baytarlıq enjektor pompası."
+    },
+    "image": "/medcaptain-enjektomat.png",
+    "features": {
+      "tr": [
+        "Akıllı Güvenlik Kilitli Enjektör Kelepçesi",
+        "Mikro Hız Ayarı (0.01 ml/s hassasiyet)",
+        "Kapsamlı Alarm Göstergeleri ve Önleme Sistemi",
+        "Dikey veya Yatay Kombine Edilebilir Modüler Yapı",
+        "Uzun Ömürlü Batarya ile Mobil Kullanılabilirlik"
+      ],
+      "en": [
+        "Syringe Clamp with Smart Safety Lock",
+        "Micro-rate Adjustment (0.01 ml/h precision)",
+        "Comprehensive Alarm Indicators and Prevention System",
+        "Modular Design for Vertical or Horizontal Assembly",
+        "Mobile Usability with Long-lasting Battery"
+      ],
+      "fr": [
+        "Pince à seringue avec verrouillage de sécurité intelligent",
+        "Réglage du micro-débit (précision de 0,01 ml/h)",
+        "Indicateurs d'alarme complets et système de prévention",
+        "Conception modulaire pour un assemblage vertical ou horizontal",
+        "Utilisation mobile avec batterie longue durée"
+      ],
+      "az": [
+        "Ağıllı təhlükəsizlik kilidli enjektor sıxacı",
+        "Mikro sürət tənzimlənməsi (0.01 ml/saat dəqiqlik)",
+        "Hərtərəfli siqnal göstəriciləri və qarşısının alınması sistemi",
+        "Şaquli və ya üfüqi birləşdirilə bilən modulyar quruluş",
+        "Uzunömürlü batareya ilə mobil istifadə imkanı"
+      ]
+    }
+  },
+  {
+    "id": "mindray-r700-ekg",
+    "name": {
+      "tr": "Mindray R700 12 Kanallı EKG Cihazı",
+      "en": "Mindray R700 12-Channel ECG Machine",
+      "fr": "Appareil ECG 12 canaux Mindray R700",
+      "az": "Mindray R700 12 Kanallı EKQ Cihazı"
+    },
+    "category": "ECG",
+    "type": "hospital",
+    "description": {
+      "tr": "Modern klinik gereksinimleri karşılamak üzere tasarlanmış, yüksek kaliteli sinyal edinimi, gelişmiş EKG analizi ve sezgisel kullanıcı arayüzü sunan profesyonel EKG cihazı.",
+      "en": "Professional ECG machine designed to meet modern clinical requirements, offering high-quality signal acquisition, advanced ECG analysis, and intuitive user interface.",
+      "fr": "Appareil ECG professionnel conçu pour répondre aux exigences cliniques modernes, offrant une acquisition de signal de haute qualité, une analyse ECG avancée et une interface utilisateur intuitive.",
+      "az": "Müasir klinik tələblərə cavab vermək üçün hazırlanmış, yüksək keyfiyyətli siqnal qəbulu, təkmil EKQ analizi və intuitiv istifadəçi interfeysi təklif edən peşəkar EKQ cihazı."
+    },
+    "image": "/mindray-r700-ekg.png",
+    "features": {
+      "tr": [
+        "7 inç Yüksek Çözünürlüklü Renkli Dokunmatik Ekran",
+        "Gelişmiş EKG Analiz ve Yorumlama Algoritması",
+        "Kağıtsız Önizleme ve Kolay Veri Depolama",
+        "Hızlı ve Sessiz Termal Yazıcı Desteği",
+        "USB ve LAN Arayüzleri ile Kolay Klinik Entegrasyon"
+      ],
+      "en": [
+        "7-inch High-Resolution Color Touchscreen",
+        "Advanced ECG Analysis and Interpretation Algorithm",
+        "Paperless Preview and Easy Data Storage",
+        "Fast and Quiet Thermal Printer Support",
+        "Easy Clinical Integration with USB and LAN Interfaces"
+      ],
+      "fr": [
+        "Écran tactile couleur haute résolution de 7 pouces",
+        "Algorithme d'analyse et d'interprétation ECG avancé",
+        "Aperçu sans papier et stockage facile des données",
+        "Support d'imprimante thermique rapide et silencieuse",
+        "Intégration clinique facile avec les interfaces USB et LAN"
+      ],
+      "az": [
+        "7 düymlük yüksək rezolyusiyalı rəngli sensor ekran",
+        "Təkmil EKQ analizi və interpretasiya alqoritmi",
+        "Kağızsız önizləmə və asan məlumat saxlama",
+        "Sürətli və səssiz termal printer dəstəyi",
+        "USB və LAN interfeysləri ilə asan klinik inteqrasiya"
+      ]
+    }
+  },
+  {
+    "id": "edan-se1202-ekg",
+    "name": {
+      "tr": "Edan SE-1202 12 Kanallı EKG Cihazı",
+      "en": "Edan SE-1202 12-Channel ECG Machine",
+      "fr": "Appareil ECG 12 canaux Edan SE-1202",
+      "az": "Edan SE-1202 12 Kanallı EKQ Cihazı"
+    },
+    "category": "ECG",
+    "type": "hospital",
+    "description": {
+      "tr": "Geniş renkli ekranı, üstün sinyal filtreleme teknolojisi ve kapsamlı analiz paketleri ile hastaneler ve klinikler için ideal tanısal 12 kanallı EKG cihazı.",
+      "en": "Diagnostic 12-channel ECG machine ideal for hospitals and clinics with its large color screen, superior signal filtering technology, and comprehensive analysis packages.",
+      "fr": "Appareil ECG diagnostique à 12 canaux idéal pour les hôpitaux et les cliniques avec son grand écran couleur, sa technologie supérieure de filtrage du signal et ses progiciels d'analyse complets.",
+      "az": "Böyük rəngli ekranı, üstün siqnal filtrləmə texnologiyası və hərtərəfli analiz paketləri ile xəstəxanalar və klinikalar üçün ideal diaqnostik 12 kanallı EKQ cihazı."
+    },
+    "image": "/edan-se1202-ekg.jpg",
+    "features": {
+      "tr": [
+        "10.1 inç Katlanabilir Renkli Dokunmatik Ekran",
+        "Alfanümerik Klavye ve Tek Dokunuşla Hızlı İşlem",
+        "12 Kanallı Eşzamanlı Dalga Formu Edinimi ve Analizi",
+        "Gelişmiş Filtreleme (EMG, AC ve Sürüklenme Filtreleri)",
+        "Barkod Okuyucu ve Kablosuz Ağ Bağlantı Desteği"
+      ],
+      "en": [
+        "10.1-inch Foldable Color Touchscreen",
+        "Alphanumeric Keyboard and One-Touch Quick Operation",
+        "12-Channel Simultaneous Waveform Acquisition and Analysis",
+        "Advanced Filtering (EMG, AC, and Drift Filters)",
+        "Barcode Reader and Wireless Network Connectivity Support"
+      ],
+      "fr": [
+        "Écran tactile couleur pliable de 10,1 pouces",
+        "Clavier alphanumérique et opération rapide à une touche",
+        "Acquisition et analyse simultanées des formes d'onde à 12 canaux",
+        "Filtrage avancé (filtres EMG, CA et dérive)",
+        "Prise en charge du lecteur de codes-barres et de la connectivité réseau sans fil"
+      ],
+      "az": [
+        "10.1 düymlük qatlana bilən rəngli sensor ekran",
+        "Alfanumerik klaviatura və bir toxunuşla sürətli əməliyyat",
+        "12 kanallı sinxron dalğa forması əldə edilməsi və analizi",
+        "Təkmil filtrləmə (EMG, AC və sürüşmə filtrləri)",
+        "Barkod oxuyucu və simsiz şəbəkə qoşulma dəstəyi"
+      ]
+    }
+  },
+  {
+    "id": "mindray-umec-series",
+    "name": {
+      "tr": "Mindray uMec 100/120/150 Hastabaşı Monitörü",
+      "en": "Mindray uMec 100/120/150 Patient Monitor",
+      "fr": "Moniteur patient Mindray uMec 100/120/150",
+      "az": "Mindray uMec 100/120/150 Yataq Başı Monitoru"
+    },
+    "category": "Monitor",
+    "type": "hospital",
+    "description": {
+      "tr": "Farklı klinik ihtiyaçlara cevap verebilen uMec 100, 120 ve 150 modellerini tek bir seride toplayan, üst düzey güvenilirlik ve kullanım kolaylığı sunan gelişmiş hastabaşı monitörü.",
+      "en": "Advanced patient monitor series bringing together uMec 100, 120, and 150 models to meet diverse clinical needs, offering high reliability and ease of use.",
+      "fr": "Série de moniteurs patient avancés réunissant les modèles uMec 100, 120 et 150 pour répondre aux divers besoins cliniques, offrant une grande fiabilité et une grande facilité d'utilisation.",
+      "az": "Müxtəlif klinik ehtiyacları ödəmək üçün uMec 100, 120 və 150 modellərini tək bir seriyada birləşdirən, yüksək etibarlılıq və istifadə asanlığı təklif edən təkmil yataq başı monitoru."
+    },
+    "image": "/umec-100-120-150.png",
+    "features": {
+      "tr": [
+        "10.4 / 12.1 / 15 inç Ekran Boyutu Seçenekleri (Dokunmatik Opsiyonlu)",
+        "Akıllı Parametre Algılama ve Gelişmiş Filtreleme",
+        "Geniş Açıdan İzlenebilen Ergonomik Ekran Tasarımı",
+        "Entegre Kablosuz Bağlantı ve Klinik İzleme Desteği",
+        "Düşük Güç Tüketimi ve Fansız Sessiz Çalışma"
+      ],
+      "en": [
+        "10.4 / 12.1 / 15-inch Display Size Options (Touchscreen Optional)",
+        "Smart Parameter Detection and Advanced Filtering",
+        "Ergonomic Screen Design Viewable from Wide Angles",
+        "Integrated Wireless Connectivity and Clinical Monitoring Support",
+        "Low Power Consumption and Fanless Quiet Operation"
+      ],
+      "fr": [
+        "Options de taille d'écran de 10,4 / 12,1 / 15 pouces (tactile en option)",
+        "Détection intelligente des paramètres et filtrage avancé",
+        "Conception d'écran ergonomique visible sous de grands angles",
+        "Connectivité sans fil intégrée et support de surveillance clinique",
+        "Faible consommation d'énergie et fonctionnement silencieux sans ventilateur"
+      ],
+      "az": [
+        "10.4 / 12.1 / 15 düymlük ekran ölçüsü seçimləri (Sensorlu ekran opsiyonu)",
+        "Ağıllı parametr aşkarlama və qabaqcıl filtrləmə",
+        "Geniş bucaqdan izlənə bilən ergonomik ekran dizaynı",
+        "İnteqrasiya edilmiş simsiz qoşulma və klinik monitorinq dəstəyi",
+        "Aşağı enerji istehlakı və ventilyatorsuz səssiz işləmə"
+      ]
+    }
+  },
+  {
+    "id": "edan-cx-series",
+    "name": {
+      "tr": "Edan CX10/12/15 Hastabaşı Monitörü",
+      "en": "Edan CX10/12/15 Patient Monitor",
+      "fr": "Moniteur patient Edan CX10/12/15",
+      "az": "Edan CX10/12/15 Yataq Başı Monitoru"
+    },
+    "category": "Monitor",
+    "type": "hospital",
+    "description": {
+      "tr": "Ameliyathane, yoğun bakım ve acil servisler için tasarlanmış, CX10, CX12 ve CX15 modelleriyle farklı ekran boyutları ve üstün tanısal ölçüm kalitesi sunan modüler hastabaşı monitörü serisi.",
+      "en": "Modular patient monitor series designed for operating rooms, intensive care units, and emergency departments, offering different screen sizes (CX10/CX12/CX15) and superior diagnostic measurement quality.",
+      "fr": "Série de moniteurs patient modulaires conçue pour les blocs opératoires, les unités de soins intensifs et les services d'urgence, offrant différentes tailles d'écran (CX10/CX12/CX15) et une qualité de mesure diagnostique supérieure.",
+      "az": "Əməliyyat otağı, reanimasiya və təcili yardım şöbələri üçün hazırlanmış, CX10, CX12 və CX15 modelləri ilə fərqli ekran ölçüləri və üstün diaqnostik ölçmə keyfiyyəti təklif edən modulyar yataq başı monitoru seriyası."
+    },
+    "image": "/edan-cx-10-12-15.png",
+    "features": {
+      "tr": [
+        "Modüler Tasarım ve Kolay Parametre Genişletme Seçenekleri",
+        "Gelişmiş EKG, SpO2, NIBP, Solunum ve Sıcaklık Ölçümleri",
+        "Opsiyonel Çoklu IBP, CO2 ve Anestezi Gazı Ölçüm Modülleri",
+        "Yüksek Çözünürlüklü Parlak Dokunmatik Ekran Arayüzü",
+        "Merkezi Monitör Sistemi Entegrasyonu ve Veri Aktarımı"
+      ],
+      "en": [
+        "Modular Design and Easy Parameter Expansion Options",
+        "Advanced ECG, SpO2, NIBP, Respiration, and Temperature Measurements",
+        "Optional Multi-IBP, CO2, and Anesthetic Gas Measurement Modules",
+        "High-Resolution Bright Touchscreen Interface",
+        "Central Monitoring System Integration and Data Transfer"
+      ],
+      "fr": [
+        "Conception modulaire et options faciles d'extension des paramètres",
+        "Mesures avancées d'ECG, SpO2, PNI, respiration et température",
+        "Modules de mesure multi-IBP, CO2 et gaz anesthésiques en option",
+        "Interface tactile lumineuse haute résolution",
+        "Intégration du système de surveillance central et transfert de données"
+      ],
+      "az": [
+        "Modulyar dizayn və asan parametr genişləndirmə seçimləri",
+        "Təkmil EKQ, SpO2, NIBP, Tənəffüs və Temperatur ölçmələri",
+        "Könüllü çoxlu IBP, CO2 və anesteziya qazı ölçmə modulları",
+        "Yüksək rezolyusiyalı parlaq sensor ekran interfeysi",
+        "Mərkəzi monitor sistemi inteqrasiyası və məlumat ötürülməsi"
+      ]
+    }
   }
 ];
 
@@ -3970,5 +4883,8 @@ export const categories = [
   "CPR",
   "Stethoscope",
   "OtoscopeSpecula",
-  "Negatoscope"
+  "Negatoscope",
+  "Anesthesia",
+  "Ultrasound",
+  "InfusionPump"
 ];

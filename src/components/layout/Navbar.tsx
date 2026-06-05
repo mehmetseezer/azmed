@@ -15,7 +15,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isCorporateOpen, setIsCorporateOpen] = useState(false);
-  const [isProductsOpen, setIsProductsOpen] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -95,40 +95,38 @@ export default function Navbar() {
             </div>
           </div>
 
-          {/* Products Dropdown */}
+          {/* Services Dropdown */}
           <div 
             className="relative"
-            onMouseEnter={() => setIsProductsOpen(true)}
-            onMouseLeave={() => setIsProductsOpen(false)}
+            onMouseEnter={() => setIsServicesOpen(true)}
+            onMouseLeave={() => setIsServicesOpen(false)}
           >
-            <Link 
-              href="/products" 
-              className={cn("text-sm font-bold flex items-center gap-1 hover:text-blue-500 transition-colors", navColor)}
-            >
-              {t('products')} <ChevronDown size={14} className={cn("transition-transform", isProductsOpen && "rotate-180")} />
-            </Link>
+            <button className={cn("text-sm font-bold flex items-center gap-1 hover:text-blue-500 transition-colors", navColor)}>
+              {t('services')} <ChevronDown size={14} className={cn("transition-transform", isServicesOpen && "rotate-180")} />
+            </button>
             <div className={cn(
               "absolute top-full left-0 pt-2 w-64 transition-all duration-300 origin-top",
-              isProductsOpen ? "opacity-100 scale-100 translate-y-0" : "opacity-0 scale-95 -translate-y-2 pointer-events-none"
+              isServicesOpen ? "opacity-100 scale-100 translate-y-0" : "opacity-0 scale-95 -translate-y-2 pointer-events-none"
             )}>
               <div className="bg-white rounded-2xl shadow-2xl border border-gray-100 py-3 overflow-hidden">
-                {/* All category link */}
                 <Link 
-                  href="/products?category=All"
-                  className="block px-6 py-2.5 text-sm font-bold text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors border-b border-gray-50"
+                  href="/products?type=hospital"
+                  className="block px-6 py-2.5 text-sm font-bold text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
                 >
-                  {tCat('All')}
+                  {t('hospitalDevices')}
                 </Link>
-                {/* Specific categories */}
-                {categories.filter(c => c !== 'All').map((cat) => (
-                  <Link 
-                    key={cat}
-                    href={`/products?category=${cat}`}
-                    className="block px-6 py-2.5 text-sm font-bold text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
-                  >
-                    {tCat(cat)}
-                  </Link>
-                ))}
+                <Link 
+                  href="/products?type=veterinary"
+                  className="block px-6 py-2.5 text-sm font-bold text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                >
+                  {t('veterinaryDevices')}
+                </Link>
+                <Link 
+                  href="/services/maintenance"
+                  className="block px-6 py-2.5 text-sm font-bold text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors border-t border-gray-50"
+                >
+                  {t('maintenanceServices')}
+                </Link>
               </div>
             </div>
           </div>
@@ -175,23 +173,28 @@ export default function Navbar() {
           </div>
 
           <div className="flex flex-col gap-2">
+            <span className="text-xs font-bold text-gray-400 uppercase tracking-widest">{t('services')}</span>
             <Link 
-              href="/products" 
+              href="/products?type=hospital" 
               onClick={() => setIsOpen(false)} 
-              className="text-lg font-bold text-gray-900 border-b border-gray-50 pb-2"
+              className="text-lg font-bold text-blue-900 pl-4"
             >
-              {t('products')}
+              {t('hospitalDevices')}
             </Link>
-            {categories.map((cat) => (
-              <Link 
-                key={cat}
-                href={`/products?category=${cat}`} 
-                onClick={() => setIsOpen(false)} 
-                className="text-md font-bold text-blue-900 pl-4"
-              >
-                {tCat(cat)}
-              </Link>
-            ))}
+            <Link 
+              href="/products?type=veterinary" 
+              onClick={() => setIsOpen(false)} 
+              className="text-lg font-bold text-blue-900 pl-4"
+            >
+              {t('veterinaryDevices')}
+            </Link>
+            <Link 
+              href="/services/maintenance" 
+              onClick={() => setIsOpen(false)} 
+              className="text-lg font-bold text-blue-900 pl-4"
+            >
+              {t('maintenanceServices')}
+            </Link>
           </div>
 
           <Link href="/contact" onClick={() => setIsOpen(false)} className="text-lg font-bold text-gray-900">

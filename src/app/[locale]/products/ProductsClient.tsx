@@ -58,23 +58,46 @@ export default function ProductsContent() {
     setSelectedCategory(cat);
   };
 
+  const typeParam = searchParams.get('type') || 'hospital';
+
+  // Dynamically filter categories to only show those that have products for the current type
+  const activeCategories = ['All', ...categories.filter(cat => 
+    cat !== 'All' && products.some(p => p.category === cat && (p.type || 'hospital') === typeParam)
+  )];
+
   useEffect(() => {
-    if (categoryParam && categories.includes(categoryParam)) {
+    if (categoryParam && activeCategories.includes(categoryParam)) {
       setSelectedCategory(categoryParam);
     } else {
       setSelectedCategory('All');
     }
-  }, [categoryParam]);
+  }, [categoryParam, typeParam]);
 
   const filteredProducts = products.filter(p => {
     const name = p.name[locale];
     const description = p.description[locale];
     
+    const matchesType = (p.type || 'hospital') === typeParam;
     const matchesCategory = selectedCategory === 'All' || p.category === selectedCategory;
     const matchesSearch = name.toLowerCase().includes(searchQuery.toLowerCase()) || 
                           description.toLowerCase().includes(searchQuery.toLowerCase());
-    return matchesCategory && matchesSearch;
+    return matchesType && matchesCategory && matchesSearch;
   });
+
+  const getPageContent = () => {
+    if (typeParam === 'veterinary') {
+      return {
+        title: locale === 'tr' ? 'Veteriner Cihazları' : (locale === 'az' ? 'Baytarlıq Cihazları' : (locale === 'fr' ? 'Appareils Vétérinaires' : 'Veterinary Devices')),
+        desc: locale === 'tr' ? 'Veteriner hekimlik ve klinik ihtiyaçlarına yönelik özel medikal teknolojilerimiz.' : (locale === 'az' ? 'Baytarlıq təbabəti və klinika ehtiyacları üçün xüsusi tibbi texnologiyalarımız.' : (locale === 'fr' ? 'Technologies médicales spécialisées pour la médecine vétérinaire et les besoins cliniques.' : 'Specialized medical technologies for veterinary medicine and clinic needs.'))
+      };
+    }
+    return {
+      title: locale === 'tr' ? 'Hastane Cihazları' : (locale === 'az' ? 'Xəstəxana Cihazları' : (locale === 'fr' ? 'Appareils Hospitaliers' : 'Hospital Devices')),
+      desc: locale === 'tr' ? 'En yeni tıbbi teknolojileri ve hastane/klinik çözümlerimizi inceleyin. İhtiyacınıza en uygun cihazı bulmak için filtreleri kullanabilirsiniz.' : (locale === 'az' ? 'Ən yeni tibbi texnologiyalarımızı və xəstəxana/klinika həllərimizi nəzərdən keçirin. Ehtiyacınıza ən uyğun cihazı tapmaq üçün filtrlərdən istifadə edə bilərsiniz.' : (locale === 'fr' ? 'Explorez nos dernières technologies médicales et nos solutions hospitalières/cliniques. Vous pouvez utiliser les filtres pour trouver le dispositif adapté.' : 'Explore our latest medical technologies and hospital/clinic solutions. You can use filters to find the most suitable device.'))
+    };
+  };
+
+  const pageContent = getPageContent();
 
   return (
     <main className="pt-32 pb-24 bg-gray-50 min-h-screen">
@@ -82,12 +105,10 @@ export default function ProductsContent() {
         {/* Header */}
         <div className="mb-16 text-center max-w-3xl mx-auto">
           <h1 className="text-4xl md:text-5xl font-bold text-blue-900 mb-6">
-            {locale === 'tr' ? 'Ürün Kataloğumuz' : 'Product Catalog'}
+            {pageContent.title}
           </h1>
           <p className="text-gray-600 text-lg">
-            {locale === 'tr' 
-              ? 'En yeni tıbbi teknolojileri ve çözümlerimizi inceleyin. İhtiyacınıza en uygun cihazı bulmak için filtreleri kullanabilirsiniz.' 
-              : 'Explore our latest medical technologies and solutions. You can use filters to find the most suitable device for your needs.'}
+            {pageContent.desc}
           </p>
         </div>
  
@@ -101,7 +122,7 @@ export default function ProductsContent() {
             onMouseMove={handleMouseMove}
             className="flex items-center gap-2 overflow-x-auto pb-2 w-full md:w-auto scrollbar-hide cursor-grab active:cursor-grabbing select-none"
           >
-            {categories.map((cat) => (
+            {activeCategories.map((cat) => (
               <button
                 key={cat}
                 onClick={(e) => handleButtonClick(cat, e)}

@@ -6,7 +6,11 @@
     "contact": "Contact",
     "corporate": "Corporate",
     "mission": "Mission & Vision",
-    "references": "Our References"
+    "references": "Our References",
+    "services": "Our Services",
+    "hospitalDevices": "Hospital Devices",
+    "veterinaryDevices": "Veterinary Devices",
+    "maintenanceServices": "Maintenance & Repair"
   },
   "Hero": {
     "title": "Azmed Engineering Electronics",
@@ -140,6 +144,9 @@
     "Imaging": "Imaging Devices",
     "Cardiology": "Cardiology Devices",
     "Respiratory": "Respiratory Devices",
-    "Surgical": "Surgical Devices"
+    "Surgical": "Surgical Devices",
+    "Anesthesia": "Anesthesia Devices",
+    "Ultrasound": "Ultrasound Devices",
+    "InfusionPump": "Infusion and Syringe Pumps"
   }
 }

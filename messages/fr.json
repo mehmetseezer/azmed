@@ -6,7 +6,11 @@
     "contact": "Contact",
     "corporate": "Entreprise",
     "mission": "Mission & Vision",
-    "references": "Nos Références"
+    "references": "Nos Références",
+    "services": "Nos Services",
+    "hospitalDevices": "Appareils Hospitaliers",
+    "veterinaryDevices": "Appareils Vétérinaires",
+    "maintenanceServices": "Entretien et Réparation"
   },
   "Hero": {
     "title": "Azmed Ingénierie Électronique",
@@ -140,6 +144,9 @@
     "Imaging": "Imagerie médicale",
     "Cardiology": "Cardiologie",
     "Respiratory": "Systèmes respiratoires",
-    "Surgical": "Instruments chirurgicaux"
+    "Surgical": "Instruments chirurgicaux",
+    "Anesthesia": "Appareils d'Anesthésie",
+    "Ultrasound": "Appareils d'Échographie",
+    "InfusionPump": "Pompes d'Infusion et de Seringue"
   }
 }

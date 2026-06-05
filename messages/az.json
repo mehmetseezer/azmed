@@ -6,7 +6,11 @@
     "contact": "Əlaqə",
     "corporate": "Korporativ",
     "mission": "Missiya & Vizyon",
-    "references": "Referanslarımız"
+    "references": "Referanslarımız",
+    "services": "Xidmətlərimiz",
+    "hospitalDevices": "Xəstəxana Cihazları",
+    "veterinaryDevices": "Baytarlıq Cihazları",
+    "maintenanceServices": "Baxım və Təmir Xidmətləri"
   },
   "Hero": {
     "title": "Azmed Mühəndislik Elektronika",
@@ -140,6 +144,9 @@
     "Imaging": "Görüntüləmə Cihazları",
     "Cardiology": "Kardioloji Cihazlar",
     "Respiratory": "Tənəffüs Cihazları",
-    "Surgical": "Cərrahi Cihazlar"
+    "Surgical": "Cərrahi Cihazlar",
+    "Anesthesia": "Anesteziya Cihazları",
+    "Ultrasound": "Ultrasəs Cihazları",
+    "InfusionPump": "İnfüziya və Enjektor Pompaları"
   }
 }

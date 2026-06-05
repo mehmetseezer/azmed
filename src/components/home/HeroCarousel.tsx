@@ -9,19 +9,19 @@ import { Link } from '@/i18n/routing';
 const slides = [
   {
     id: 1,
-    image: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=1920',
+    image: '/hero1.png',
     titleKey: 'slide1Title',
     subtitleKey: 'slide1Subtitle',
   },
   {
     id: 2,
-    image: 'https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&q=80&w=1920',
+    image: '/hero2.jpg',
     titleKey: 'slide2Title',
     subtitleKey: 'slide2Subtitle',
   },
   {
     id: 3,
-    image: 'https://images.unsplash.com/photo-1579154273821-0a6b83c81f7d?auto=format&fit=crop&q=80&w=1920',
+    image: '/hero3.png',
     titleKey: 'slide3Title',
     subtitleKey: 'slide3Subtitle',
   },
