@@ -131,7 +131,7 @@
     "All": "Tout",
     "ECG": "Électrocardiographes",
     "Monitor": "Moniteurs multiparamétriques",
-    "SurgicalLight": "Éclairage chirurgical",
+    "SurgicalLight": "Lampes chirurgicales et d'examen",
     "Endovision": "Systèmes d'endovision",
     "Electrosurgery": "Bistouris électriques",
     "MedicalCart": "Chariots médicaux",
@@ -147,6 +147,9 @@
     "Surgical": "Instruments chirurgicaux",
     "Anesthesia": "Appareils d'Anesthésie",
     "Ultrasound": "Appareils d'Échographie",
-    "InfusionPump": "Pompes d'Infusion et de Seringue"
+    "InfusionPump": "Pompes d'Infusion et de Seringue",
+    "SurgicalTable": "Tables d'opération",
+    "Tourniquet": "Tourniquets",
+    "Defibrillator": "Défibrillateurs"
   }
 }

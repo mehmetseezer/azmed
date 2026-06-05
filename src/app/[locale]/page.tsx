@@ -58,13 +58,23 @@ export default async function HomePage({
     <main>
       <HeroCarousel />
       
-      {/* Partners Section (Ticker) */}
-      <div className="py-12 bg-white border-b border-gray-50">
+      {/* Partners Section (Marquee Ticker) */}
+      <div className="py-12 bg-white border-b border-gray-50 overflow-hidden">
         <div className="container mx-auto px-6">
           <p className="text-center text-sm font-bold text-gray-400 uppercase tracking-widest mb-8">{tHome('partners')}</p>
-          <div className="flex flex-wrap justify-center items-center gap-12 grayscale opacity-50">
-            {['SAMSUNG', 'PHILIPS', 'GE HEALTHCARE', 'SIEMENS', 'TOSHIBA'].map((brand) => (
-              <span key={brand} className="text-2xl font-black tracking-tighter text-gray-900">{brand}</span>
+        </div>
+        <div className="relative w-full overflow-hidden whitespace-nowrap mask-gradient">
+          <div className="flex gap-16 animate-marquee grayscale opacity-40 hover:opacity-85 transition-opacity duration-300">
+            {[
+              'SAMSUNG', 'PHILIPS', 'GE HEALTHCARE', 'SIEMENS', 'TOSHIBA', 
+              'MINDRAY', 'EDAN', 'COMEN', 'MEDIONE', 'ADC', 
+              'SHALYA', 'FMD', 'HEALTH PLUS'
+            ].concat([
+              'SAMSUNG', 'PHILIPS', 'GE HEALTHCARE', 'SIEMENS', 'TOSHIBA', 
+              'MINDRAY', 'EDAN', 'COMEN', 'MEDIONE', 'ADC', 
+              'SHALYA', 'FMD', 'HEALTH PLUS'
+            ]).map((brand, idx) => (
+              <span key={`${brand}-${idx}`} className="text-2xl font-black tracking-tighter text-gray-900 mx-4 shrink-0">{brand}</span>
             ))}
           </div>
         </div>

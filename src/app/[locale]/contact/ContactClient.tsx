@@ -60,7 +60,9 @@ export default function ContactContent() {
               </div>
               <div>
                 <h3 className="text-lg font-bold text-gray-900 mb-2">{t('email')}</h3>
-                <p className="text-gray-600 font-medium">info@azmed.com.tr</p>
+                <p className="text-gray-600 font-medium">
+                  <a href="mailto:info@azmedmuhendislik.com" className="hover:text-blue-600 transition-colors">info@azmedmuhendislik.com</a>
+                </p>
                 <p className="text-gray-400 text-sm mt-1">{t('responseNotice')}</p>
               </div>
             </div>

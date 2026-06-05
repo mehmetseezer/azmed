@@ -131,7 +131,7 @@
     "All": "All",
     "ECG": "ECG Devices",
     "Monitor": "Patient Monitors",
-    "SurgicalLight": "Surgical Lights",
+    "SurgicalLight": "Surgical & Examination Lights",
     "Endovision": "Endovision Systems",
     "Electrosurgery": "Electrosurgical Units",
     "MedicalCart": "Medical Carts",
@@ -147,6 +147,9 @@
     "Surgical": "Surgical Devices",
     "Anesthesia": "Anesthesia Devices",
     "Ultrasound": "Ultrasound Devices",
-    "InfusionPump": "Infusion and Syringe Pumps"
+    "InfusionPump": "Infusion and Syringe Pumps",
+    "SurgicalTable": "Operating Tables",
+    "Tourniquet": "Tourniquet Devices",
+    "Defibrillator": "Defibrillator Devices"
   }
 }

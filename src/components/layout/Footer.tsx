@@ -45,13 +45,13 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Categories Preview */}
+          {/* Services Section */}
           <div>
-            <h4 className="text-lg font-semibold mb-6">{tf('products')}</h4>
+            <h4 className="text-lg font-semibold mb-6">{t('services')}</h4>
             <ul className="space-y-3 text-gray-400 text-sm">
-              <li><Link href="/products" className="hover:text-white transition-colors">{tf('cat1')}</Link></li>
-              <li><Link href="/products" className="hover:text-white transition-colors">{tf('cat2')}</Link></li>
-              <li><Link href="/products" className="hover:text-white transition-colors">{tf('cat3')}</Link></li>
+              <li><Link href="/products?type=hospital" className="hover:text-white transition-colors">{t('hospitalDevices')}</Link></li>
+              <li><Link href="/products?type=veterinary" className="hover:text-white transition-colors">{t('veterinaryDevices')}</Link></li>
+              <li><Link href="/services/maintenance" className="hover:text-white transition-colors">{t('maintenanceServices')}</Link></li>
             </ul>
           </div>
 
@@ -72,7 +72,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <Mail size={18} className="text-blue-400 shrink-0" />
-                <span>info@azmed.com.tr</span>
+                <a href="mailto:info@azmedmuhendislik.com" className="hover:text-white transition-colors">info@azmedmuhendislik.com</a>
               </li>
             </ul>
           </div>

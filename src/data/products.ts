@@ -4,6 +4,7 @@ export interface Product {
   category: string;
   description: { tr: string; en: string; fr: string; az: string };
   image: string;
+  images?: string[];
   features: { tr: string[]; en: string[]; fr: string[]; az: string[] };
   type?: 'hospital' | 'veterinary';
 }
@@ -965,7 +966,7 @@ export const products: Product[] = [
       "fr": "Bistouri électrochirurgical haut de gamme de 400 watts avec support avancé d'étanchéité des vaisseaux et interface tactile conçu pour les procédures de chirurgie générale et de gynécologie.",
       "az": "Ümumi cərrahiyyə və ginekoloji cərrahiyyə əməliyyatları üçün 400 Vatt çıxış gücü, qabaqcıl damar möhürləmə dəstəyi və toxunma interfeysi ilə yüksək səviyyəli koteriya qurğusu."
     },
-    "image": "/Shalya-Sigma-Koter-400.jpg",
+    "image": "/shalya-Sigma-400.jpg",
     "features": {
       "tr": [
         "400W Yüksek Çıkış Gücü ve Damar Mühürleme Modu",
@@ -4867,6 +4868,1302 @@ export const products: Product[] = [
         "Mərkəzi monitor sistemi inteqrasiyası və məlumat ötürülməsi"
       ]
     }
+  },
+  {
+    "id": "tasinabilir-endoskopi-sistemi",
+    "name": {
+      "tr": "Taşınabilir Veteriner Endoskopi Sistemi",
+      "en": "Portable Veterinary Endoscopy System",
+      "fr": "Système d'endoscopie vétérinaire portable",
+      "az": "Portativ Baytarlıq Endoskopiya Sistemi"
+    },
+    "category": "Endovision",
+    "type": "veterinary",
+    "description": {
+      "tr": "Veteriner hekimlikte tanı ve tedavi prosedürleri için özel olarak geliştirilmiş, yüksek çözünürlüklü görüntüleme kalitesi, entegre LED ışık kaynağı ve taşınabilir hafif tasarımı ile hem klinik hem de saha şartlarında mükemmel sonuçlar sunan profesyonel endoskopi cihazı.",
+      "en": "Professional endoscopy system specially developed for diagnostic and therapeutic procedures in veterinary medicine, offering excellent results in both clinic and field conditions with its high-resolution imaging quality, integrated LED light source, and portable lightweight design.",
+      "fr": "Système d'endoscopie professionnel spécialement développé pour les procédures diagnostiques et thérapeutiques en médecine vétérinaire, offrant d'excellents résultats en clinique et sur le terrain grâce à sa qualité d'imagerie haute résolution, sa source lumineuse LED intégrée et sa conception portable et légère.",
+      "az": "Baytarlıq təbabətində diaqnostika və müalicə prosedurları üçün xüsusi olaraq hazırlanmış, yüksək rezolyusiyalı təsvir keyfiyyəti, inteqrasiya olunmuş LED işıq mənbəyi və portativ yüngül dizaynı ilə həm klinika, həm də sahə şəraitində mükəmməl nəticələr təqdim edən peşəkar endoskopiya cihazı."
+    },
+    "image": "/tasinabilir-endoskopi-sistemi.png",
+    "features": {
+      "tr": [
+        "Yüksek Çözünürlüklü Görüntü Sensörü ve Net Görüş Alışı",
+        "Entegre Yüksek Yoğunluklu LED Işık Kaynağı",
+        "Sahada Kolaylık Sağlayan Uzun Ömürlü Dahili Batarya",
+        "Hafif, Ergonomik ve Kolay Taşınabilir Kompakt Kasa",
+        "Suya ve Toza Dayanıklı Prob Yapısı ile Güvenli Kullanım"
+      ],
+      "en": [
+        "High-Resolution Image Sensor and Clear Visual Output",
+        "Integrated High-Intensity LED Light Source",
+        "Long-Lasting Built-in Battery for Convenient Field Use",
+        "Lightweight, Ergonomic, and Easily Portable Compact Housing",
+        "Water and Dust Resistant Probe Structure for Safe Operation"
+      ],
+      "fr": [
+        "Capteur d'image haute résolution et rendu visuel clair",
+        "Source lumineuse LED intégrée à haute intensité",
+        "Batterie intégrée longue durée pour une utilisation pratique sur le terrain",
+        "Boîtier compact léger, ergonomique et facilement portable",
+        "Structure de sonde résistante à l'eau et à la poussière pour un fonctionnement sûr"
+      ],
+      "az": [
+        "Yüksək Rezolyusiyalı Şəkil Sensoru və Net Vizual Çıxış",
+        "İnteqrasiya edilmiş Yüksək İntensivlikli LED İşıq Mənbəyi",
+        "Sahədə Rahatlıq təmin edən Uzunömürlü Daxili Batareya",
+        "Yüngül, Erqonomik və Asan Daşına bilən Kompakt Korpus",
+        "Təhlükəsiz İstifadə üçün Suya və Toza Davamlı Prob Quruluşu"
+      ]
+    }
+  },
+  {
+    "id": "karl-storz-4k-endovizyon-sistemi",
+    "name": {
+      "tr": "Karl Storz 4K Endovizyon Sistemi",
+      "en": "Karl Storz 4K Endovision System",
+      "fr": "Système d'endovision 4K Karl Storz",
+      "az": "Karl Storz 4K Endoviziya Sistemi"
+    },
+    "category": "Endovision",
+    "type": "hospital",
+    "description": {
+      "tr": "Ameliyathaneler için en yüksek standartlarda tasarlanmış, ultra yüksek çözünürlüklü 4K görüntüleme kalitesi, mükemmel renk doğruluğu ve üstün derinlik algısı sunan son teknoloji endovizyon sistemi kulesi.",
+      "en": "State-of-the-art endovision system tower designed to the highest standards for operating rooms, offering ultra-high-definition 4K imaging quality, excellent color accuracy, and superior depth perception.",
+      "fr": "Tour de système d'endovision de pointe conçue selon les normes les plus élevées pour les blocs opératoires, offrant une qualité d'imagerie 4K ultra-haute définition, une excellente précision des couleurs et une perception supérieure de la profondeur.",
+      "az": "Əməliyyatxanalar üçün ən yüksək standartlarda hazırlanmış, ultra yüksək keyfiyyətli 4K görüntüləmə keyfiyyəti, mükəmməl rəng dəqiqliyi və üstün dərinlik qavrayışı təqdim edən müasir endoviziya sistemi qülləsi."
+    },
+    "image": "/karl-storz-4k-endovizyon-sistemi.png",
+    "features": {
+      "tr": [
+        "Ultra HD 4K (3840 x 2160) Çözünürlük ve Kristal Netliğinde Görüntü",
+        "Geniş Renk Gamı (BT.2020) ile Doğal ve Gerçekçi Renkler",
+        "Gelişmiş Derinlik Algısı ve Doku Ayrımı Teknolojisi",
+        "Entegre Yüksek Yoğunluklu LED/Xenon Işık Kaynağı Uyumluluğu",
+        "Dokunmatik Kontrol Paneli ve Dijital Görüntü Kayıt Ünitesi"
+      ],
+      "en": [
+        "Ultra HD 4K (3840 x 2160) Resolution and Crystal Clear Imaging",
+        "Natural and Realistic Colors with Wide Color Gamut (BT.2020)",
+        "Advanced Depth Perception and Tissue Differentiation Technology",
+        "Compatibility with Integrated High-Intensity LED/Xenon Light Sources",
+        "Touch Control Panel and Digital Image Recording Unit"
+      ],
+      "fr": [
+        "Résolution Ultra HD 4K (3840 x 2160) et imagerie cristalline",
+        "Couleurs naturelles et réalistes avec large gamme de couleurs (BT.2020)",
+        "Perception avancée de la profondeur et technologie de différenciation des tissus",
+        "Compatibilité avec les sources lumineuses intégrées LED/Xénon haute intensité",
+        "Panneau de commande tactile et unité d'enregistrement d'images numériques"
+      ],
+      "az": [
+        "Ultra HD 4K (3840 x 2160) Rezolyusiyası və Kristal Netliyində Görüntü",
+        "Geniş Rəng Qamutu (BT.2020) ilə Təbii və Həqiqi Rənglər",
+        "Qabaqcıl Dərinlik Qavrayışı və Toxuma Ayrılması Texnologiyası",
+        "İnteqrasiya edilmiş Yüksək İntensivlikli LED/Xenon İşıq Mənbəyi Uyğunluğu",
+        "Toxunma İdarəetmə Paneli və Rəqəmsal Görüntü Qeyd Cihazı"
+      ]
+    }
+  },
+  {
+    "id": "karl-storz-spies-endovizyon-sistemi",
+    "name": {
+      "tr": "Karl Storz Image1 Spies Endovizyon Sistemi",
+      "en": "Karl Storz Image1 Spies Endovision System",
+      "fr": "Système d'endovision Spies Image1 Karl Storz",
+      "az": "Karl Storz Image1 Spies Endoviziya Sistemi"
+    },
+    "category": "Endovision",
+    "type": "hospital",
+    "description": {
+      "tr": "Cerrahi operasyonlarda doku kontrastını ve görünürlüğü artırmak için yenilikçi SPIES (Storz Professional Image Enhancement System) teknolojisiyle donatılmış, yüksek çözünürlüklü ve modüler endovizyon sistemi.",
+      "en": "High-resolution, modular endovision system equipped with innovative SPIES (Storz Professional Image Enhancement System) technology to enhance tissue contrast and visibility in surgical procedures.",
+      "fr": "Système d'endovision modulaire haute résolution équipé de la technologie innovante SPIES (Storz Professional Image Enhancement System) pour améliorer le contraste tissulaire et la visibilité lors des procédures chirurgicales.",
+      "az": "Cərrahi əməliyyatlarda toxuma kontrastını və görünürlüyünü artırmaq üçün innovativ SPIES (Storz Professional Image Enhancement System) texnologiyası ilə təchiz olunmuş, yüksək keyfiyyətli və modulyar endoviziya sistemi."
+    },
+    "image": "/karl-storz-spies-endovizyon-sistemi.png",
+    "features": {
+      "tr": [
+        "SPIES Doku ve Kontrast Optimizasyon Teknolojisi (CLARA, CHROMA, SPECTRA)",
+        "Full HD Yüksek Çözünürlüklü Kamera Kontrol Ünitesi",
+        "Modüler Yapı ile Kolay Güncellenebilirlik ve Entegrasyon",
+        "Özelleştirilebilir Kullanıcı Profilleri ve Hızlı Mod Geçişleri",
+        "Cerrahi Monitörler ve Görüntüleme Yazılımları ile Tam Uyum"
+      ],
+      "en": [
+        "SPIES Tissue and Contrast Optimization Technology (CLARA, CHROMA, SPECTRA)",
+        "Full HD High-Resolution Camera Control Unit",
+        "Modular Structure for Easy Upgrades and Integration",
+        "Customizable User Profiles and Quick Mode Transitions",
+        "Full Compatibility with Surgical Monitors and Imaging Software"
+      ],
+      "fr": [
+        "Technologie d'optimisation des tissus et des contrastes SPIES (CLARA, CHROMA, SPECTRA)",
+        "Unité de contrôle de caméra haute résolution Full HD",
+        "Structure modulaire pour des mises à niveau et une intégration faciles",
+        "Profils d'utilisateurs personnalisables et transitions de mode rapides",
+        "Compatibilité totale avec les moniteurs chirurgicaux et les logiciels d'imagerie"
+      ],
+      "az": [
+        "SPIES Toxuma və Kontrast Optimizasiyası Texnologiyası (CLARA, CHROMA, SPECTRA)",
+        "Full HD Yüksək Rezolyusiyalı Kamera İdarəetmə Cihazı",
+        "Asan Yenilənmə və İnteqrasiya üçün Modulyar Quruluş",
+        "Fərdiləşdirilə bilən İstifadəçi Profilləri və Sürətli Rejim Keçidləri",
+        "Cərrahi Monitorlar və Görüntüləmə Proqramları ilə Tam Uyğunluq"
+      ]
+    }
+  },
+  {
+    "id": "shalya-dx-koter-cihazi",
+    "name": {
+      "tr": "Shalya DX Koter Cihazı",
+      "en": "Shalya DX Electrosurgical Unit",
+      "fr": "Bistouri électrique Shalya DX",
+      "az": "Shalya DX Koter Cihazı"
+    },
+    "category": "Electrosurgery",
+    "type": "hospital",
+    "description": {
+      "tr": "Mikroişlemci kontrollü yapısı, geniş dijital ekranı ve farklı monopolar/bipolar modları ile cerrahi müdahalelerde yüksek hassasiyet ve güvenlik sunan profesyonel 300W elektrocerrahi koter cihazı.",
+      "en": "Professional 300W electrosurgical unit offering high precision and safety in surgical interventions with its microprocessor-controlled structure, large digital display, and various monopolar/bipolar modes.",
+      "fr": "Bistouri électrique professionnel de 300 W offrant une grande précision et sécurité lors des interventions chirurgicales grâce à sa structure contrôlée par microprocesseur, son grand écran numérique et ses divers modes monopolaires/bipolaires.",
+      "az": "Mikroprosessorla idarə olunan strukturu, geniş rəqəmsal ekranı və müxtəlif monopolyar/bipolyar rejimləri ilə cərrahi müdaxilələrdə yüksək dəqiqlik və təhlükəsizlik təklif edən peşəkar 300W elektrocərrahiyyə koter cihazı."
+    },
+    "image": "/shalya-dx-koter-cihazi.png",
+    "features": {
+      "tr": [
+        "300W Maksimum Güç Çıkışı",
+        "Çoklu Monopolar Kesme ve Koagülasyon Modları",
+        "Hassas Bipolar Kesme ve Koagülasyon Desteği",
+        "Kullanıcı Dostu Dijital Gösterge Paneli",
+        "Gelişmiş Hasta Güvenliği ve Plaka Temas İzleme Sistemi"
+      ],
+      "en": [
+        "300W Maximum Power Output",
+        "Multiple Monopolar Cut and Coagulation Modes",
+        "Precise Bipolar Cut and Coagulation Support",
+        "User-Friendly Digital Display Panel",
+        "Advanced Patient Safety and Plate Contact Monitoring System"
+      ],
+      "fr": [
+        "Puissance de sortie maximale de 300 W",
+        "Plusieurs modes de coupe et de coagulation monopolaires",
+        "Support précis de coupe et de coagulation bipolaires",
+        "Panneau d'affichage numérique convivial",
+        "Sécurité des patients avancée et système de surveillance du contact de la plaque"
+      ],
+      "az": [
+        "300W Maksimum Güc Çıxışı",
+        "Çoxsaylı Monopolyar Kəsmə və Koaqulyasiya Rejimləri",
+        "Həssas Bipolyar Kəsmə və Koaqulyasiya Dəstəyi",
+        "İstifadəçi Dostu Rəqəmsal Göstərici Paneli",
+        "Qabaqcıl Pasiyent Təhlükəsizliyi və Plitə Təmas Nəzarəti Sistemi"
+      ]
+    }
+  },
+  {
+    "id": "shalya-vista-koter-cihazi",
+    "name": {
+      "tr": "Shalya Vista Koter Cihazı",
+      "en": "Shalya Vista Electrosurgical Unit",
+      "fr": "Bistouri électrique Shalya Vista",
+      "az": "Shalya Vista Koter Cihazı"
+    },
+    "category": "Electrosurgery",
+    "type": "hospital",
+    "description": {
+      "tr": "Akıllı geri bildirim sistemine ve damar mühürleme teknolojisine sahip, genel cerrahiden jinekoloji ve ürolojiye kadar geniş yelpazede güvenli cerrahi operasyon sağlayan yeni nesil elektrocerrahi sistemi.",
+      "en": "New generation electrosurgical system featuring smart feedback system and vessel sealing technology, providing safe surgical operations across a wide spectrum from general surgery to gynecology and urology.",
+      "fr": "Système d'électrochirurgie de nouvelle génération doté d'un système de rétroaction intelligent et d'une technologie de scellement des vaisseaux, offrant des opérations chirurgicales sûres dans un large spectre, de la chirurgie générale à la gynécologie et à l'urologie.",
+      "az": "Ağıllı əks əlaqə sisteminə və damar möhürləmə texnologiyasına malik, ümumi cərrahiyyədən ginekologiya və urologiyaya qədər geniş spektri əhatə edən təhlükəsiz cərrahi əməliyyatları təmin edən yeni nəsil elektrocərrahiyyə sistemi."
+    },
+    "image": "/shalya-vista-koter-cihazi.png",
+    "features": {
+      "tr": [
+        "Akıllı Güç Geri Bildirim ve Ayarlama Sistemi",
+        "Dahili Vessel Sealing (Damar Mühürleme) Fonksiyonu",
+        "Monopolar ve Bipolar Modlarda Yüksek Kararlılık",
+        "Kullanıcı Dostu Renkli Dokunmatik Arayüz",
+        "Hata Kodu Tanımlama ve Güvenlik Alarmları"
+      ],
+      "en": [
+        "Smart Power Feedback and Regulation System",
+        "Built-in Vessel Sealing Functionality",
+        "High Stability in Monopolar and Bipolar Modes",
+        "User-Friendly Color Touchscreen Interface",
+        "Error Code Diagnostic and Safety Alarms"
+      ],
+      "fr": [
+        "Système intelligent de rétroaction et de régulation de la puissance",
+        "Fonctionnalité de scellement de vaisseaux intégrée",
+        "Haute stabilité en modes monopolaire et bipolaire",
+        "Interface utilisateur conviviale à écran tactile couleur",
+        "Diagnostic des codes d'erreur et alarmes de sécurité"
+      ],
+      "az": [
+        "Ağıllı Güc Əks Əlaqə və Tənzimləmə Sistemi",
+        "Daxili Vessel Sealing (Damar Möhürləmə) Funksiyası",
+        "Monopolyar və Bipolyar Rejimlərdə Yüksək Sabitlik",
+        "İstifadəçi Dostu Rəngli Toxunma İnterfeysi",
+        "Xəta Kodu Diaqnostikası və Təhlükəsizlik Siqnalları"
+      ]
+    }
+  },
+  {
+    "id": "force-triad-koter-cihazi",
+    "name": {
+      "tr": "Force Triad Koter Cihazı",
+      "en": "Force Triad Electrosurgical Platform",
+      "fr": "Plateforme d'électrochirurgie Force Triad",
+      "az": "Force Triad Koter Cihazı"
+    },
+    "category": "Electrosurgery",
+    "type": "hospital",
+    "description": {
+      "tr": "Monopolar elektrocerrahi, bipolar koagülasyon ve LigaSure damar kapama teknolojilerini tek bir platformda birleştiren, dünya çapında referans kabul edilen çok fonksiyonlu gelişmiş koter ünitesi.",
+      "en": "World-class multifunctional electrosurgical platform combining monopolar electrosurgery, bipolar coagulation, and LigaSure vessel sealing technologies in a single system.",
+      "fr": "Plateforme d'électrochirurgie multifonctionnelle de classe mondiale combinant l'électrochirurgie monopolaire, la coagulation bipolaire et les technologies de scellement de vaisseaux LigaSure dans un seul système.",
+      "az": "Monopolyar elektrocərrahiyyə, bipolyar koaqulyasiya və LigaSure damar bağlama texnologiyalarını tək bir platformada birləşdirən, dünya miqyasında istinad qəbul edilən çoxfunksiyalı təkmil koter cihazı."
+    },
+    "image": "/force-triad-koter-cihazi.jpeg",
+    "features": {
+      "tr": [
+        "LigaSure Damar Mühürleme Teknolojisi (300 ms Geri Bildirim)",
+        "TissueFect Doku Algılama Teknolojisi ile Kararlı Enerji İletimi",
+        "Monopolar, Bipolar ve LigaSure Çıkış Portları",
+        "Dokunmatik LCD Ekranlar ve Kolay Programlama",
+        "Tekerlekli Orijinal Taşıma Standı ve Ayak Pedalları"
+      ],
+      "en": [
+        "LigaSure Vessel Sealing Technology (300 ms Feedback)",
+        "Stable Energy Delivery with TissueFect Tissue Sensing Technology",
+        "Monopolar, Bipolar, and LigaSure Output Ports",
+        "Touchscreen LCD Displays and Easy Programming",
+        "Original Mobile Trolley Stand and Foot Switches"
+      ],
+      "fr": [
+        "Technologie de scellement de vaisseaux LigaSure (rétroaction de 300 ms)",
+        "Distribution d'énergie stable avec technologie de détection des tissus TissueFect",
+        "Ports de sortie monopolaire, bipolaire et LigaSure",
+        "Écrans LCD tactiles et programmation facile",
+        "Chariot mobile d'origine et interrupteurs au pied"
+      ],
+      "az": [
+        "LigaSure Damar Möhürləmə Texnologiyası (300 ms Əks Əlaqə)",
+        "TissueFect Toxuma Aşkarlama Texnologiyası ilə Sabit Enerji Ötürülməsi",
+        "Monopolyar, Bipolyar və LigaSure Çıxış Portları",
+        "Toxunma LCD Ekranlar və Asan Proqramlaşdırma",
+        "Orijinal Təkərli Taşıma Stendi və Ayaq Pedalları"
+      ]
+    }
+  },
+  {
+    "id": "shalya-lx-120-hospital",
+    "name": {
+      "tr": "Shalya LX 120 Koter Cihazı",
+      "en": "Shalya LX 120 Electrosurgical Unit",
+      "fr": "Bistouri électrique Shalya LX 120",
+      "az": "Shalya LX 120 Koter Cihazı"
+    },
+    "category": "Electrosurgery",
+    "type": "hospital",
+    "description": {
+      "tr": "Klinikler ve ameliyathaneler için mikroişlemci kontrollü dijital yapısı, 120W maksimum çıkış gücü ve stabil performansı ile öne çıkan güvenilir koter ünitesi.",
+      "en": "Reliable electrosurgical unit featuring a microprocessor-controlled digital architecture, 120W maximum output power, and stable performance for clinics and operating rooms.",
+      "fr": "Bistouri électrique fiable doté d'une architecture numérique contrôlée par microprocesseur, d'une puissance de sortie maximale de 120 W et de performances stables pour les cliniques et les blocs opératoires.",
+      "az": "Klinikalar və əməliyyatxanalar üçün mikroprosessorla idarə olunan rəqəmsal quruluşu, 120W maksimum çıxış gücü və stabil performansı ilə seçilən etibarlı koter cihazı."
+    },
+    "image": "/shalya-lx-120.png",
+    "features": {
+      "tr": [
+        "120W Güvenli Çıkış Gücü",
+        "Monopolar Kesme ve Koagülasyon Modları",
+        "Hassas Bipolar Modu Desteği",
+        "Kompakt ve Hafif Masaüstü Tasarım",
+        "Dijital Güç Ayar Göstergesi"
+      ],
+      "en": [
+        "120W Safe Output Power",
+        "Monopolar Cut and Coagulation Modes",
+        "Precise Bipolar Mode Support",
+        "Compact and Lightweight Desktop Design",
+        "Digital Power Setting Indicator"
+      ],
+      "fr": [
+        "Puissance de sortie sûre de 120 W",
+        "Modes coupe et coagulation monopolaires",
+        "Support de mode bipolaire précis",
+        "Conception de bureau compacte et légère",
+        "Indicateur numérique de réglage de puissance"
+      ],
+      "az": [
+        "120W Təhlükəsiz Çıxış Gücü",
+        "Monopolyar Kəsmə və Koaqulyasiya Rejimləri",
+        "Həssas Bipolyar Rejim Dəstəyi",
+        "Yığcam və Yüngül Masaüstü Dizayn",
+        "Rəqəmsal Güc Tənzimləmə Göstəricisi"
+      ]
+    }
+  },
+  {
+    "id": "shalya-turoseal-tur-cihazi",
+    "name": {
+      "tr": "Shalya Turoseal Üroloji TUR Cihazı",
+      "en": "Shalya Turoseal Urology TUR Electrosurgical Unit",
+      "fr": "Bistouri électrique d'urologie TUR Shalya Turoseal",
+      "az": "Shalya Turoseal Urologiya TUR Koter Cihazı"
+    },
+    "category": "Electrosurgery",
+    "type": "hospital",
+    "description": {
+      "tr": "Ürolojik TUR (Transüretral Rezeksiyon) ameliyatları ve su altı kesim işlemleri için özel olarak tasarlanmış, yüksek frekanslı kararlı akım çıkışı ve gelişmiş güvenlik sistemleri sunan profesyonel üroloji koter cihazı.",
+      "en": "Professional urology electrosurgical unit specially designed for urological TUR (Transurethral Resection) surgeries and underwater cutting procedures, offering high-frequency stable current output and advanced safety systems.",
+      "fr": "Bistouri électrique d'urologie professionnel spécialement conçu pour les chirurgies urologiques TUR (Résection Transurétrale) et les procédures de coupe sous-marine, offrant une sortie de courant stable à haute fréquence et des systèmes de sécurité avancés.",
+      "az": "Uroloji TUR (Transuretral Rezeksiya) əməliyyatları və sualtı kəsmə prosedurları üçün xüsusi olaraq hazırlanmış, yüksək tezlikli sabit cərəyan çıxışı və qabaqcıl təhlükəsizlik sistemləri təklif edən peşəkar urologiya koter cihazı."
+    },
+    "image": "/shalya-turoseal-tur-cihazi.png",
+    "features": {
+      "tr": [
+        "Su Altı Kesim (TURP / TUIP) Prosedurları ile Tam Uyum",
+        "Gelişmiş Doku Algılama ve Otomatik Güç Düzenleme",
+        "Kanamasız Kesim ve Hassas Bipolar Koagülasyon",
+        "Dokunmatik Kontrol Paneli ve Mod Hafıza Fonksiyonu",
+        "Maksimum Hasta Güvenliği ve Kaçak Akım Koruması"
+      ],
+      "en": [
+        "Full Compatibility with Underwater Cutting (TURP / TUIP) Procedures",
+        "Advanced Tissue Sensing and Automatic Power Regulation",
+        "Bloodless Cutting and Precise Bipolar Coagulation",
+        "Touchscreen Control Panel and Mode Memory Function",
+        "Maximum Patient Safety and Leakage Current Protection"
+      ],
+      "fr": [
+        "Compatibilité totale avec les procédures de coupe sous-marine (TURP / TUIP)",
+        "Détection avancée des tissus et régulation automatique de la puissance",
+        "Coupe sans effusion de sang et coagulation bipolaire précise",
+        "Panneau de commande tactile et fonction de mémoire de mode",
+        "Sécurité maximale des patients et protection contre les courants de fuite"
+      ],
+      "az": [
+        "Sualtı Kəsmə (TURP / TUIP) Prosedurları ilə Tam Uyğunluq",
+        "Qabaqcıl Toxuma Aşkarlama və Avtomatik Güc Tənzimlənməsi",
+        "Qansız Kəsmə və Həssas Bipolyar Koaqulyasiya",
+        "Toxunma İdarəetmə Paneli və Rejim Yaddaş Funksiyası",
+        "Maksimum Pasiyent Təhlükəsizliyi və Sızma Cərəyanından Qorunma"
+      ]
+    }
+  },
+  {
+    "id": "mindray-wato-65-anestezi-cihazi",
+    "name": {
+      "tr": "Mindray Wato EX-65 Anestezi Cihazı",
+      "en": "Mindray Wato EX-65 Anesthesia Machine",
+      "fr": "Station d'anesthésie Mindray Wato EX-65",
+      "az": "Mindray Wato EX-65 Anesteziya Cihazı"
+    },
+    "category": "Anesthesia",
+    "type": "hospital",
+    "description": {
+      "tr": "Gelişmiş solunum modu seçenekleri, entegre fizyolojik parametre takibi ve kullanıcı dostu renkli dokunmatik ekranı ile ameliyathaneler için yüksek performans ve güvenlik sunan profesyonel anestezi cihazı.",
+      "en": "Professional anesthesia machine offering high performance and safety for operating rooms with its advanced ventilation mode options, integrated physiological parameter monitoring, and user-friendly color touchscreen.",
+      "fr": "Station d'anesthésie professionnelle offrant des performances élevées et une sécurité pour les blocs opératoires grâce à ses options de mode de ventilation avancées, son monitorage intégré des paramètres physiologiques et son écran tactile couleur convivial.",
+      "az": "Əməliyyatxanalar üçün inkişaf etmiş tənəffüs rejimi seçimləri, inteqrasiya olunmuş fizioloji parametr nəzarəti və istifadəçi dostu rəngli sensor ekranı ilə yüksək performans və təhlükəsizlik təqdim edən peşəkar anesteziya cihazı."
+    },
+    "image": "/mindray-wato-65-anestezi-cihazi.jpg",
+    "features": {
+      "tr": [
+        "12.1 inç Yüksek Çözünürlüklü Renkli Dokunmatik Ekran",
+        "Gelişmiş Solunum Modları (PCV, VCV, SIMV, PSV)",
+        "Hassas Akış Kontrolü ve Entegre Gaz İzleme",
+        "Kompakt Solunum Devresi ile Hızlı Tepki Süresi",
+        "Dahili Kesintisiz Güç Kaynağı ve Yedek Akü Desteği"
+      ],
+      "en": [
+        "12.1-inch High-Resolution Color Touchscreen",
+        "Advanced Ventilation Modes (PCV, VCV, SIMV, PSV)",
+        "Precise Flow Control and Integrated Gas Monitoring",
+        "Fast Response Time with Compact Breathing Circuit",
+        "Built-in Uninterruptible Power Supply and Battery Backup"
+      ],
+      "fr": [
+        "Écran tactile couleur haute résolution de 12,1 pouces",
+        "Modes de ventilation avancés (PCV, VCV, SIMV, PSV)",
+        "Contrôle précis du débit et surveillance intégrée des gaz",
+        "Temps de réponse rapide avec circuit respiratoire compact",
+        "Alimentation sans coupure intégrée et batterie de secours"
+      ],
+      "az": [
+        "12.1 düymlük Yüksək Rezolyusiyalı Rəngli Sensor Ekran",
+        "Təkmil Tənəffüs Rejimləri (PCV, VCV, SIMV, PSV)",
+        "Dəqiq Axın Nəzarəti və İnteqrasiya edilmiş Qaz Nəzarəti",
+        "Kompakt Tənəffüs Dövrəsi ilə Sürətli Cavab Müddəti",
+        "Daxili Fasiləsiz Enerji Mənbəyi və Yedək Akkumulyator Dəstəyi"
+      ]
+    }
+  },
+  {
+    "id": "mindray-wato-35-anestesi-cihazi",
+    "name": {
+      "tr": "Mindray Wato EX-35 Anestezi Cihazı",
+      "en": "Mindray Wato EX-35 Anesthesia Machine",
+      "fr": "Station d'anesthésie Mindray Wato EX-35",
+      "az": "Mindray Wato EX-35 Anesteziya Cihazı"
+    },
+    "category": "Anesthesia",
+    "type": "hospital",
+    "description": {
+      "tr": "Klinikler ve ameliyathaneler için kompakt tasarımı, stabil solunum performansını ve kullanım kolaylığını bir arada sunan, üst seviye klinik güvenlik standartlarına sahip anestezi sistemi.",
+      "en": "Anesthesia system offering a compact design, stable ventilation performance, and ease of use for clinics and operating rooms, meeting high clinical safety standards.",
+      "fr": "Système d'anesthésie offrant une conception compacte, des performances de ventilation stables et une facilité d'utilisation pour les cliniques et les blocs opératoires, répondant à des normes de sécurité clinique élevées.",
+      "az": "Klinikalar və əməliyyatxanalar üçün kompakt dizaynı, sabit tənəffüs performansını və istifadə asanlığını bir arada təqdim edən, yüksək klinik təhlükəsizlik standartlarına malik anesteziya sistemi."
+    },
+    "image": "/mindray-wato-35-anestesi-cihazi.png",
+    "features": {
+      "tr": [
+        "10.4 inç Dokunmatik Olmayan Renkli LCD Ekran",
+        "Dinamik Gaz Akış Kompansasyonu ve Kararlı Solunum",
+        "Standart VCV Solunum Modu ve PCV Opsiyonu",
+        "Kolay Temizlenebilir Otoklavlanabilir Solunum Devresi",
+        "Kompakt ve Ergonomik Şasi Tasarımı"
+      ],
+      "en": [
+        "10.4-inch Non-Touch Color LCD Screen",
+        "Dynamic Gas Flow Compensation and Stable Ventilation",
+        "Standard VCV Ventilation Mode and PCV Option",
+        "Easy-to-clean Autoclavable Breathing Circuit",
+        "Compact and Ergonomic Chassis Design"
+      ],
+      "fr": [
+        "Écran LCD couleur non tactile de 10,4 pouces",
+        "Compensation dynamique du débit de gaz et ventilation stable",
+        "Mode de ventilation VCV standard et option PCV",
+        "Circuit respiratoire autoclavable facile à nettoyer",
+        "Conception de châssis compacte et ergonomique"
+      ],
+      "az": [
+        "10.4 düymlük Sensor Olmayan Rəngli LCD Ekran",
+        "Dinamik Qaz Axını Kompensasiyası və Sabit Tənəffüs",
+        "Standart VCV Tənəffüs Rejimi və PCV Seçimi",
+        "Asan Təmizlənən Otoklavlana bilən Tənəffüs Dövrəsi",
+        "Yığcam və Erqonomik Şassi Dizaynı"
+      ]
+    }
+  },
+  {
+    "id": "drager-primus-anestezi-cihazi",
+    "name": {
+      "tr": "Dräger Primus Anestezi Cihazı",
+      "en": "Dräger Primus Anesthesia Workstation",
+      "fr": "Station d'anesthésie Dräger Primus",
+      "az": "Dräger Primus Anesteziya Cihazı"
+    },
+    "category": "Anesthesia",
+    "type": "hospital",
+    "description": {
+      "tr": "Ameliyathanelerde yüksek kalitede hasta izleme, hassas ventilasyon ve gelişmiş anestezi yönetimi sunan, dünya genelinde güvenilirliği ile bilinen üst düzey anestezi iş istasyonu.",
+      "en": "High-end anesthesia workstation known worldwide for its reliability, offering high-quality patient monitoring, precise ventilation, and advanced anesthesia management in operating rooms.",
+      "fr": "Station d'anesthésie haut de gamme connue dans le monde entier pour sa fiabilité, offrant un monitorage des patients de haute qualité, une ventilation précise et une gestion avancée de l'anesthésie dans les blocs opératoires.",
+      "az": "Əməliyyatxanalarda yüksək keyfiyyətli pasiyent nəzarəti, dəqiq ventilyasiya və təkmil anesteziya idarəetməsi təqdim edən, dünya miqyasında etibarlılığı ilə tanınan yüksək səviyyəli anesteziya iş stansiyası."
+    },
+    "image": "/drager-primus-anestezi-cihazi.png",
+    "features": {
+      "tr": [
+        "Elektronik Gaz Karıştırıcı ve Hassas Dozajlama",
+        "Yüksek Kaliteli E-Vent Plus Servo Ventilatör Teknolojisi",
+        "Gelişmiş Düşük Akışlı (Low-Flow) Anestezi Desteği",
+        "Entegre Renkli Ekran ve Kolay İzleme Paneli",
+        "Kapsamlı Akıllı Alarm Sistemi ve Güvenlik Protokolleri"
+      ],
+      "en": [
+        "Electronic Gas Mixer and Precise Dosing",
+        "High-Quality E-Vent Plus Servo Ventilator Technology",
+        "Advanced Low-Flow Anesthesia Support",
+        "Integrated Color Screen and Easy Monitoring Panel",
+        "Comprehensive Smart Alarm System and Safety Protocols"
+      ],
+      "fr": [
+        "Mélangeur de gaz électronique et dosage précis",
+        "Technologie de ventilateur asservi E-Vent Plus de haute qualité",
+        "Support d'anesthésie à faible débit (Low-Flow) avancé",
+        "Écran couleur intégré et panneau de surveillance facile",
+        "Système d'alarme intelligent complet et protocoles de sécurité"
+      ],
+      "az": [
+        "Elektron Qaz Qarışdırıcısı və Dəqiq Dozajlama",
+        "Yüksək Keyfiyyətli E-Vent Plus Servo Ventilyator Texnologiyası",
+        "Təkmil Aşağı Axınlı (Low-Flow) Anesteziya Dəstəyi",
+        "İnteqrasiya edilmiş Rəngli Ekran və Asan Monitorinq Paneli",
+        "Kompleks Ağıllı Siqnal Sistemi və Təhlükəsizlik Protokolları"
+      ]
+    }
+  },
+  {
+    "id": "drager-fabius-anestesi-cihazi",
+    "name": {
+      "tr": "Dräger Fabius Anestezi Cihazı",
+      "en": "Dräger Fabius Anesthesia Machine",
+      "fr": "Station d'anesthésie Dräger Fabius",
+      "az": "Dräger Fabius Anesteziya Cihazı"
+    },
+    "category": "Anesthesia",
+    "type": "hospital",
+    "description": {
+      "tr": "Güçlü elektronik pistonlu ventilatörü, modüler tasarımı ve klinik esnekliği ile bilinen, ameliyathanelerde stabil ve güvenilir performans sunan anestezi cihazı.",
+      "en": "Anesthesia machine known for its powerful electronic piston ventilator, modular design, and clinical flexibility, offering stable and reliable performance in operating rooms.",
+      "fr": "Station d'anesthésie connue pour son puissant ventilateur à piston électronique, sa conception modulaire et sa flexibilité clinique, offrant des performances stables et fiables dans les blocs opératoires.",
+      "az": "Güclü elektron porşenli ventilyatoru, modulyar dizaynı və klinik çevikliyi ilə tanınan, əməliyyatxanalarda sabit və etibarlı performans təqdim edən anesteziya cihazı."
+    },
+    "image": "/drager-fabius-anestesi-cihazi.png",
+    "features": {
+      "tr": [
+        "Elektronik Kontrollü Pistonlu Ventilatör (Gaz Gerektirmez)",
+        "Yüksek Kontrastlı Renkli Ekran Arayüzü",
+        "Esnek Duvar, Tavan veya Mobil Stand Montaj Seçenekleri",
+        "Kolay Güncellenebilir ve Genişletilebilir Modüler Yapı",
+        "Kararlı Mekanik Gaz Akışölçer Sistemi"
+      ],
+      "en": [
+        "Electronically Controlled Piston Ventilator (Requires No Drive Gas)",
+        "High-Contrast Color Display Interface",
+        "Flexible Wall, Ceiling, or Mobile Stand Mounting Options",
+        "Easily Upgradeable and Expandable Modular Architecture",
+        "Stable Mechanical Gas Flowmeter System"
+      ],
+      "fr": [
+        "Ventilateur à piston à commande électronique (ne nécessite aucun gaz d'entraînement)",
+        "Interface d'affichage couleur à contraste élevé",
+        "Options de montage flexibles sur mur, plafond ou pied mobile",
+        "Architecture modulaire facilement évolutive et extensible",
+        "Système de débitmètre de gaz mécanique stable"
+      ],
+      "az": [
+        "Elektron İdarə Olunan Porşenli Ventilyator (Sürücü Qazı Tələb Etmir)",
+        "Yüksək Kontrastlı Rəngli Ekran İnterfeysi",
+        "Çevik Divar, Tavan və ya Mobil Stend Quraşdırma Seçimləri",
+        "Asan Yenilənə bilən və Genişləndirilə bilən Modulyar Quruluş",
+        "Sabit Mexaniki Qaz Axınölçən Sistemi"
+      ]
+    }
+  },
+  {
+    "id": "ge-avange-s5-anestezi-cihazi",
+    "name": {
+      "tr": "GE Avance S5 Anestezi Cihazı",
+      "en": "GE Avance S5 Anesthesia System",
+      "fr": "Système d'anesthésie GE Avance S5",
+      "az": "GE Avance S5 Anesteziya Cihazı"
+    },
+    "category": "Anesthesia",
+    "type": "hospital",
+    "description": {
+      "tr": "Gelişmiş solunum desteği sağlayan entegre vantilatörü, hassas gaz yönetimi ve üst düzey hasta güvenliği özellikleri ile donatılmış profesyonel anestezi iş istasyonu.",
+      "en": "Professional anesthesia workstation equipped with an integrated ventilator providing advanced respiratory support, precise gas management, and high-end patient safety features.",
+      "fr": "Station d'anesthésie professionnelle équipée d'un respirateur intégré offrant une assistance respiratoire avancée, une gestion précise des gaz et des fonctions de sécurité des patients haut de gamme.",
+      "az": "Təkmil tənəffüs dəstəyi təmin edən inteqrasiya edilmiş ventilyatoru, dəqiq qaz idarəetməsi və yüksək səviyyəli pasiyent təhlükəsizliyi xüsusiyyətləri ilə təchiz olunmuş peşəkar anesteziya iş stansiyası."
+    },
+    "image": "/ge-avange-s5-anestezi-cihazi.png",
+    "features": {
+      "tr": [
+        "Gelişmiş Akıllı Havalandırma Modu Seçenekleri",
+        "Düşük Akışlı Anestezi için Optimize Edilmiş Solunum Sistemi",
+        "Kullanıcı Dostu Renkli Düz Panel Ekran Arayüzü",
+        "Hassas Elektronik Gaz Akış Kontrolü",
+        "Kompakt ve Temizliği Kolay Gelişmiş Solunum Devresi"
+      ],
+      "en": [
+        "Advanced Smart Ventilation Mode Options",
+        "Breathing System Optimized for Low-Flow Anesthesia",
+        "User-Friendly Color Flat-Panel Display Interface",
+        "Precise Electronic Gas Flow Control",
+        "Compact and Easy-to-Clean Advanced Breathing Circuit"
+      ],
+      "fr": [
+        "Options de mode de ventilation intelligente avancées",
+        "Système respiratoire optimisé pour l'anesthésie à faible débit",
+        "Interface utilisateur conviviale à écran plat couleur",
+        "Contrôle précis du débit de gaz électronique",
+        "Circuit respiratoire avancé compact et facile à nettoyer"
+      ],
+      "az": [
+        "Təkmil Ağıllı Ventilyasiya Rejimi Seçimləri",
+        "Aşağı Axınlı Anesteziya üçün Optimallaşdırılmış Tənəffüs Sistemi",
+        "İstifadəçi Dostu Rəngli Yastı Panel Ekran İnterfeysi",
+        "Dəqiq Elektron Qaz Axını Nəzarəti",
+        "Yığcam və Təmizlənməsi Asan Təkmil Tənəffüs Dövrəsi"
+      ]
+    }
+  },
+  {
+    "id": "ge-avange-cs2-anestesi-cihazi",
+    "name": {
+      "tr": "GE Avance CS2 Anestezi Cihazı",
+      "en": "GE Avance CS2 Anesthesia Workstation",
+      "fr": "Station d'anesthésie GE Avance CS2",
+      "az": "GE Avance CS2 Anesteziya Cihazı"
+    },
+    "category": "Anesthesia",
+    "type": "hospital",
+    "description": {
+      "tr": "15 inç büyüklüğündeki renkli dokunmatik ekranı, otomatik gaz kontrol yeteneği (ecoFlow) ve en hassas solunum modları ile donatılmış, ameliyathaneler için üst segment yeni nesil anestezi platformu.",
+      "en": "Premium, new generation anesthesia platform for operating rooms, equipped with a 15-inch color touchscreen, automatic gas control capability (ecoFlow), and precise ventilation modes.",
+      "fr": "Plateforme d'anesthésie haut de gamme de nouvelle génération pour les blocs opératoires, équipée d'un écran tactile couleur de 15 pouces, d'une capacité de contrôle automatique des gaz (ecoFlow) et de modes de ventilation précis.",
+      "az": "15 düymlük rəngli sensor ekranı, avtomatik qaz idarəetmə qabiliyyəti (ecoFlow) və ən həssas tənəffüs rejimləri ilə təchiz olunmuş, əməliyyatxanalar üçün üst seqment yeni nəsil anesteziya platforması."
+    },
+    "image": "/ge-avange-cs2-anestesi-cihazi.png",
+    "features": {
+      "tr": [
+        "15 inç Yüksek Çözünürlüklü Dokunmatik Ekran",
+        "ecoFlow Teknolojisi ile Gaz Tüketim Optimizasyonu",
+        "Carestation Entegre Akıllı Arayüz Tasarımı",
+        "Akış Durumuna Göre Otomatik Ayarlanan Akıllı Solunum",
+        "Yüksek Kaliteli Akışölçer ve Elektronik Dozajlama"
+      ],
+      "en": [
+        "15-inch High-Resolution Touchscreen Display",
+        "Gas Consumption Optimization with ecoFlow Technology",
+        "Carestation Integrated Smart Interface Design",
+        "Smart Ventilation Automatically Adjusted to Flow Status",
+        "High-Quality Flowmeter and Electronic Dosing"
+      ],
+      "fr": [
+        "Écran tactile haute résolution de 15 pouces",
+        "Optimisation de la consommation de gaz avec la technologie ecoFlow",
+        "Conception d'interface intelligente intégrée Carestation",
+        "Ventilation intelligente ajustée automatiquement à l'état du débit",
+        "Débitmètre de haute qualité et dosage électronique"
+      ],
+      "az": [
+        "15 düymlük Yüksək Rezolyusiyalı Sensor Ekran",
+        "ecoFlow Texnologiyası ilə Qaz İstehlakı Optimizasiyası",
+        "Carestation İnteqrasiya edilmiş Ağıllı İnterfeys Dizaynı",
+        "Axın Vəziyyətinə Görə Avtomatik Tənzimlənən Ağıllı Tənəffüs",
+        "Yüksək Keyfiyyətli Axınölçən və Elektron Dozajlama"
+      ]
+    }
+  },
+  {
+    "id": "drager-vaporizator",
+    "name": {
+      "tr": "Dräger Vaporizatör",
+      "en": "Dräger Vaporizer",
+      "fr": "Vaporisateur Dräger",
+      "az": "Dräger Vaporizator"
+    },
+    "category": "Anesthesia",
+    "type": "hospital",
+    "description": {
+      "tr": "Anestezi cihazlarında solunum havasına sıvı anestezik ajanların (İzofluran/Sevofluran) son derece hassas, kararlı ve sıcaklıktan bağımsız bir şekilde buharlaştırılarak karıştırılmasını sağlayan profesyonel vaporizatör ünitesi.",
+      "en": "Professional vaporizer unit ensuring highly precise, stable, and temperature-independent vaporization and mixing of liquid anesthetic agents (Isoflurane/Sevoflurane) into the breathing air in anesthesia machines.",
+      "fr": "Unité de vaporisation professionnelle assurant une vaporisation et un mélange très précis, stables et indépendants de la température des agents anesthésiques liquides (Isoflurane/Sévoflurane) dans l'air respirable des stations d'anesthésie.",
+      "az": "Anesteziya cihazlarında tənəffüs havasına maye anestezik maddələrin (İzofluran/Sevofluran) son dərəcə dəqiq, sabit və temperaturdan asılı olmayaraq buxarlandırılaraq qarışdırılmasını təmin edən peşəkar vaporizator cihazı."
+    },
+    "image": "/drager-vaporizator.png",
+    "features": {
+      "tr": [
+        "Sıcaklık, Akış ve Basınç Değişimlerinden Etkilenmeyen Kararlı Çıkış",
+        "Farklı Anestezik Ajan Seçenekleri (Sevofluran, İzofluran vb.)",
+        "Güvenli Kilitleme Sistemi (Interlock) ile Eş Zamanlı Çalışmayı Önleme",
+        "Kolay ve Güvenli Doldurma Seçenekleri (Quik-Fil, Easy-Fil)",
+        "Dräger Anestezi Cihazları ile Tam ve Güvenli Entegrasyon"
+      ],
+      "en": [
+        "Stable Output Unaffected by Temperature, Flow, and Pressure Changes",
+        "Different Anesthetic Agent Options (Sevoflurane, Isoflurane, etc.)",
+        "Secure Interlock System to Prevent Simultaneous Operation",
+        "Easy and Safe Filling Options (Quik-Fil, Easy-Fil)",
+        "Full and Secure Integration with Dräger Anesthesia Machines"
+      ],
+      "fr": [
+        "Sortie stable non affectée par les changements de température, de débit et de pression",
+        "Différentes options d'agents anesthésiques (Sévoflurane, Isoflurane, etc.)",
+        "Système de verrouillage sécurisé pour empêcher un fonctionnement simultané",
+        "Options de remplissage simples et sûres (Quik-Fil, Easy-Fil)",
+        "Intégration complète et sécurisée avec les stations d'anesthésie Dräger"
+      ],
+      "az": [
+        "Temperatur, Axın və Təzyiq Dəyişikliklərindən Təsir Görməyən Sabit Çıxış",
+        "Müxtəlif Anestezik Maddə Seçimləri (Sevofluran, İzofluran və s.)",
+        "Təhlükəsiz Kilidləmə Sistemi (Interlock) ilə Eyni Vaxtda İşləməyin Qarşısının Alınması",
+        "Asan Və Təhlükəsiz Doldurma Seçimləri (Quik-Fil, Easy-Fil)",
+        "Dräger Anesteziya Cihazları ilə Tam və Təhlükəsiz İnteqrasiya"
+      ]
+    }
+  },
+  {
+    "id": "uzumcu-opm-600n-ameliyat-masasi",
+    "name": {
+      "tr": "Üzümcü OPM-600N Ameliyat Masası",
+      "en": "Üzümcü OPM-600N Operating Table",
+      "fr": "Table d'opération Üzümcü OPM-600N",
+      "az": "Üzümcü OPM-600N Əməliyyat Masası"
+    },
+    "category": "SurgicalTable",
+    "type": "hospital",
+    "description": {
+      "tr": "Elektro-hidrolik tahrik sistemi, kaydırılabilir masa tablası, yüksek ağırlık taşıma kapasitesi ve modüler yapısı ile tüm cerrahi branşların ihtiyaçlarını karşılayan profesyonel ameliyat masası.",
+      "en": "Professional operating table meeting the needs of all surgical specialties with its electro-hydraulic drive system, sliding tabletop, high weight capacity, and modular design.",
+      "fr": "Table d'opération professionnelle répondant aux besoins de toutes les spécialités chirurgicales grâce à son système d'entraînement électro-hydraulique, son plateau coulissant, sa capacité de charge élevée et sa conception modulaire.",
+      "az": "Elektro-hidravlik idarəetmə sistemi, sürüşən masa üstü, yüksək çəki tutumu və modulyar dizaynı ilə bütün cərrahi sahələrin ehtiyaclarını ödəyən peşəkar əməliyyat masası."
+    },
+    "image": "/uzumcu-opm-600n-ameliyat-masasi.jpg",
+    "features": {
+      "tr": [
+        "Elektro-Hidrolik Hareket Sistemi ve Akıllı Kumanda",
+        "Radyotransparan (X-Ray Geçirgen) Masa Tablası",
+        "Boyuna Kayma (Sliding) Özelliği ile C-Kollu Uyumlu",
+        "Modüler Baş, Sırt ve Bacak Bölümü Tasarımı",
+        "Yüksek Kaliteli Paslanmaz Çelik Şasi ve Kolay Temizlik"
+      ],
+      "en": [
+        "Electro-Hydraulic Movement System and Smart Controller",
+        "Radiotranslucent (X-Ray Permeable) Tabletop",
+        "Longitudinal Sliding for C-Arm Compatibility",
+        "Modular Head, Back, and Leg Section Design",
+        "High-Quality Stainless Steel Chassis and Easy Cleaning"
+      ],
+      "fr": [
+        "Système de mouvement électro-hydraulique et télécommande intelligente",
+        "Plateau radiotransparent (perméable aux rayons X)",
+        "Coulissement longitudinal pour la compatibilité avec l'arceau chirurgical (C-Arm)",
+        "Conception modulaire des sections de tête, de dossier et de jambe",
+        "Châssis en acier inoxydable de haute qualité et nettoyage facile"
+      ],
+      "az": [
+        "Elektro-Hidravlik Hərəkət Sistemi və Ağıllı Nəzarətçi",
+        "Radiotransparent (X-Ray Keçirici) Masa Üstü",
+        "C-Qollu Uyğunluq üçün Uzununa Sürüşmə",
+        "Modulyar Baş, Bel və Ayaq Hissələrinin Dizaynı",
+        "Yüksək Keyfiyyətli Paslanmayan Polad Şassi və Asan Təmizlənmə"
+      ]
+    }
+  },
+  {
+    "id": "uzumcu-op-4p-ameliyat-masasi",
+    "name": {
+      "tr": "Üzümcü OP-4P Ameliyat Masası",
+      "en": "Üzümcü OP-4P Operating Table",
+      "fr": "Table d'opération Üzümcü OP-4P",
+      "az": "Üzümcü OP-4P Əməliyyat Masası"
+    },
+    "category": "SurgicalTable",
+    "type": "hospital",
+    "description": {
+      "tr": "Mekanik ve hidrolik kontrol mekanizması, çok açılı konumlandırma esnekliği ve dayanıklı yapısı ile genel cerrahi ve jinekoloji için ideal ve ekonomik ameliyat masası çözümü.",
+      "en": "Ideal and economical operating table solution for general surgery and gynecology with its mechanical and hydraulic control mechanism, multi-angle positioning flexibility, and durable construction.",
+      "fr": "Solution de table d'opération idéale et économique pour la chirurgie générale et la gynécologie grâce à son mécanisme de contrôle mécanique et hydraulique, sa flexibilité de positionnement multi-angle et sa construction durable.",
+      "az": "Mexaniki və hidravlik idarəetmə mexanizmi, çoxbucaqlı yerləşdirmə çevikliyi və davamlı quruluşu ilə ümumi cərrahiyyə və ginekologiya üçün ideal və iqtisadi əməliyyat masası həlli."
+    },
+    "image": "/uzumcu-op-4p-ameliyat-masasi.jpg",
+    "features": {
+      "tr": [
+        "Hidrolik Yükseklik Ayarı (Ayak Pedallı)",
+        "Mekanik Dişli Sistemi ile Trendelenburg ve Yanal Eğim",
+        "Radyografi ve C-Kollu Görüntüleme Uyumluluğu",
+        "Dayanıklı Antistatik Poliüretan Minder Seti",
+        "Fren Mekanizmalı Mobil Tekerlek Sistemi"
+      ],
+      "en": [
+        "Hydraulic Height Adjustment (via Foot Pedal)",
+        "Trendelenburg and Lateral Tilt via Mechanical Gears",
+        "Radiography and C-Arm Imaging Compatibility",
+        "Durable Antistatic Polyurethane Mattress Set",
+        "Mobile Caster System with Brake Mechanism"
+      ],
+      "fr": [
+        "Réglage hydraulique de la hauteur (via pédale)",
+        "Positions Trendelenburg et inclinaison latérale via engrenages mécaniques",
+        "Compatibilité avec la radiographie et l'imagerie par arceau (C-Arm)",
+        "Matelas en polyuréthane antistatique et durable",
+        "Système de roulettes mobiles avec mécanisme de freinage"
+      ],
+      "az": [
+        "Hidravlik Hündürlük Tənzimlənməsi (Ayaq Pedalı vasitəsilə)",
+        "Mexaniki Ötürücülər vasitəsilə Trendelenburq və Yan Maililik",
+        "Radioqrafiya və C-Qollu Görüntüləmə Uyğunluğu",
+        "Davamlı Antistatik Poliuretan Döşək Dəsti",
+        "Əyləc Mexanizmli Mobil Təkər Sistemi"
+      ]
+    }
+  },
+  {
+    "id": "medsan-ameliyat-masasi",
+    "name": {
+      "tr": "Medsan Ameliyat Masası",
+      "en": "Medsan Operating Table",
+      "fr": "Table d'opération Medsan",
+      "az": "Medsan Əməliyyat Masası"
+    },
+    "category": "SurgicalTable",
+    "type": "hospital",
+    "description": {
+      "tr": "Sağlam gövde tasarımı, kolay ayarlanabilir bölmeleri ve hijyenik yapısı ile küçük cerrahi odaları, günübirlik klinikler ve acil müdahale odaları için mükemmel ameliyat masası.",
+      "en": "Excellent operating table for minor surgical suites, outpatient clinics, and emergency intervention rooms with its robust body design, easily adjustable sections, and hygienic construction.",
+      "fr": "Excellente table d'opération pour les salles de chirurgie mineure, les cliniques ambulatoires et les salles d'intervention d'urgence grâce à sa conception robuste, ses sections facilement réglables et sa construction hygiénique.",
+      "az": "Möhkəm gövdə dizaynı, asan tənzimlənən hissələri və gigiyenik quruluşu ilə kiçik cərrahi otaqlar, ambulator klinikalar və təcili müdaxilə otaqları üçün mükəmməl əməliyyat masası."
+    },
+    "image": "/medsan-ameliyat-masasi.jpeg",
+    "features": {
+      "tr": [
+        "Mekanik Ayarlanabilir Sırt ve Ayak Bölümleri",
+        "Hidrolik Pompa ile Sorunsuz Yükseklik Ayarı",
+        "Paslanmaz Çelik Alt Şasi ve Kolay Temizlenebilir Yüzeyler",
+        "Konforlu ve Sıvı Geçirmeyen Minder Kaplaması",
+        "Farklı Cerrahi Aksesuarlar için Yan Ray Desteği"
+      ],
+      "en": [
+        "Mechanically Adjustable Back and Foot Sections",
+        "Smooth Height Adjustment via Hydraulic Pump",
+        "Stainless Steel Sub-Chassis and Easy-to-Clean Surfaces",
+        "Comfortable and Waterproof Mattress Coating",
+        "Side Rail Support for Various Surgical Accessories"
+      ],
+      "fr": [
+        "Sections de dossier et de pied réglables mécaniquement",
+        "Réglage de la hauteur en douceur via pompe hydraulique",
+        "Sous-châssis en acier inoxydable et surfaces faciles à nettoyer",
+        "Revêtement de matelas confortable et imperméable",
+        "Support de rail latéral pour divers accessoires chirurgicaux"
+      ],
+      "az": [
+        "Mexaniki Tənzimlənən Bel və Ayaq Hissələri",
+        "Hidravlik Nasos vasitəsilə Rahat Hündürlük Tənzimlənməsi",
+        "Paslanmayan Polad Alt Şassi və Asan Təmizlənən Səthlər",
+        "Rahat və Su Keçirməyən Döşək Örtüyü",
+        "Müxtəlif Cərrahi Aksesuarlar üçün Yan Relk Dəstəyi"
+      ]
+    }
+  },
+  {
+    "id": "uzumcu-mobil-ameliyat-lambasi",
+    "name": {
+      "tr": "Üzümcü Mobil Ameliyat Lambası",
+      "en": "Üzümcü Mobile Surgical Light",
+      "fr": "Scialytique mobile Üzümcü",
+      "az": "Üzümcü Mobil Əməliyyat Lampası"
+    },
+    "category": "SurgicalLight",
+    "type": "hospital",
+    "description": {
+      "tr": "Ameliyathaneler, acil müdahale odaları ve klinikler için tasarlanmış, yüksek aydınlatma gücü, batarya desteği ve kolay taşınabilir tekerlekli şasisi ile kesintisiz gölgesiz ışık sunan mobil LED ameliyat lamba sistemi.",
+      "en": "Mobile LED surgical light system designed for operating rooms, emergency suites, and clinics, offering continuous shadowless light with its high illumination power, battery backup, and easily portable wheeled chassis.",
+      "fr": "Système de scialytique mobile à LED conçu pour les blocs opératoires, les salles d'urgence et les cliniques, offrant une lumière sans ombre continue grâce à sa puissance d'éclairage élevée, sa batterie de secours et son châssis sur roulettes facilement transportable.",
+      "az": "Əməliyyatxanalar, təcili müdaxilə otaqları və klinikalar üçün nəzərdə tutulmuş, yüksək işıqlandırma gücü, batareya dəstəyi və asan daşına bilən təkərli şassisi ilə fasiləsiz kölgəsiz işıq təqdim edən mobil LED əməliyyat lampası sistemi."
+    },
+    "image": "/uzumcu-mobil-ameliyat-lambasi.png",
+    "features": {
+      "tr": [
+        "Yüksek Verimli Gölgesiz LED Teknolojisi",
+        "Dahili Batarya ile Elektrik Kesintisinde Çalışma Esnekliği",
+        "Ayarlanabilir Odak Çapı ve Aydınlatma Yoğunluğu",
+        "360 Derece Dönebilen Kolay Yönlendirilebilir Gövde",
+        "Kilit Mekanizmalı Güvenli Mobil Tekerlek Sistemi"
+      ],
+      "en": [
+        "High-Efficiency Shadowless LED Technology",
+        "Uninterrupted Operation during Power Outages via Built-in Battery",
+        "Adjustable Spot Size and Illumination Intensity",
+        "360-Degree Rotating Easily Positionable Arm",
+        "Secure Mobile Caster System with Locking Mechanism"
+      ],
+      "fr": [
+        "Technologie LED sans ombre à haute efficacité",
+        "Fonctionnement ininterrompu lors des pannes de courant via batterie intégrée",
+        "Taille du spot et intensité d'éclairage réglables",
+        "Bras facilement positionnable rotatif à 360 degrés",
+        "Système de roulettes mobiles sécurisé avec mécanisme de verrouillage"
+      ],
+      "az": [
+        "Yüksək Effektivli Kölgəsiz LED Texnologiyası",
+        "Daxili Batareya ilə Elektrik Kəsintilərində İşləmə Çevikliyi",
+        "Tənzimlənən Fokus Sahəsi və İşıqlandırma İntensivliyi",
+        "360 Dərəcə Fırlana bilən Asan İdarə Olunan Gövdə",
+        "Kilid Mexanizmli Təhlükəsiz Mobil Təkər Sistemi"
+      ]
+    }
+  },
+  {
+    "id": "uzumcu-dl66-2d-3-basli-ameliyat-lambasi",
+    "name": {
+      "tr": "Üzümcü DL66-2D 3 Başlı Ameliyat Lambası",
+      "en": "Üzümcü DL66-2D Triple-Head Surgical Light",
+      "fr": "Scialytique triple coupole Üzümcü DL66-2D",
+      "az": "Üzümcü DL66-2D 3 Başlı Əməliyyat Lampası"
+    },
+    "category": "SurgicalLight",
+    "type": "hospital",
+    "description": {
+      "tr": "Büyük cerrahi operasyonlar için tasarlanmış, üç adet aydınlatma başlığı ile çok açılı, maksimum aydınlatma gücüne sahip ve gölge oluşumunu tamamen engelleyen tavan tipi profesyonel LED ameliyat lambası.",
+      "en": "Ceiling-mounted professional LED surgical light designed for major surgical procedures, featuring three illumination heads for multi-angle maximum light output, completely eliminating shadow formation.",
+      "fr": "Scialytique à LED professionnel plafonnier conçu pour les interventions chirurgicales majeures, doté de trois coupoles d'éclairage pour un rendement lumineux maximal multi-angle, éliminant complètement la formation d'ombres.",
+      "az": "Böyük cərrahi əməliyyatlar üçün nəzərdə tutulmuş, üç işıqlandırma başlığı ilə çoxbucaqlı, maksimum işıqlandırma gücünə malik və kölgə əmələ gəlməsini tamamilə maneə törədən tavana quraşdırılmış peşəkar LED əməliyyat lampası."
+    },
+    "image": "/uzumcu-dl66-2d-3-basli-ameliyat-lambasi.png",
+    "features": {
+      "tr": [
+        "Üç Başlıklı Maksimum Gölgesiz Işık Alanı",
+        "Yüksek Işık Yoğunluğu (Her Başlıkta Ayrı Kontrol)",
+        "Doğal Gün Işığı Renk Sıcaklığı (CRI >96)",
+        "Laminer Akış (Hava Akımı) Dostu Aerodinamik Tasarım",
+        "Endoskopi Modu ve Dokunmatik Kontrol Paneli"
+      ],
+      "en": [
+        "Triple-Head Maximum Shadowless Light Field",
+        "High Illumination Intensity (Independent Control on Each Head)",
+        "Natural Daylight Color Temperature (CRI >96)",
+        "Laminar Flow Friendly Aerodynamic Design",
+        "Endoscopy Mode and Touch Control Panel"
+      ],
+      "fr": [
+        "Champ lumineux sans ombre maximal à triple coupole",
+        "Intensité d'éclairage élevée (contrôle indépendant sur chaque coupole)",
+        "Température de couleur de la lumière du jour naturelle (IRC >96)",
+        "Conception aérodynamique adaptée au flux laminaire",
+        "Mode endoscopie et panneau de commande tactile"
+      ],
+      "az": [
+        "Üç Başlıqlı Maksimum Kölgəsiz İşıq Sahəsi",
+        "Yüksək İşıq İntensivliyi (Hər Başlıqda Müstəqil Nəzarət)",
+        "Təbii Gün İşığı Rəng Temperaturu (CRI >96)",
+        "Laminar Axın (Hava Axını) Dostu Aerodinamik Dizayn",
+        "Endoskopiya Rejimi və Toxunma İdarəetmə Paneli"
+      ]
+    }
+  },
+  {
+    "id": "uzumcu-dl66-ameliyat-tavan-lambasi",
+    "name": {
+      "tr": "Üzümcü DL66 Ameliyat Tavan Lambası",
+      "en": "Üzümcü DL66 Ceiling Surgical Light",
+      "fr": "Scialytique plafonnier Üzümcü DL66",
+      "az": "Üzümcü DL66 Əməliyyat Tavan Lampası"
+    },
+    "category": "SurgicalLight",
+    "type": "hospital",
+    "description": {
+      "tr": "Modern ameliyathanelerin ihtiyaçlarına göre geliştirilmiş, tek başlıklı yüksek aydınlatma performansı sunan, derinlik odaklamalı ve gölgesiz ışık alanı sağlayan tavan tipi profesyonel LED ameliyat lambası.",
+      "en": "Professional ceiling-mounted LED surgical light developed for modern operating rooms, offering high illumination performance with a single head, depth focusing, and shadowless light field.",
+      "fr": "Scialytique à LED professionnel plafonnier développé pour les blocs opératoires modernes, offrant des performances d'éclairage élevées avec une seule coupole, une mise au point en profondeur et un champ lumineux sans ombre.",
+      "az": "Müasir əməliyyatxanaların ehtiyaclarına uyğun olaraq hazırlanmış, tək başlıqlı yüksək işıqlandırma performansı təqdim edən, dərinlik fokuslamalı və kölgəsiz işıq sahəsi təmin edən tavana quraşdırılmış peşəkar LED əməliyyat lampası."
+    },
+    "image": "/uzumcu-DL66-ameliyat-tavan-lambasi.png",
+    "features": {
+      "tr": [
+        "Yüksek Performanslı Tek Başlıklı LED Işık Kaynağı",
+        "Elektronik Odaklama ve Ayarlanabilir Işık Alanı Çapı",
+        "Isı Yaymayan Soğuk Işık Teknolojisi ile Uzun Operasyon Konforu",
+        "Sterilize Edilebilir Tutamak ile Kolay Yönlendirme",
+        "Dahili Kamera Entegrasyon Opsiyonu"
+      ],
+      "en": [
+        "High-Performance Single-Head LED Light Source",
+        "Electronic Focusing and Adjustable Light Field Diameter",
+        "Long Operation Comfort with Cold Light Technology (No Heat Emission)",
+        "Easy Positioning with Sterilizable Handle",
+        "Built-in Camera Integration Option"
+      ],
+      "fr": [
+        "Source lumineuse LED haute performance à coupole unique",
+        "Mise au point électronique et diamètre de champ lumineux réglable",
+        "Confort d'utilisation prolongé grâce à la technologie de lumière froide (pas d'émission de chaleur)",
+        "Positionnement facile avec poignée stérilisable",
+        "Option d'intégration de caméra intégrée"
+      ],
+      "az": [
+        "Yüksək Performanslı Tək Başlıqlı LED İşıq Mənbəyi",
+        "Elektron Fokuslama və Tənzimlənən İşıq Sahəsi Diametri",
+        "İstilik Yaymayan Soyuq İşıq Texnologiyası ilə Uzun Əməliyyat Rahatlığı",
+        "Sterilizasiya oluna bilən Tutacaq vasitəsilə Asan İdarəetmə",
+        "Daxili Kamera İnteqrasiya Seçimi"
+      ]
+    }
+  },
+  {
+    "id": "trq-2022-turnike-cihazi-otomatik",
+    "name": {
+      "tr": "TRQ-2022 Otomatik Turnike Cihazı",
+      "en": "TRQ-2022 Automatic Tourniquet Device",
+      "fr": "Tourniquet Automatique TRQ-2022",
+      "az": "TRQ-2022 Avtomatik Turniket Cihazı"
+    },
+    "category": "Tourniquet",
+    "type": "hospital",
+    "description": {
+      "tr": "Ameliyathane ortamında cerrahi müdahaleler sırasında kan akışını güvenli ve hassas bir şekilde durdurmak amacıyla tasarlanmış, gelişmiş çift kanallı otomatik turnike cihazı.",
+      "en": "Advanced dual-channel automatic tourniquet device designed for safe and precise blood flow restriction during surgical procedures in operating rooms.",
+      "fr": "Garrot automatique double canal avancé conçu pour restreindre le flux sanguin de manière sûre et précise lors d'interventions chirurgicales au bloc opératoire.",
+      "az": "Əməliyyatxana mühitində cərrahi müdaxilələr zamanı qan axınını təhlükəsiz və dəqiq şəkildə dayandırmaq məqsədilə dizayn edilmiş, qabaqcıl cüt kanallı avtomatik turniket cihazı."
+    },
+    "image": "/TRQ-2022-turnike-cihazi-otomatik.png",
+    "features": {
+      "tr": [
+        "Çift Kanallı Bağımsız Basınç ve Zaman Kontrolü",
+        "Renkli TFT Dokunmatik Ekran ve Kolay Kullanım",
+        "Gelişmiş Sesli ve Görsel Alarm Güvenlik Sistemleri",
+        "Dahili Şarj Edilebilir Batarya ile Elektrik Kesintilerine Karşı Koruma",
+        "Hassas Basınç Kalibrasyonu ve Otomatik Sızdırmazlık Testi"
+      ],
+      "en": [
+        "Dual-Channel Independent Pressure and Time Control",
+        "Color TFT Touch Screen and Easy Interface",
+        "Advanced Audible and Visual Safety Alarm Systems",
+        "Built-in Rechargeable Battery Protection Against Power Outages",
+        "Precise Pressure Calibration and Automatic Leak Test"
+      ],
+      "fr": [
+        "Contrôle indépendant de la pression et du temps sur double canal",
+        "Écran tactile couleur TFT et interface conviviale",
+        "Systèmes d'alarme de sécurité sonores et visuels avancés",
+        "Batterie rechargeable intégrée contre les coupures de courant",
+        "Étalonnage précis de la pression et test de fuite automatique"
+      ],
+      "az": [
+        "Cüt Kanallı Müstəqil Təzyiq və Zaman Nəzarəti",
+        "Rəngli TFT Toxunma Ekran və Asan İdarəetmə",
+        "Qabaqcıl Səsli və Vizual Siqnalizasiya Təhlükəsizlik Sistemləri",
+        "Daxili Yenidən Şarj Edilə bilən Batareya ilə Elektrik Kəsilməsinə Qarşı Qoruma",
+        "Dəqiq Təzyiq Kalibrasiyası və Avtomatik Sızdırmazlıq Testi"
+      ]
+    }
+  },
+  {
+    "id": "trq-2020-otomatik-turnike-cihazi",
+    "name": {
+      "tr": "TRQ-2020 Otomatik Turnike Cihazı",
+      "en": "TRQ-2020 Automatic Tourniquet Device",
+      "fr": "Garrot Automatique TRQ-2020",
+      "az": "TRQ-2020 Avtomatik Turniket Cihazı"
+    },
+    "category": "Tourniquet",
+    "type": "hospital",
+    "description": {
+      "tr": "Tek kanallı yapısı, kompakt ve ergonomik tasarımı ile cerrahi operasyonlarda hekimlere pratik ve güvenilir basınç kontrolü sunan otomatik turnike cihazı.",
+      "en": "Single-channel automatic tourniquet device offering practical and reliable pressure control for surgeons with its compact and ergonomic design during surgical operations.",
+      "fr": "Garrot automatique monocanal offrant un contrôle pratique et fiable de la pression aux chirurgiens grâce à sa conception compacte et ergonomique.",
+      "az": "Tək kanallı quruluşu, kompakt və erqonomik dizaynı ilə cərrahi əməliyyatlarda həkimlərə praktik və etibarlı təzyiq nəzarəti təklif edən avtomatik turniket cihazı."
+    },
+    "image": "/TRQ-2020-otomatik-turnike-cihazi.png",
+    "features": {
+      "tr": [
+        "Tek Kanallı Güvenilir Basınç Kontrol Sistemi",
+        "Kompakt Tasarım ve Kolay Taşınabilirlik (Masaüstü ve Stand Uyumlu)",
+        "Dijital Ekran Üzerinden Basınç ve Süre Takibi",
+        "Batarya Yedekleme Sistemi",
+        "Aşırı Basınç Koruma Fonksiyonu"
+      ],
+      "en": [
+        "Single-Channel Reliable Pressure Control System",
+        "Compact Design and Easy Portability (Tabletop and Stand Compatible)",
+        "Pressure and Time Monitoring on Digital Screen",
+        "Battery Backup System",
+        "Overpressure Protection Function"
+      ],
+      "fr": [
+        "Système de contrôle de pression fiable à canal unique",
+        "Conception compacte et portabilité facile (compatible table et support)",
+        "Surveillance de la pression et du temps sur écran numérique",
+        "Système de batterie de secours",
+        "Fonction de protection contre la surpression"
+      ],
+      "az": [
+        "Tək Kanallı Etibarlı Təzyiq Nəzarət Sistemi",
+        "Kompakt Dizayn və Asan Daşına bilmə (Masaüstü və Stend Uyğunluğu)",
+        "Rəqəmsal Ekran Vasitəsilə Təzyiq və Zaman İzlənməsi",
+        "Batareya Ehtiyat Sistemi",
+        "Həddindən Artıq Təzyiqdən Qorunma Funksiyası"
+      ]
+    }
+  },
+  {
+    "id": "turnike-mansonlari",
+    "name": {
+      "tr": "Turnike Manşonları",
+      "en": "Tourniquet Cuffs",
+      "fr": "Brassards de Garrot",
+      "az": "Turniket Manjetləri"
+    },
+    "category": "Tourniquet",
+    "type": "hospital",
+    "description": {
+      "tr": "Farklı ekstremite boyutlarına uygun, sterilizasyona dayanıklı, sızdırmazlık garantili ve konforlu çift veya tek lümenli medikal turnike manşonları.",
+      "en": "Comfortable double or single-lumen medical tourniquet cuffs, suitable for different extremity sizes, sterilization-resistant, and leak-proof.",
+      "fr": "Brassards de garrot médicaux confortables à double ou simple lumière, adaptés à différentes tailles de membres, résistants à la stérilisation et étanches.",
+      "az": "Müxtəlif ətrafların ölçülərinə uyğun, sterilizasiyaya davamlı, sızdırmazlıq zəmanətli və rahat cüt və ya tək lümenli tibbi turniket manjetləri."
+    },
+    "image": "/turnike-mansonlari.png",
+    "features": {
+      "tr": [
+        "Çift ve Tek Lümenli Seçenekler",
+        "Yumuşak Doku Dostu, Lateks İçermeyen Malzeme Yapısı",
+        "Tekrar Kullanılabilir ve Kolay Temizlenebilir Tasarım",
+        "Farklı Boyut Seçenekleri (Çocuk, Kol, Uyluk, Bacak)",
+        "Güvenli Bağlantı Konnektörleri ve Sağlam Cırt Cırt Yapısı"
+      ],
+      "en": [
+        "Double and Single Lumen Options",
+        "Soft Tissue Friendly, Latex-Free Material Structure",
+        "Reusable and Easy to Clean Design",
+        "Various Size Options (Pediatric, Arm, Thigh, Leg)",
+        "Secure Connection Connectors and Strong Velcro Structure"
+      ],
+      "fr": [
+        "Options double et simple lumière",
+        "Structure matérielle sans latex respectueuse des tissus mous",
+        "Conception réutilisable et facile à nettoyer",
+        "Différentes options de taille (pédiatrique, bras, cuisse, jambe)",
+        "Connecteurs de connexion sécurisés et structure velcro solide"
+      ],
+      "az": [
+        "Cüt və Tək Lümenli Seçimlər",
+        "Yumşaq Toxuma Dostu, Lateksiz Material Quruluşu",
+        "Yenidən İstifadə edilə bilən və Asan Təmizlənən Dizayn",
+        "Müxtəlif Ölçü Seçimləri (Uşaq, Qol, Bud, Ayaq)",
+        "Təhlükəsiz Bağlantı Konnektorları və Sağlam Cırt-cırt Quruluşu"
+      ]
+    }
+  },
+  {
+    "id": "mindray-d30-defibrilator-cihazi",
+    "name": {
+      "tr": "Mindray BeneHeart D30 Defibrilatör Cihazı",
+      "en": "Mindray BeneHeart D30 Defibrillator",
+      "fr": "Défibrillateur Mindray BeneHeart D30",
+      "az": "Mindray BeneHeart D30 Defibrilyator Cihazı"
+    },
+    "category": "Defibrillator",
+    "type": "hospital",
+    "description": {
+      "tr": "Acil servis ve yoğun bakım ortamlarında en zorlu koşullara dayanacak şekilde geliştirilmiş, bifazik teknolojiye sahip, yüksek kaliteli izleme ve defibrilasyon sunan profesyonel defibrilatör/monitör cihazı.",
+      "en": "Professional defibrillator/monitor equipped with biphasic technology, offering high-quality monitoring and defibrillation, designed to withstand the toughest conditions in emergency and intensive care environments.",
+      "fr": "Défibrillateur/moniteur professionnel équipé de la technologie biphasique, offrant une surveillance et une défibrillation de haute qualité, conçu pour résister aux conditions les plus difficiles dans les environnements d'urgence et de soins intensifs.",
+      "az": "Təcili yardım və reanimasiya mühitlərində ən çətin şərtlərə tab gətirəcək şəkildə hazırlanmış, bifazik texnologiyaya malik, yüksək keyfiyyətli izləmə və defibrilyasiya təklif edən peşəkar defibrilyator/monitor cihazı."
+    },
+    "image": "/mindray-d30-defibrilator-cihazi.png",
+    "features": {
+      "tr": [
+        "Gelişmiş Bifazik Dalga Formu Teknolojisi",
+        "Manuel Defibrilasyon, AED, Pacing ve Çok Parametreli Monitörizasyon",
+        "Renkli ve Yüksek Çözünürlüklü TFT Ekran",
+        "Hızlı Enerji Şarjı ve Yüksek Kapasiteli Batarya",
+        "Kompakt, Dayanıklı ve Kolay Taşınabilir Tasarım"
+      ],
+      "en": [
+        "Advanced Biphasic Waveform Technology",
+        "Manual Defibrillation, AED, Pacing, and Multi-Parameter Monitoring",
+        "Color and High-Resolution TFT Display",
+        "Fast Energy Charge and High-Capacity Battery",
+        "Compact, Durable, and Easy to Carry Design"
+      ],
+      "fr": [
+        "Technologie avancée de forme d'onde biphasique",
+        "Défibrillation manuelle, DEA, stimulation cardiaque et surveillance multiparamétrique",
+        "Écran TFT couleur haute résolution",
+        "Charge d'énergie rapide et batterie haute capacité",
+        "Conception compacte, durable et facile à transporter"
+      ],
+      "az": [
+        "Qabaqcıl Bifazik Dalğa Forması Texnologiyası",
+        "Manuel Defibrilyasiya, AED, Pacing və Çox Parametrli Monitorinq",
+        "Rəngli və Yüksək Rezolyusiyalı TFT Ekran",
+        "Tez Enerji Şarjı və Yüksək Tutumlu Batareya",
+        "Kompakt, Davamlı və Asan Daşına bilən Dizayn"
+      ]
+    }
+  },
+  {
+    "id": "mindray-u-serisi-infuzyon-ve-siringa-pompasi",
+    "name": {
+      "tr": "Mindray U Serisi İnfüzyon ve Şırınga Pompası",
+      "en": "Mindray U Series Infusion and Syringe Pump",
+      "fr": "Pompe d'infusion et de seringue Mindray Série U",
+      "az": "Mindray U Seriyası İnfüziya və Şprits Pompası"
+    },
+    "category": "InfusionPump",
+    "type": "hospital",
+    "description": {
+      "tr": "Klinik uygulamalarda yüksek doğruluk oranı, renkli dokunmatik ekranı ve gelişmiş akıllı algoritmaları ile hastanın güvenliğini ön planda tutan profesyonel infüzyon ve şırınga pompası.",
+      "en": "Professional infusion and syringe pump featuring high accuracy, a color touch screen, and advanced smart algorithms designed to prioritize patient safety in clinical applications.",
+      "fr": "Pompe d'infusion et de seringue professionnelle offrant une grande précision, un écran tactile couleur et des algorithmes intelligents avancés conçus pour donner la priorité à la sécurité des patients dans les applications cliniques.",
+      "az": "Klinik tətbiqlərdə yüksək dəqiqlik dərəcəsi, rəngli sensor ekranı və inkişaf etmiş ağıllı alqoritmləri ilə xəstənin təhlükəsizliyini ön planda tutan peşəkar infüziya və şprits pompası."
+    },
+    "image": "/mindray-u-serisi-infuzyon-ve-siringa-pompasi.png",
+    "features": {
+      "tr": [
+        "Yüksek İnfüzyon Doğruluğu (Hassas Sıvı ve İlaç İletimi)",
+        "Renkli Dokunmatik LCD Ekran ve Kullanıcı Dostu Arayüz",
+        "Gelişmiş Tıkanıklık Basıncı ve Hava Algılama Sensörleri",
+        "Kompakt ve Farklı Pompa Modüllerinin Üst Üste Takılabilme Özelliği",
+        "Uzun Ömürlü Şarj Edilebilir Batarya ile Kesintisiz İletim"
+      ],
+      "en": [
+        "High Infusion Accuracy (Precise Fluid & Drug Delivery)",
+        "Color Touch LCD Screen and User-Friendly Interface",
+        "Advanced Occlusion Pressure and Air Bubble Detection Sensors",
+        "Compact and Stackable Modular Design for Multiple Pumps",
+        "Continuous Delivery with Long-life Rechargeable Battery"
+      ],
+      "fr": [
+        "Grande précision d'infusion (débit précis de fluides et de médicaments)",
+        "Écran couleur LCD tactile et interface conviviale",
+        "Capteurs avancés de pression d'occlusion et de détection de bulles d'air",
+        "Conception modulaire compacte et empilable pour plusieurs pompes",
+        "Débit continu avec batterie rechargeable à longue durée de vie"
+      ],
+      "az": [
+        "Yüksək İnfüziya Dəqiqliyi (Dəqiq Maye və Dərman Ötürülməsi)",
+        "Rəngli Sensorlu LCD Ekran və İstifadəçi Dostu İnterfeys",
+        "Qabaqcıl Tıxanıqlıq Təzyiqi və Hava Aşkarlama Sensorları",
+        "Kompakt və Müxtəlif Pompa Modullarının Üst-üstə Quraşdırılma Xüsusiyyəti",
+        "Uzunömürlü Yenidən Şarj Edilə bilən Batareya ilə Kəsilməz Ötürülmə"
+      ]
+    }
+  },
+  {
+    "id": "mindray-esp-infusion-pompasi",
+    "name": {
+      "tr": "Mindray ESP İnfüzyon Pompası",
+      "en": "Mindray ESP Infusion Pump",
+      "fr": "Pompe d'infusion Mindray ESP",
+      "az": "Mindray ESP İnfüziya Pompası"
+    },
+    "category": "InfusionPump",
+    "type": "hospital",
+    "description": {
+      "tr": "Yoğun bakım ve anestezi uygulamaları için özel olarak tasarlanmış, geniş ilaç kütüphanesine sahip, hassas doz ayarı ve güvenli infüzyon protokollerini destekleyen gelişmiş infüzyon pompası.",
+      "en": "Advanced infusion pump specially designed for intensive care and anesthesia applications, featuring a comprehensive drug library, precise dosage configuration, and supporting secure infusion protocols.",
+      "fr": "Pompe d'infusion avancée spécialement conçue pour les applications de soins intensifs et d'anesthésie, dotée d'une bibliothèque de médicaments complète, d'une configuration posologique précise et prenant en charge des protocoles d'infusion sécurisés.",
+      "az": "Reanimasiya və anesteziya tətbiqləri üçün xüsusi olaraq hazırlanmış, geniş dərman kitabxanasına malik, dəqiq doza tənzimlənməsi və təhlükəsiz infüziya protokollarını dəstəkləyən təkmil infüziya pompası."
+    },
+    "image": "/mindray-esp-infusion-pompasi.png",
+    "features": {
+      "tr": [
+        "Yoğun Bakım ve Anestezi İçin Hassas Dozlama Seçenekleri",
+        "Entegre İlaç Kütüphanesi ve Güvenli Sınır Değerleri",
+        "Çoklu İnfüzyon Modu Desteği (Hız, Zaman, Ağırlık, Damla)",
+        "Kapsamlı Sesli ve Görsel Alarm Uyarı Sistemi",
+        "Serum Askısı ve Duvar Bağlantı Aparatları ile Kolay Entegrasyon"
+      ],
+      "en": [
+        "Precise Dosing Options for Intensive Care & Anesthesia",
+        "Integrated Drug Library and Safety Limits Configuration",
+        "Multiple Infusion Mode Support (Rate, Time, Weight, Drip)",
+        "Comprehensive Audio and Visual Alarm Warning System",
+        "Easy Integration with IV Pole and Wall Mount Bracket Options"
+      ],
+      "fr": [
+        "Options de dosage précises pour les soins intensifs et l'anesthésie",
+        "Bibliothèque de médicaments intégrée et configuration des limites de sécurité",
+        "Prise en charge de plusieurs modes d'infusion (débit, temps, poids, goutte)",
+        "Système complet d'alarme sonore et visuelle",
+        "Intégration facile avec potence d'infusion et options de support mural"
+      ],
+      "az": [
+        "Reanimasiya və Anesteziya Üçün Dəqiq Dozalama Seçimləri",
+        "İnteqra edilmiş Dərman Kitabxanası və Təhlükəsiz Limit Dəyərləri",
+        "Çoxlu İnfüziya Rejimi Dəstəyi (Sürət, Zaman, Çəki, Damla)",
+        "Hərtərəfli Səsli və Vizual Siqnal Xəbərdarlıq Sistemi",
+        "Serum Askısı və Divar Bağlantı Aparatları ilə Asan İnteqrasiya"
+      ]
+    }
   }
 ];
 
@@ -4886,5 +6183,8 @@ export const categories = [
   "Negatoscope",
   "Anesthesia",
   "Ultrasound",
-  "InfusionPump"
+  "InfusionPump",
+  "SurgicalTable",
+  "Tourniquet",
+  "Defibrillator"
 ];

@@ -131,7 +131,7 @@
     "All": "Tümü",
     "ECG": "EKG Cihazları",
     "Monitor": "Hastabaşı Monitörleri",
-    "SurgicalLight": "Ameliyathane Lambaları",
+    "SurgicalLight": "Ameliyathane ve Muayene Lambaları",
     "Endovision": "Endovizyon Sistemleri",
     "Electrosurgery": "Koter Cihazları",
     "MedicalCart": "Medikal Arabalar",
@@ -147,6 +147,9 @@
     "Surgical": "Cerrahi Cihazlar",
     "Anesthesia": "Anestezi Cihazları",
     "Ultrasound": "Ultrason Cihazları",
-    "InfusionPump": "İnfüzyon ve Enjektör Pompaları"
+    "InfusionPump": "İnfüzyon ve Enjektör Pompaları",
+    "SurgicalTable": "Ameliyat Masaları",
+    "Tourniquet": "Turnike Cihazları",
+    "Defibrillator": "Defibrilatör Cihazları"
   }
 }

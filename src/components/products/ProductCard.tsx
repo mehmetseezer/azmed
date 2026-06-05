@@ -8,6 +8,23 @@ export default function ProductCard({ product }: { product: Product }) {
   const t = useTranslations('Navbar'); // Using Navbar namespace for general translations if needed
   const tCat = useTranslations('Categories');
 
+  const getCategoryLabel = (cat: string) => {
+    if (cat === 'Endovision') {
+      if (product.type === 'veterinary') {
+        return locale === 'tr' ? 'Endoskopi Cihazları' 
+             : locale === 'az' ? 'Endoskopiya Cihazları' 
+             : locale === 'fr' ? "Appareils d'endoscopie" 
+             : 'Endoscopy Devices';
+      } else {
+        return locale === 'tr' ? 'Endovizyon Sistemleri' 
+             : locale === 'az' ? 'Endoviziya Sistemləri' 
+             : locale === 'fr' ? "Systèmes d'endovision" 
+             : 'Endovision Systems';
+      }
+    }
+    return tCat(cat);
+  };
+
   return (
     <div className="group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 flex flex-col h-full">
       <div className="relative h-64 overflow-hidden">
@@ -18,7 +35,7 @@ export default function ProductCard({ product }: { product: Product }) {
         />
         <div className="absolute top-4 left-4 z-20">
           <span className="bg-blue-600/90 backdrop-blur-md text-white text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider">
-            {tCat(product.category)}
+            {getCategoryLabel(product.category)}
           </span>
         </div>
         {/* Hover Overlay */}

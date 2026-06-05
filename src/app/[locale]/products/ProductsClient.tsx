@@ -60,6 +60,23 @@ export default function ProductsContent() {
 
   const typeParam = searchParams.get('type') || 'hospital';
 
+  const getCategoryLabel = (cat: string) => {
+    if (cat === 'Endovision') {
+      if (typeParam === 'veterinary') {
+        return locale === 'tr' ? 'Endoskopi Cihazları' 
+             : locale === 'az' ? 'Endoskopiya Cihazları' 
+             : locale === 'fr' ? "Appareils d'endoscopie" 
+             : 'Endoscopy Devices';
+      } else {
+        return locale === 'tr' ? 'Endovizyon Sistemleri' 
+             : locale === 'az' ? 'Endoviziya Sistemləri' 
+             : locale === 'fr' ? "Systèmes d'endovision" 
+             : 'Endovision Systems';
+      }
+    }
+    return tCat(cat);
+  };
+
   // Dynamically filter categories to only show those that have products for the current type
   const activeCategories = ['All', ...categories.filter(cat => 
     cat !== 'All' && products.some(p => p.category === cat && (p.type || 'hospital') === typeParam)
@@ -132,7 +149,7 @@ export default function ProductsContent() {
                   : 'bg-white text-gray-600 hover:bg-gray-100'
                 }`}
               >
-                {tCat(cat)}
+                {getCategoryLabel(cat)}
               </button>
             ))}
           </div>

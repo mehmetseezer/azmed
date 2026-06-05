@@ -61,7 +61,7 @@ export default async function ProductDetailPage({
   const categoryNames: Record<string, { tr: string; en: string; fr: string; az: string }> = {
     ECG: { tr: 'EKG Cihazları', en: 'ECG Devices', fr: 'Électrocardiographes', az: 'EKQ Cihazları' },
     Monitor: { tr: 'Hastabaşı Monitörleri', en: 'Patient Monitors', fr: 'Moniteurs multiparamétriques', az: 'Xəstəbaşı Monitorları' },
-    SurgicalLight: { tr: 'Ameliyathane Lambaları', en: 'Surgical Lights', fr: 'Éclairage chirurgical', az: 'Əməliyyatxana Lambaları' },
+    SurgicalLight: { tr: 'Ameliyathane ve Muayene Lambaları', en: 'Surgical & Examination Lights', fr: 'Lampes chirurgicales et d\'examen', az: 'Əməliyyat və Müayinə Lampaları' },
     Endovision: { tr: 'Endovizyon Sistemleri', en: 'Endovision Systems', fr: 'Systèmes d\'endovision', az: 'Endoviziya Sistemləri' },
     Electrosurgery: { tr: 'Koter Cihazları', en: 'Electrosurgical Units', fr: 'Bistouris électriques', az: 'Koter Cihazları' },
     MedicalCart: { tr: 'Medikal Arabalar', en: 'Medical Carts', fr: 'Chariots médicaux', az: 'Tibbi Arabalar' },
@@ -74,7 +74,28 @@ export default async function ProductDetailPage({
     Imaging: { tr: 'Görüntüleme Cihazları', en: 'Imaging Devices', fr: 'Imagerie médicale', az: 'Görüntüləmə Cihazları' },
     Cardiology: { tr: 'Kardiyoloji Cihazları', en: 'Cardiology Devices', fr: 'Cardiologie', az: 'Kardioloji Cihazlar' },
     Respiratory: { tr: 'Solunum Cihazları', en: 'Respiratory Devices', fr: 'Systèmes respiratoires', az: 'Tənəffüs Cihazları' },
-    Surgical: { tr: 'Cerrahi Cihazlar', en: 'Surgical Devices', fr: 'Instruments chirurgicaux', az: 'Cərrahi Cihazlar' }
+    Surgical: { tr: 'Cerrahi Cihazlar', en: 'Surgical Devices', fr: 'Instruments chirurgicaux', az: 'Cərrahi Cihazlar' },
+    SurgicalTable: { tr: 'Ameliyat Masaları', en: 'Operating Tables', fr: 'Tables d\'opération', az: 'Əməliyyat Masaları' },
+    Tourniquet: { tr: 'Turnike Cihazları', en: 'Tourniquet Devices', fr: 'Tourniquets', az: 'Turniket Cihazları' },
+    Defibrillator: { tr: 'Defibrilatör Cihazları', en: 'Defibrillator Devices', fr: 'Défibrillateurs', az: 'Defibrilyator Cihazları' }
+  };
+
+  const getDetailCategoryLabel = () => {
+    const cat = product.category;
+    if (cat === 'Endovision') {
+      if (product.type === 'veterinary') {
+        return prodLocale === 'tr' ? 'Endoskopi Cihazları' 
+             : prodLocale === 'az' ? 'Endoskopiya Cihazları' 
+             : prodLocale === 'fr' ? "Appareils d'endoscopie" 
+             : 'Endoscopy Devices';
+      } else {
+        return prodLocale === 'tr' ? 'Endovizyon Sistemleri' 
+             : prodLocale === 'az' ? 'Endoviziya Sistemləri' 
+             : prodLocale === 'fr' ? "Systèmes d'endovision" 
+             : 'Endovision Systems';
+      }
+    }
+    return categoryNames[cat]?.[prodLocale] || cat;
   };
 
   return (
@@ -99,20 +120,22 @@ export default async function ProductDetailPage({
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="grid grid-cols-3 gap-4">
-               {[1,2,3].map(i => (
-                 <div key={i} className="aspect-square rounded-2xl bg-gray-50 border border-gray-100 overflow-hidden cursor-pointer hover:opacity-80 transition-opacity">
-                    <img src={product.image} alt={product.name[prodLocale]} className="w-full h-full object-cover" />
-                 </div>
-               ))}
-            </div>
+            {product.images && product.images.length > 1 && (
+              <div className="grid grid-cols-3 gap-4">
+                 {product.images.map((img, i) => (
+                   <div key={i} className="aspect-square rounded-2xl bg-gray-50 border border-gray-100 overflow-hidden cursor-pointer hover:opacity-80 transition-opacity">
+                      <img src={img} alt={product.name[prodLocale]} className="w-full h-full object-cover" />
+                   </div>
+                 ))}
+              </div>
+            )}
           </div>
  
           {/* Product Info */}
           <div className="flex flex-col">
             <div className="mb-8">
               <span className="text-blue-600 font-bold text-sm uppercase tracking-widest mb-4 block">
-                {categoryNames[product.category]?.[prodLocale] || product.category}
+                {getDetailCategoryLabel()}
               </span>
               <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">{product.name[prodLocale]}</h1>
               <p className="text-gray-600 text-lg leading-relaxed mb-8">
