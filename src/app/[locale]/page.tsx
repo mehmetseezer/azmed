@@ -68,11 +68,13 @@ export default async function HomePage({
             {[
               'SAMSUNG', 'PHILIPS', 'GE HEALTHCARE', 'SIEMENS', 'TOSHIBA', 
               'MINDRAY', 'EDAN', 'COMEN', 'MEDIONE', 'ADC', 
-              'SHALYA', 'FMD', 'HEALTH PLUS'
+              'SHALYA', 'FMD', 'HEALTH PLUS', 'KARL STORZ', 'OLYMPUS', 
+              'RICHARD WOLF', 'TONTARRA', 'BUCK', 'RUDOLF', 'SHENDA'
             ].concat([
               'SAMSUNG', 'PHILIPS', 'GE HEALTHCARE', 'SIEMENS', 'TOSHIBA', 
               'MINDRAY', 'EDAN', 'COMEN', 'MEDIONE', 'ADC', 
-              'SHALYA', 'FMD', 'HEALTH PLUS'
+              'SHALYA', 'FMD', 'HEALTH PLUS', 'KARL STORZ', 'OLYMPUS', 
+              'RICHARD WOLF', 'TONTARRA', 'BUCK', 'RUDOLF', 'SHENDA'
             ]).map((brand, idx) => (
               <span key={`${brand}-${idx}`} className="text-2xl font-black tracking-tighter text-gray-900 mx-4 shrink-0">{brand}</span>
             ))}

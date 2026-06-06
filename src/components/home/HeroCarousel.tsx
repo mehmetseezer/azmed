@@ -15,7 +15,7 @@ const slides = [
   },
   {
     id: 2,
-    image: '/hero2.jpg',
+    image: '/2018_08_ameliyathane_3.jpg',
     titleKey: 'slide2Title',
     subtitleKey: 'slide2Subtitle',
   },

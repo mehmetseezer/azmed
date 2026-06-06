@@ -63,6 +63,12 @@ export default async function ProductDetailPage({
     Monitor: { tr: 'Hastabaşı Monitörleri', en: 'Patient Monitors', fr: 'Moniteurs multiparamétriques', az: 'Xəstəbaşı Monitorları' },
     SurgicalLight: { tr: 'Ameliyathane ve Muayene Lambaları', en: 'Surgical & Examination Lights', fr: 'Lampes chirurgicales et d\'examen', az: 'Əməliyyat və Müayinə Lampaları' },
     Endovision: { tr: 'Endovizyon Sistemleri', en: 'Endovision Systems', fr: 'Systèmes d\'endovision', az: 'Endoviziya Sistemləri' },
+    EndoscopyTelescopes: { 
+      tr: 'Endoskopi Teleskoplar ve Flexible Cihazlar', 
+      en: 'Endoscopy Telescopes and Flexible Devices', 
+      fr: "Télescopes d'endoscopie et dispositifs flexibles", 
+      az: 'Endoskopiya Teleskopları və Fleksibel Cihazlar' 
+    },
     Electrosurgery: { tr: 'Koter Cihazları', en: 'Electrosurgical Units', fr: 'Bistouris électriques', az: 'Koter Cihazları' },
     MedicalCart: { tr: 'Medikal Arabalar', en: 'Medical Carts', fr: 'Chariots médicaux', az: 'Tibbi Arabalar' },
     Thermometer: { tr: 'Ateş Ölçerler', en: 'Thermometers', fr: 'Thermomètres', az: 'Termometrlər' },
