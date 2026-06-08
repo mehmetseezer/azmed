@@ -6166,22 +6166,22 @@ export const products: Product[] = [
     }
   },
   {
-    "id": "kbb-optikleri",
+    "id": "artroskopi-optigi",
     "name": {
-      "tr": "KBB Optikleri (Teleskoplar)",
-      "en": "ENT Optics (Telescopes)",
-      "fr": "Optiques ORL (Télescopes)",
-      "az": "QBB Optikləri (Teleskoplar)"
+      "tr": "Artroskopi Optiği",
+      "en": "Arthroscopy Optics",
+      "fr": "Optique d'arthroscopie",
+      "az": "Artroskopiya Optikası"
     },
     "category": "EndoscopyTelescopes",
     "type": "hospital",
     "description": {
-      "tr": "KBB cerrahisi ve muayeneleri için üstün görüntü kalitesi sunan yüksek çözünürlüklü rijit teleskoplar.",
-      "en": "High-resolution rigid telescopes offering superior image quality for ENT surgery and examinations.",
-      "fr": "Télescopes rigides haute résolution offrant une qualité d'image supérieure pour la chirurgie et les examens ORL.",
-      "az": "QBB cərrahiyyəsi və müayinələri üçün üstün təsvir keyfiyyəti təklif edən yüksək rezolyusiyalı rigid teleskoplar."
+      "tr": "Eklem içi cerrahi ve tanısal işlemler için tasarlanmış yüksek çözünürlüklü, dayanıklı artroskopik teleskop.",
+      "en": "High-resolution, durable arthroscopic telescope designed for intra-articular surgical and diagnostic procedures.",
+      "fr": "Télescope arthroscopique durable et haute résolution conçu pour les procédures chirurgicales et diagnostiques intra-articulaires.",
+      "az": "Oynaq daxili cərrahi və diaqnostik prosedurlar üçün hazırlanmış yüksək keyfiyyətli, davamlı artroskopik teleskop."
     },
-    "image": "/kbb_optikleri.png",
+    "image": "/Artroskopi_Optigi.png",
     "features": {
       "tr": [
         "Farklı açı seçenekleri (0°, 30°, 45°, 70°)",
@@ -6210,222 +6210,574 @@ export const products: Product[] = [
     }
   },
   {
-    "id": "uroloji-optikleri",
+    "id": "storz-laparoskopi-optigi",
     "name": {
-      "tr": "Üroloji Optikleri (Teleskoplar)",
-      "en": "Urology Optics (Telescopes)",
-      "fr": "Optiques d'Urologie (Télescopes)",
-      "az": "Urologiya Optikləri (Teleskoplar)"
+      "tr": "Storz Laparoskopi Optiği",
+      "en": "Storz Laparoscopy Optics",
+      "fr": "Optique de laparoscopie Storz",
+      "az": "Storz Laparoskopiya Optikası"
     },
     "category": "EndoscopyTelescopes",
     "type": "hospital",
     "description": {
-      "tr": "Ürolojik endoskopik tanı ve cerrahi işlemler için tasarlanmış yüksek kontrastlı teleskoplar.",
-      "en": "High-contrast telescopes designed for urological endoscopic diagnosis and surgical procedures.",
-      "fr": "Télescopes à contraste élevé conçus pour le diagnostic endoscopique urologique et les procédures chirurgicales.",
-      "az": "Uroloji endoskopik diaqnostika və cərrahi prosedurlar üçün nəzərdə tutulmuş yüksək kontrastlı teleskoplar."
+      "tr": "Karın içi cerrahi operasyonlarında üstün netlik ve geniş görüş alanı sağlayan yüksek kaliteli Storz laparoskopi teleskobu.",
+      "en": "High-quality Storz laparoscopy telescope providing superior clarity and wide field of view in intra-abdominal surgical procedures.",
+      "fr": "Télescope de laparoscopie Storz de haute qualité offrant une clarté supérieure et un large champ de vision dans les procédures chirurgicales intra-abdominales.",
+      "az": "Qarın boşluğu cərrahiyyə əməliyyatlarında üstün aydınlıq ve geniş baxış sahəsi təmin edən yüksək keyfiyyetli Storz laparoskopiya teleskopu."
     },
-    "image": "/uroloji_optikleri.png",
+    "image": "/Storz_Laporoskopi_Optigi.png",
     "features": {
       "tr": [
-        "Mükemmel görüntü netliği",
-        "Gelişmiş optik mercek teknolojisi",
-        "Otoklava dayanıklı yapı",
-        "Standart kablolarla tam uyumluluk"
-      ],
-      "en": [
-        "Excellent image clarity",
-        "Advanced optical lens technology",
-        "Autoclave resistant structure",
-        "Full compatibility with standard light cables"
-      ],
-      "fr": [
-        "Excellente clarté d'image",
-        "Technologie avancée de lentille optique",
-        "Structure résistante à l'autoclave",
-        "Compatibilité totale avec les câbles de lumière standard"
-      ],
-      "az": [
-        "Mükəmməl təsvir netliyi",
-        "Təkmilləşdirilmiş optik linza texnologiyası",
-        "Otoklava davamlı struktur",
-        "Standart işıq kabelləri ilə tam uyğunluq"
-      ]
-    }
-  },
-  {
-    "id": "laparoskopi-optikleri",
-    "name": {
-      "tr": "Laparoskopi Optikleri",
-      "en": "Laparoscopy Optics",
-      "fr": "Optiques de Laparoscopie",
-      "az": "Laparoskopiya Optikləri"
-    },
-    "category": "EndoscopyTelescopes",
-    "type": "hospital",
-    "description": {
-      "tr": "Abdominal cerrahide net ve yüksek çözünürlüklü görüntüleme sağlayan profesyonel laparoskoplar.",
-      "en": "Professional laparoscopes providing clear and high-resolution imaging in abdominal surgery.",
-      "fr": "Laparoscopes professionnels offrant une imagerie claire et haute résolution en chirurgie abdominale.",
-      "az": "Abdominal cərrahiyyədə aydın və yüksək rezolyusiyalı görüntüləmə təmin edən peşəkar laparoskoplar."
-    },
-    "image": "/laparoskopi_optikleri.png",
-    "features": {
-      "tr": [
+        "HD görüntü kalitesi ve mükemmel renk doğruluğu",
         "10 mm ve 5 mm çap seçenekleri",
         "0° ve 30° yönlendirme açıları",
-        "Mükemmel renk doğruluğu ve parlaklık",
         "Distorsiyonsuz kenar keskinliği"
       ],
       "en": [
+        "HD image quality and excellent color accuracy",
         "10 mm and 5 mm diameter options",
         "0° and 30° direction of view",
-        "Excellent color accuracy and brightness",
         "Distortion-free edge sharpness"
       ],
       "fr": [
+        "Qualité d'image HD et excellente précision des couleurs",
         "Options de diamètre 10 mm et 5 mm",
         "Direction de vue 0° et 30°",
-        "Excellente précision des couleurs et luminosité",
         "Netteté des bords sans distorsion"
       ],
       "az": [
+        "HD təsvir keyfiyyəti ve mükəmməl rəng dəqiqliyi",
         "10 mm və 5 mm diametr seçimləri",
         "0° və 30° yönləndirmə bucaqları",
-        "Mükəmməl rəng dəqiqliyi və parlaqlıq",
         "Distorsiyasız kənar kəskinliyi"
       ]
     }
   },
   {
-    "id": "histeroskopi-optikleri",
+    "id": "olympus-uroloji-optigi",
     "name": {
-      "tr": "Histeroskopi Optikleri",
-      "en": "Hysteroscopy Optics",
-      "fr": "Optiques d'Hystéroscopie",
-      "az": "Histeroskopiya Optikləri"
+      "tr": "Olympus Üroloji Optiği",
+      "en": "Olympus Urology Optics",
+      "fr": "Optique d'urologie Olympus",
+      "az": "Olympus Urologiya Optikası"
     },
     "category": "EndoscopyTelescopes",
     "type": "hospital",
     "description": {
-      "tr": "Jinekolojik tanı ve tedavi uygulamalarında güvenli ve net görüntüleme sunan histeroskopi teleskopları.",
-      "en": "Hysteroscopy telescopes offering safe and clear imaging in gynecological diagnosis and therapeutic applications.",
-      "fr": "Télescopes d'hystéroscopie offrant une imagerie sûre et claire dans le diagnostic gynécologique et les applications thérapeutiques.",
-      "az": "Ginekoloji diaqnostika və müalicə tətbiqlərində təhlükəsiz və aydın görüntüləmə təklif edən histeroskopiya teleskopları."
+      "tr": "Ürolojik endoskopik müdahaleler ve tanı işlemleri için yüksek kontrastlı ve keskin görüntülü Olympus üroloji optiği.",
+      "en": "High-contrast and sharp-image Olympus urology optics for urological endoscopic interventions and diagnostics.",
+      "fr": "Optique d'urologie Olympus à contraste élevé et image nette pour les interventions endoscopiques urologiques et les diagnostics.",
+      "az": "Uroloji endoskopik müdaxilələr və diaqnostik prosedurlar üçün yüksək kontrastlı və kəskin təsvirli Olympus urologiya optikası."
     },
-    "image": "/histeroskopi_optikleri.jpg",
+    "image": "/Olmypus_uroloji_optigi.png",
     "features": {
       "tr": [
-        "İnce mil çapı ile kolay penetrasyon",
-        "Geniş açılı HD mercek sistemi",
-        "Isıya dayanıklı paslanmaz gövde",
-        "Minimum travma riski sağlayan tasarım"
+        "Mükemmel görüntü netliği ve parlaklık",
+        "Gelişmiş optik mercek teknolojisi",
+        "Otoklava dayanıklı uzun ömürlü yapı",
+        "Çizilmeye karşı dayanıklı safir ön cam"
       ],
       "en": [
-        "Easy penetration with thin shaft diameter",
-        "Wide-angle HD lens system",
-        "Heat-resistant stainless steel body",
-        "Design ensuring minimum trauma risk"
+        "Excellent image clarity and brightness",
+        "Advanced optical lens technology",
+        "Autoclave resistant long-lasting structure",
+        "Scratch-resistant sapphire front glass"
       ],
       "fr": [
-        "Pénétration facile avec un diamètre de tige fin",
-        "Système de lentilles HD grand angle",
-        "Corps en acier inoxydable résistant à la chaleur",
-        "Conception garantissant un risque de traumatisme minimal"
+        "Clarté d'image et luminosité excellentes",
+        "Technologie avancée de lentille optique",
+        "Structure durable résistante à l'autoclave",
+        "Verre frontal en saphir résistant aux rayures"
       ],
       "az": [
-        "İncə mil diametri ilə asan nüfuz",
-        "Geniş bucaqlı HD linza sistemi",
-        "İstiyə davamlı paslanmaz gövdə",
-        "Minimum travma riski təmin edən dizayn"
+        "Mükəmməl təsvir aydınlığı və parlaqlıq",
+        "Təkmilləşdirilmiş optik linza texnologiyası",
+        "Otoklava davamlı uzunömürlü struktur",
+        "Cızılmaya davamlı sapfir ön şüşə"
       ]
     }
   },
   {
-    "id": "rezektoskop-seti",
+    "id": "kbb-pediatrik-optikleri",
     "name": {
-      "tr": "Rezektoskop Seti",
-      "en": "Resectoscope Set",
-      "fr": "Set de Résectoscope",
-      "az": "Rezektoskop Seti"
+      "tr": "KBB Pediatrik Optikleri",
+      "en": "ENT Pediatric Optics",
+      "fr": "Optiques pédiatriques ORL",
+      "az": "QBB Pediatrik Optikləri"
     },
     "category": "EndoscopyTelescopes",
     "type": "hospital",
     "description": {
-      "tr": "Üroloji ve jinekolojide transüretral rezeksiyon operasyonları için komple rezektoskop seti.",
-      "en": "Complete resectoscope set for transurethral resection operations in urology and gynecology.",
-      "fr": "Set de résectoscope complet pour les opérations de résection transurétrale en urologie et gynécologie.",
-      "az": "Urologiya və ginekologiyada transuretral rezeksiya əməliyyatları üçün tam rezektoskop dəsti."
+      "tr": "Pediatrik kulak burun boğaz muayene ve cerrahileri için ince çaplı ve travmatik olmayan yüksek çözünürlüklü teleskoplar.",
+      "en": "Thin diameter, non-traumatic, high-resolution telescopes designed for pediatric ear, nose, and throat examinations and surgeries.",
+      "fr": "Télescopes haute résolution de fin diamètre et non traumatiques conçus pour les examens et chirurgies pédiatriques de l'oreille, du nez et de la gorge.",
+      "az": "Uşaq qulaq-burun-boğaz müayinələri və cərrahiyyəsi üçün kiçik diametrli və travmatik olmayan yüksək keyfiyyətli teleskoplar."
     },
-    "image": "/rezektoskop_seti.png",
+    "image": "/kbb_pediatrik_optikleri.png",
+    "features": {
+      "tr": [
+        "Pediatrik hastalar için ince mil çapı (2.7 mm ve altı)",
+        "Farklı bakış açıları (0°, 30°, 70°)",
+        "Minimum travma riski sağlayan yuvarlatılmış uç yapısı",
+        "Yüksek kaliteli fiber optik ışık iletimi"
+      ],
+      "en": [
+        "Thin shaft diameter for pediatric patients (2.7 mm and below)",
+        "Different direction of view (0°, 30°, 70°)",
+        "Rounded tip design ensuring minimum trauma risk",
+        "High-quality fiber optic light transmission"
+      ],
+      "fr": [
+        "Diamètre de tige fin pour patients pédiatriques (2,7 mm et moins)",
+        "Différentes directions de vue (0°, 30°, 70°)",
+        "Conception d'extrémité arrondie garantissant un risque de traumatisme minimal",
+        "Transmission lumineuse en fibre optique de haute qualité"
+      ],
+      "az": [
+        "Uşaq xəstələr üçün incə mil diametri (2.7 mm və aşağı)",
+        "Fərqli baxış bucaqları (0°, 30°, 70°)",
+        "Minimum travma riski təmin edən yuvarlaqlaşdırılmış ucluq quruluşu",
+        "Yüksək keyfiyyətli fiber optik işıq ötürülməsi"
+      ]
+    }
+  },
+  {
+    "id": "ofis-histeroskopi-optikleri",
+    "name": {
+      "tr": "Ofis Histeroskopi Optikleri",
+      "en": "Office Hysteroscopy Optics",
+      "fr": "Optiques d'hystéroscopie de bureau",
+      "az": "Ofis Histeroskopiya Optikləri"
+    },
+    "category": "EndoscopyTelescopes",
+    "type": "hospital",
+    "description": {
+      "tr": "Poliklinik ve ofis ortamında anestezi gerektirmeden tanısal histeroskopi işlemleri yapılması için tasarlanmış ince optik sistem.",
+      "en": "Slim optical system designed for diagnostic hysteroscopy procedures in office and outpatient settings without anesthesia.",
+      "fr": "Système optique fin conçu pour les procédures d'hystéroscopie diagnostique en cabinet et en ambulatoire sans anesthésie.",
+      "az": "Ambulator və ofis şəraitində anesteziya tələb etmədən diaqnostik histeroskopiya prosedurları üçün nəzərdə tutulmuş incə optik sistem."
+    },
+    "image": "/ofis_histeroskopi_optikleri.png",
+    "features": {
+      "tr": [
+        "Yüksek hasta konforu için ultra ince gövde",
+        "Geniş açılı HD mercek sistemi",
+        "Otoklavlanabilir paslanmaz çelik tasarım",
+        "Yüksek ışık gücü ve net görüntüleme"
+      ],
+      "en": [
+        "Ultra-slim body for high patient comfort",
+        "Wide-angle HD lens system",
+        "Autoclavable stainless steel design",
+        "High light output and clear imaging"
+      ],
+      "fr": [
+        "Corps ultra-fin pour un confort de patient élevé",
+        "Système de lentilles HD grand angle",
+        "Conception en acier inoxydable autoclavable",
+        "Rendement lumineux élevé et imagerie claire"
+      ],
+      "az": [
+        "Yüksək xəstə rahatlığı üçün ultra incə gövdə",
+        "Geniş bucaqlı HD linza sistemi",
+        "Otoklavlana bilən paslanmaz polad dizayn",
+        "Yüksək işıq gücü ve aydın görüntüləmə"
+      ]
+    }
+  },
+  {
+    "id": "storz-yakalama-forceps",
+    "name": {
+      "tr": "Storz Yakalama Forcepsi",
+      "en": "Storz Grasping Forceps",
+      "fr": "Pince de préhension Storz",
+      "az": "Storz Tutma Forsepsi"
+    },
+    "category": "EndoscopyTelescopes",
+    "type": "hospital",
+    "description": {
+      "tr": "Endoskopik işlemler sırasında doku veya yabancı cisimlerin güvenli bir şekilde tutulması için tasarlanmış Storz cerrahi el aleti.",
+      "en": "Storz surgical hand instrument designed for secure grasping of tissues or foreign objects during endoscopic procedures.",
+      "fr": "Instrument chirurgical manuel Storz conçu pour saisir en toute sécurité les tissus ou les corps étrangers lors des procédures endoscopiques.",
+      "az": "Endoskopik prosedurlar zamanı toxumaların və ya yad cisimlərin təhlükəsiz şəkildə tutulması üçün nəzörder tutulmuş Storz cərrahi əl aləti."
+    },
+    "image": "/storz_yakalama_forceps.png",
+    "features": {
+      "tr": [
+        "Ergonomik tutma kolu ve hassas kontrol mekanizması",
+        "Yüksek dayanıklılığa sahip paslanmaz çelik yapı",
+        "Tekrar kullanılabilir ve otoklavlanabilir",
+        "Farklı uç seçenekleri ve uzunluklar"
+      ],
+      "en": [
+        "Ergonomic handle and precise control mechanism",
+        "High durability stainless steel structure",
+        "Reusable and autoclavable",
+        "Different tip options and lengths"
+      ],
+      "fr": [
+        "Poignée ergonomique et mécanisme de contrôle précis",
+        "Structure en acier inoxydable à haute durabilité",
+        "Réutilisable et autoclavable",
+        "Différentes options d'embouts et de longueurs"
+      ],
+      "az": [
+        "Erqonomik tutacaq və dəqiq idarəetmə mexanizmi",
+        "Yüksək davamlılığa malik paslanmaz polad quruluş",
+        "Yenidən istifadə edilə bilən və otoklavlana bilən",
+        "Fərqli ucluq seçimləri və uzunluqlar"
+      ]
+    }
+  },
+  {
+    "id": "storz-rezektoskop-seti",
+    "name": {
+      "tr": "Storz Rezektoskop Seti",
+      "en": "Storz Resectoscope Set",
+      "fr": "Set de résectoscope Storz",
+      "az": "Storz Rezektoskop Dəsti"
+    },
+    "category": "EndoscopyTelescopes",
+    "type": "hospital",
+    "description": {
+      "tr": "Ürolojik ve jinekolojik cerrahi operasyonlarında doku rezeksiyonu ve koagülasyonu için tam donanımlı profesyonel rezektoskop kiti.",
+      "en": "Fully equipped professional resectoscope kit for tissue resection and coagulation in urological and gynecological surgical procedures.",
+      "fr": "Kit de résectoscope professionnel entièrement équipé pour la résection et la coagulation des tissus lors des procédures chirurgicales urologiques et gynécologiques.",
+      "az": "Uroloji və ginekoloji cərrahiyyə əməliyyatlarında toxumaların rezeksiyası və koaqulyasiyası üçün tam təchiz olunmuş peşəkar rezektoskop dəsti."
+    },
+    "image": "/storz_rezektoskop_seti.png",
     "features": {
       "tr": [
         "Aktif ve pasif çalışma elemanı seçenekleri",
-        "Yüksek yalıtımlı seramik kılıflar",
-        "Geniş elektrot yelpazesi",
-        "Sıvı giriş-çıkış vanaları ile sürekli irrigasyon"
+        "Yüksek yalıtımlı seramik kılıflar ile güvenli kullanım",
+        "Sürekli irrigasyon sağlayan sıvı giriş-çıkış vanaları",
+        "Geniş elektrot yelpazesi ile uyumluluk"
       ],
       "en": [
         "Active and passive working element options",
-        "High-insulated ceramic sheaths",
-        "Wide range of electrodes",
-        "Continuous irrigation with fluid inlet-outlet valves"
+        "Safe use with highly insulated ceramic sheaths",
+        "Fluid inlet-outlet valves providing continuous irrigation",
+        "Compatibility with a wide range of electrodes"
       ],
       "fr": [
         "Options d'éléments de travail actifs et passifs",
-        "Gaines céramiques hautement isolées",
-        "Large gamme d'électrodes",
-        "Irrigation continue avec vannes d'entrée-sortie de fluide"
+        "Utilisation sûre avec des gaines en céramique hautement isolées",
+        "Vannes d'entrée et de sortie de fluide assurant une irrigation continue",
+        "Compatibilité avec une large gamme d'électrodes"
       ],
       "az": [
         "Aktiv və passiv iş elementi seçimləri",
-        "Yüksək izolyasiyalı keramika qılaflar",
-        "Geniş elektrod çeşidi",
-        "Maye giriş-çıxış klapanları ilə davamlı irriqasiya"
+        "Yüksək izolyasiyalı keramika qılafları ilə təhlükəsiz istifadə",
+        "Davamlı irriqasiya təmin edən maye giriş-çıxış klapanları",
+        "Geniş elektrod çeşidi ile uyğunluq"
       ]
     }
   },
   {
-    "id": "rigid-uretero-renoskop",
+    "id": "uretero-reno-fiberscope",
     "name": {
-      "tr": "Rigid Üretero-Renoskop (URS)",
-      "en": "Rigid Ureterorenoscope (URS)",
-      "fr": "Urétérorénoscope Rigide (URS)",
-      "az": "Rigid Uretero-Renoskop (URS)"
+      "tr": "Uretero-Reno Fiberskop (Flex-2)",
+      "en": "Ureteroreno Fiberscope (Flex-2)",
+      "fr": "Fibroscope urétérorénal (Flex-2)",
+      "az": "Uretero-Reno Fiberskop (Flex-2)"
     },
     "category": "EndoscopyTelescopes",
     "type": "hospital",
     "description": {
-      "tr": "Üreterdeki taş ve lezyonların tedavisi için tasarlanmış yüksek dayanıklılığa sahip rijit üretero-renoskop.",
-      "en": "Highly durable rigid ureterorenoscope designed for the treatment of stones and lesions in the ureter.",
-      "fr": "Urétérorénoscope rigide très durable conçu pour le traitement des calculs et des lésions dans l'uretère.",
-      "az": "Sidik axarındakı daş və lezyonların müalicəsi üçün nəzərdə tutulmuş yüksək davamlılığa malik rigid uretero-renoskop."
+      "tr": "Üreter ve böbrek içi tanı ve lazer taş kırma işlemleri için yüksek esneklik sunan üstün performanslı flexible fiberskop cihazı.",
+      "en": "High-performance flexible fiberscope offering superior flexibility for diagnostic and laser stone lithotripsy procedures in the ureter and kidney.",
+      "fr": "Fibroscope flexible haute performance offrant une flexibilité supérieure pour les procédures de diagnostic et de lithotripsie laser des calculs dans l'uretère et le rein.",
+      "az": "Sidik axarı və böyrək daxili diaqnostika və lazer daş qırma prosedurları üçün yüksək çeviklik təklif edən üstün performanslı fleksibel fiberskop cihazı."
     },
-    "image": "/rigid_uretero_renoskop.png",
+    "image": "/uretero_reno_fiberscope.png",
     "features": {
       "tr": [
-        "İnce ve travmatik olmayan uç yapısı",
-        "Çift enstrüman kanalı desteği",
-        "Yüksek çözünürlüklü fiber optik görüntü demeti",
-        "Bükülmelere karşı dayanıklı gövde yapısı"
+        "Çift yönlü hassas bükülebilme açısı",
+        "Ultra ince yerleştirme tüpü ile kolay geçiş",
+        "Yüksek yoğunluklu fiber optik görüntü demeti",
+        "Lazer fiberleri ve enstrüman kanalı desteği"
       ],
       "en": [
-        "Thin and atraumatic tip design",
-        "Dual instrument channels support",
-        "High-resolution fiber optic image bundle",
-        "Bend-resistant shaft structure"
+        "Bidirectional precise deflection angle",
+        "Easy insertion with ultra-thin insertion tube",
+        "High-density fiber optic image bundle",
+        "Laser fibers and instrument channel support"
       ],
       "fr": [
-        "Conception d'extrémité fine et atraumatique",
-        "Prise en charge de deux canaux d'instruments",
-        "Faisceau d'images en fibre optique haute résolution",
-        "Structure de tige résistante aux courbures"
+        "Angle de déflexion précis bidirectionnel",
+        "Insertion facile avec un tube d'insertion ultra-fin",
+        "Faisceau d'images en fibre optique haute densité",
+        "Support des fibres laser et du canal d'instruments"
       ],
       "az": [
-        "İncə və travmatik olmayan ucluq quruluşu",
-        "Cüt alət kanalı dəstəyi",
-        "Yüksək rezolyusiyalı fiber optik təsvir dəstəsi",
-        "Əyilmələrə qarşı davamlı gövdə strukturu"
+        "İki tərəfli dəqiq əyilmə bucağı",
+        "Ultra incə daxiletmə borusu ilə asan keçid",
+        "Yüksək sıxlıqlı fiber optik təsvir dəstəsi",
+        "Lazer fiberləri və alət kanalı dəstəyi"
+      ]
+    }
+  },
+  {
+    "id": "buck-flexible-nazofaringoskop",
+    "name": {
+      "tr": "Buck Flexible Nazofaringoskop",
+      "en": "Buck Flexible Nasopharyngoscope",
+      "fr": "Nasopharyngoscope flexible Buck",
+      "az": "Buck Fleksibel Nazofarinqoskop"
+    },
+    "category": "EndoscopyTelescopes",
+    "type": "hospital",
+    "description": {
+      "tr": "Burun boşluğu, yutak ve gırtlak muayenelerinde yüksek hasta konforu sağlayan bükülebilir esnek endoskopik cihaz.",
+      "en": "Bending flexible endoscopic device providing high patient comfort during nasal cavity, pharynx, and larynx examinations.",
+      "fr": "Appareil endoscopique flexible et pliable offrant un confort de patient élevé lors des examens des fosses nasales, du pharynx et du larynx.",
+      "az": "Burun boşluğu, udlaq və qırtlaq müayinələrində yüksək xəstə rahatlığı təmin edən əyilə bilən fleksibel endoskopik cihaz."
+    },
+    "image": "/buck_flexible_nazofaringoskop.png",
+    "features": {
+      "tr": [
+        "Üstün bükülme kabiliyeti ile geniş muayene açısı",
+        "Son derece ince prob yapısı ile ağrısız penetrasyon",
+        "Yüksek kaliteli görüntü aktarımı ve doğal renkler",
+        "Suya dayanıklı, kolay dezenfekte edilebilir gövde"
+      ],
+      "en": [
+        "Wide examination angle with superior bending capability",
+        "Painless penetration with extremely thin probe structure",
+        "High-quality image transmission and natural colors",
+        "Waterproof, easy to disinfect body"
+      ],
+      "fr": [
+        "Large angle d'examen avec une capacité de flexion supérieure",
+        "Pénétration sans douleur avec une structure de sonde extrêmement fine",
+        "Transmission d'images de haute qualité et couleurs naturelles",
+        "Boîtier étanche et facile à désinfecter"
+      ],
+      "az": [
+        "Üstün əyilmə qabiliyyəti ilə geniş müayinə bucağı",
+        "Son dərəcə incə zond strukturu ilə ağrısız daxilolma",
+        "Yüksək keyfiyyətli təsvir ötürülməsi və təbii rənglər",
+        "Suya davamlı, asan dezinfeksiya edilə bilən gövdə"
+      ]
+    }
+  },
+  {
+    "id": "histeroskopi-set-ekipmanlari",
+    "name": {
+      "tr": "Histeroskopi Set Ekipmanları",
+      "en": "Hysteroscopy Set Equipments",
+      "fr": "Équipements du kit d'hystéroscopie",
+      "az": "Histeroskopiya Dəsti Avadanlıqları"
+    },
+    "category": "EndoscopyTelescopes",
+    "type": "hospital",
+    "description": {
+      "tr": "Histeroskopik cerrahi ve tanısal işlemlerde kullanılan kılıflar, forsepsler, makaslar ve diğer yardımcı enstrümanların tamamı.",
+      "en": "Complete collection of sheaths, forceps, scissors, and other auxiliary instruments used in hysteroscopic surgical and diagnostic procedures.",
+      "fr": "Collection complète de gaines, pinces, ciseaux et autres instruments auxiliaires utilisés dans les procédures chirurgicales et diagnostiques d'hystéroscopie.",
+      "az": "Histeroskopik cərrahiyyə və diaqnostika prosedurlarında istifadə olunan qılaflar, forsepslər, qayçılar və digər köməkçi alətlərin tam dəsti."
+    },
+    "image": "/histeroskopi_set_ekipmanlari.png",
+    "features": {
+      "tr": [
+        "Dayanıklı paslanmaz çelik cerrahi enstrümanlar",
+        "Farklı kılıf ve akış tipleriyle tam modüler uyumluluk",
+        "Sterilizasyon ve otoklav döngülerine yüksek dayanıklılık",
+        "Hassas ve ergonomik el aletleri tasarımları"
+      ],
+      "en": [
+        "Durable stainless steel surgical instruments",
+        "Full modular compatibility with different sheaths and flow types",
+        "High durability to sterilization and autoclave cycles",
+        "Precise and ergonomic hand instrument designs"
+      ],
+      "fr": [
+        "Instruments chirurgicaux durables en acier inoxydable",
+        "Compatibilité modulaire totale avec différentes gaines et types de flux",
+        "Haute résistance aux cycles de stérilisation et d'autoclave",
+        "Conceptions d'instruments manuels précises et ergonomiques"
+      ],
+      "az": [
+        "Davamlı paslanmaz polad cərrahi alətlər",
+        "Fərqli qılaf və axın tipləri ile tam modulyar uyğunluq",
+        "Sterilizasiya və otoklav dövlərinə yüksək davamlılıq",
+        "Dəqiq və erqonomik əl alətləri dizaynları"
+      ]
+    }
+  },
+  {
+    "id": "rigid-sisteskopi-optikleri",
+    "name": {
+      "tr": "Rigid Sisteskopi Optikleri",
+      "en": "Rigid Cystoscopy Optics",
+      "fr": "Optiques de cystoscopie rigide",
+      "az": "Rigid Sistoskopiya Optikləri"
+    },
+    "category": "EndoscopyTelescopes",
+    "type": "hospital",
+    "description": {
+      "tr": "Mesane içi görüntüleme ve tanısal sistoskopi işlemleri için yüksek çözünürlüklü ve parlak görüntü sağlayan rijit teleskoplar.",
+      "en": "Rigid telescopes providing high-resolution and bright images for intravesical imaging and diagnostic cystoscopy procedures.",
+      "fr": "Télescopes rigides fournissant des images haute résolution et lumineuses pour l'imagerie intravésicale et les procédures de cystoscopie diagnostique.",
+      "az": "Sidik kisəsinin daxili görüntülənməsi və diaqnostik sistoskopiya prosedurları üçün yüksək keyfiyyətli və parlaq təsvir təmin edən rigid teleskoplar."
+    },
+    "image": "/rigid_sisteskopi_optikleri.png",
+    "features": {
+      "tr": [
+        "HD optik mercek teknolojisi ile kristal netliğinde görüntü",
+        "Otoklavlanabilir paslanmaz çelik şasi tasarımı",
+        "Çizilmelere karşı dayanıklı safir ön mercek koruması",
+        "Geniş açı seçenekleri (0°, 12°, 30°, 70°)"
+      ],
+      "en": [
+        "HD optical lens technology for crystal clear images",
+        "Autoclavable stainless steel chassis design",
+        "Scratch-resistant sapphire front lens protection",
+        "Wide angle options (0°, 12°, 30°, 70°)"
+      ],
+      "fr": [
+        "Technologie de lentille optique HD pour des images cristallines",
+        "Conception de châssis en acier inoxydable autoclavable",
+        "Protection de lentille frontale en saphir résistant aux rayures",
+        "Options grand angle (0°, 12°, 30°, 70°)"
+      ],
+      "az": [
+        "HD optik linza texnologiyası ilə kristal aydınlığında təsvir",
+        "Otoklavlana bilən paslanmaz polad şassi dizaynı",
+        "Cızılmaya davamlı sapfir ön linza qorunması",
+        "Geniş bucaq seçimləri (0°, 12°, 30°, 70°)"
+      ]
+    }
+  },
+  {
+    "id": "storz-rigid-urs",
+    "name": {
+      "tr": "Storz Rigid URS (Üretero-Renoskop)",
+      "en": "Storz Rigid URS (Ureterorenoscope)",
+      "fr": "URS Rigide Storz (Urétérorénoscope)",
+      "az": "Storz Rigid URS (Uretero-Renoskop)"
+    },
+    "category": "EndoscopyTelescopes",
+    "type": "hospital",
+    "description": {
+      "tr": "Üreteral taş tedavilerinde yüksek görüntü kalitesi ve enstrüman kanalı genişliği ile güvenilir Storz rijit üretero-renoskop cihazı.",
+      "en": "Reliable Storz rigid ureterorenoscope device offering high image quality and wide instrument channel in ureteral stone treatments.",
+      "fr": "Urétérorénoscope rigide Storz fiable offrant une qualité d'image élevée et un large canal d'instruments dans les traitements des calculs urétéraux.",
+      "az": "Sidik axarı daşlarının müalicəsində yüksək təsvir keyfiyyəti və alət kanalı genişliyi ilə etibarlı Storz rigid uretero-renoskop cihazı."
+    },
+    "image": "/storz_rigid_urs.png",
+    "features": {
+      "tr": [
+        "Atravmatik uç yapısı ile hastaya zarar vermeyen geçiş",
+        "Çift enstrüman çalışma kanalı desteği",
+        "Otoklavlanabilir yüksek mukavemetli paslanmaz gövde",
+        "Yüksek çözünürlüklü entegre fiber optik görüntü iletimi"
+      ],
+      "en": [
+        "Atraumatic tip design for safe insertion",
+        "Dual instrument working channels support",
+        "Autoclavable high durability stainless steel body",
+        "High-resolution integrated fiber optic image transmission"
+      ],
+      "fr": [
+        "Conception d'extrémité atraumatique pour une insertion sûre",
+        "Prise en charge de deux canaux de travail d'instruments",
+        "Corps en acier inoxydable autoclavable à haute durabilité",
+        "Transmission d'images en fibre optique intégrée haute résolution"
+      ],
+      "az": [
+        "Travmatik olmayan ucluq quruluşu ilə təhlükəsiz keçid",
+        "Cüt alət işçi kanalı dəstəyi",
+        "Otoklavlana bilən yüksək davamlılığa malik paslanmaz gövdə",
+        "Yüksək keyfiyyətli inteqrasiya olunmuş fiber optik təsvir ötürülməsi"
+      ]
+    }
+  },
+  {
+    "id": "richard-wolf-rigid-urs",
+    "name": {
+      "tr": "Richard Wolf Rigid URS",
+      "en": "Richard Wolf Rigid URS",
+      "fr": "URS Rigide Richard Wolf",
+      "az": "Richard Wolf Rigid URS"
+    },
+    "category": "EndoscopyTelescopes",
+    "type": "hospital",
+    "description": {
+      "tr": "Richard Wolf kalitesiyle tasarlanmış, üstün bükülme mukavemeti ve optik performans sunan rijit üretero-renoskop.",
+      "en": "Rigid ureterorenoscope designed with Richard Wolf quality, offering superior bending strength and optical performance.",
+      "fr": "Urétérorénoscope rigide conçu avec la qualité Richard Wolf, offrant une résistance à la flexion et des performances optiques supérieures.",
+      "az": "Richard Wolf keyfiyyəti ilə dizayn edilmiş, üstün əyilmə müqaviməti və optik performans təqdim edən rigid uretero-renoskop."
+    },
+    "image": "/richard_wolf_rigid_urs.png",
+    "features": {
+      "tr": [
+        "Bükülmelere ve kırılmalara dayanıklı gövde yapısı",
+        "Yüksek çözünürlüklü fiber optik görüntü demeti ile net görünüm",
+        "Çift kanal yapısı ile eş zamanlı enstrüman kullanımı",
+        "Tamamen otoklavlanabilir, uzun kullanım ömürlü"
+      ],
+      "en": [
+        "Bending and break-resistant shaft structure",
+        "Clear view with high-resolution fiber optic image bundle",
+        "Simultaneous instrument use with dual-channel design",
+        "Fully autoclavable, long operational life"
+      ],
+      "fr": [
+        "Structure de tige résistante aux courbures et à la rupture",
+        "Vue claire avec faisceau d'images en fibre optique haute résolution",
+        "Utilisation simultanée d'instruments avec conception à double canal",
+        "Entièrement autoclavable, longue durée de vie opérationnelle"
+      ],
+      "az": [
+        "Əyilmələrə və qırılmalara davamlı gövdə strukturu",
+        "Yüksək rezolyusiyalı fiber optik təsvir dəstəsi ile aydın görünüş",
+        "Cüt kanal quruluşu ilə eyni vaxtda alət istifadəsi",
+        "Tamamilə otoklavlana bilən, uzun istifadə ömürlü"
+      ]
+    }
+  },
+  {
+    "id": "bjry-rigid-urs",
+    "name": {
+      "tr": "BJRY Rigid URS",
+      "en": "BJRY Rigid URS",
+      "fr": "URS Rigide BJRY",
+      "az": "BJRY Rigid URS"
+    },
+    "category": "EndoscopyTelescopes",
+    "type": "hospital",
+    "description": {
+      "tr": "Dayanıklı paslanmaz çelik yapısı, hassas ince ucu ve geniş çalışma kanalı ile ekonomik ve yüksek performanslı rijit üretero-renoskop.",
+      "en": "Economic and high-performance rigid ureterorenoscope featuring durable stainless steel body, delicate thin tip, and wide working channel.",
+      "fr": "Urétérorénoscope rigide économique et performant doté d'un corps durable en acier inoxydable, d'une extrémité fine et délicate et d'un large canal de travail.",
+      "az": "Davamlı paslanmaz polad gövdəsi, həssas incə ucluğu və geniş işçi kanalı ilə iqtisadi və yüksək performanslı rigid uretero-renoskop."
+    },
+    "image": "/bjry_rigid_urs.png",
+    "features": {
+      "tr": [
+        "Ekonomik ve yüksek fiyat/performans verimliliği",
+        "Hassas ve travmatik olmayan yerleştirme ucu tasarımı",
+        "Yüksek kaliteli fiber optik ışık ve görüntü aktarımı",
+        "Standart cerrahi kablolarla tam uyumluluk"
+      ],
+      "en": [
+        "Economical and high price/performance efficiency",
+        "Delicate and non-traumatic insertion tip design",
+        "High-quality fiber optic light and image transmission",
+        "Full compatibility with standard surgical cables"
+      ],
+      "fr": [
+        "Économique et haute efficacité prix/performance",
+        "Conception d'extrémité d'insertion délicate et non traumatique",
+        "Transmission de lumière et d'images en fibre optique de haute qualité",
+        "Compatibilité totale avec les câbles chirurgicaux standard"
+      ],
+      "az": [
+        "İqtisadi və yüksək qiymət/performans səmərəliliyi",
+        "Həssas və travmatik olmayan daxiletmə ucluğu dizaynı",
+        "Yüksək keyfiyyətli fiber optik işıq və təsvir ötürülməsi",
+        "Standart cərrahi kabellərlə tam uyğunluq"
       ]
     }
   }
