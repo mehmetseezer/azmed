@@ -6225,7 +6225,7 @@ export const products: Product[] = [
       "fr": "Télescope de laparoscopie Storz de haute qualité offrant une clarté supérieure et un large champ de vision dans les procédures chirurgicales intra-abdominales.",
       "az": "Qarın boşluğu cərrahiyyə əməliyyatlarında üstün aydınlıq ve geniş baxış sahəsi təmin edən yüksək keyfiyyetli Storz laparoskopiya teleskopu."
     },
-    "image": "/Storz_Laporoskopi_Optigi.png",
+    "image": "/storz_laporoskopi_optigi.png",
     "features": {
       "tr": [
         "HD görüntü kalitesi ve mükemmel renk doğruluğu",
@@ -6388,7 +6388,7 @@ export const products: Product[] = [
   {
     "id": "storz-yakalama-forceps",
     "name": {
-      "tr": "Storz Yakalama Forcepsi",
+      "tr": "Storz Yakalama Forcepsler",
       "en": "Storz Grasping Forceps",
       "fr": "Pince de préhension Storz",
       "az": "Storz Tutma Forsepsi"
